@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[02-CSS选择器]]></title>
+    <url>%2F2019%2F10%2F09%2FB-02-CSS%E9%80%89%E6%8B%A9%E5%99%A8%2F</url>
+    <content type="text"><![CDATA[1. css选择器选择器（selector），会告诉浏览器：网页 上的哪些元素需要设置什么样的样式。 1.1 元素选择器 元素选择器（标签选择器），可以根据标 签的名字来从页面中选取指定的元素。 语法： 标签名 { } 1.2 类选择器 类选择器，可以根据元素的class属性值选 取元素。 语法： .className { } 1.3 ID选择器 ID选择器，可以根据元素的id属性值选取元素。 语法：#id { } 1.4 复合选择器 (交集选择器) 复合选择器，可以同时使用多个选择器， 这样可以选择同时满足多个选择器的元素。 语法：选择器1选择器2{} 1.5 群组选择器(并集选择器) 群组选择器，可以同时使用多个选择器， 多个选择器将被同时应用指定的样式。 语法： 选择器1,选择器2,选择器3 { } 1.6 通用选择器 通用选择器，可以同时选中页面中的所有 元素。 语法： *{ } 1.7 后代选择器 后代选择器可以根据标签的关系，为处在 元素内部的代元素设置样式。 语法： 祖先元素 后代元素 后代元素 { } 1.8 伪类选择器 有四个伪类可以根据访问者与该链接的交互方式，将链接设置成4种不同的状态。 正常链接 a:link{ } 访问过的链接 a:visited{ }（只能定义字体颜色） 鼠标滑过的链接 a:hover{ } 正在点击的链接 a:active{ } 其他伪类： 获取焦点 :focus 指定元素前 :before 指定元素后 :after 选中的元素 ::selection 1.9 伪元素选择器 给段落定义样式： 首字母 :first-letter{ } 首行 :first-line{ } 1.10 属性选择器 属性选择器可以挑选带有特殊属性的标签。 语法: [属性名]{ } – 属性名可以是类名/id名等 [属性名=”属性值”]{ } – 属性为某个特定值的 [属性名~=”属性值”]{ } – 选取属性值中包含指定词汇的元素。 [属性名|=”属性值”]{ } – 选取带有以指定值开头的属性值的元素，该值必须是整个单词。 [属性名^=”属性值”]{ } – 属性值以XXX开头 [属性名$=”属性值”]{ } – 属性值以XXX结尾 [属性名*=”属性值”]{ } – 属性值包含XXX 1.11 子元素选择器 子元素选择器可以给另一个元素的子元素设置样式。 语法：父元素 &gt; 子元素{} 其他子元素选择器 :first-child – 选择第一个子标签 :last-child – 选择最后一个子标签 :nth(n)-child – 选择指定位置的子元素,n 是整数或odd(奇数位置)/even(偶数位置) :first-of-type 选择指定类型的第一个子元素 :last-of-type 选择指定类型的最后一个子元素 :nth(n)-of-type 选择指定类型的子元素 1.12 兄弟选择器 除了根据祖先父子关系，还可以根据兄弟 关系查找元素。 语法: 查找后边一个兄弟元素 ： 兄弟元素 + 兄弟元素{}查找后边所有的兄弟元素： 兄弟元素 ~ 兄弟元素{} 1.13 否定伪类选择器 否定伪类可以帮助我们选择不是其他东西 的某件东西。 语法: :not(选择器){} 比如： p:not(.hello)表示选择所有的p元素但 是class为hello的除外。 2. 选择器的权重2.1 权重概述 在页面中使用CSS选择器选中元素时，经常都是一个元素同时被多个选择器选中。如果两个选择器设置的是同一个样式则会产生冲突， 这样h1到底要应用那个样式呢？CSS中会默认使用权重较大的样式 2.2 权重的计算 不同的选择器有不同的权重值： 内联样式：权重是1000 id选择器：权重是100 类、属性、伪类选择器：权重是10 元素选择器：权重是1 通配符：权重是0 默认样式：没有权重 计算权重需要将一个样式的全部选择器相加，权重高的优先显示，权重相同的就后面的样式使用。 ！权重相加结果不会超过最大值]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+        <category>CSS选择器</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>css选择器</tag>
+        <tag>标签关系</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[00-markdown常用语法]]></title>
     <url>%2F2019%2F10%2F09%2F00-markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%2F</url>
     <content type="text"><![CDATA[1.标题 # 一级标题一级标题 ## 二级标题二级标题 ### 三级标题三级标题 #### 四级标题四级标题 ##### 五级标题五级标题 ###### 六级标题六级标题 2.列表(注意空格) * ：无序列表 + ：无序列表 - ：无序列表 ：有序列表 ：有序列表 ：有序列表3.换行 按两次回车 html中的标签br &lt;可识别的内容&gt;4.分割线 --- 连续输入三个- *** 连续输入三个* 5.超链接 [超链接名字](超链接的地址src) wcy’blog 6.粗体和斜体 *内容* ：一个*号代表 斜体 这是斜体文字 **内容** ：两个*号代表 粗体 这是粗体文字 ***内容*** ：三个*号代表 斜体+粗体 这是斜体+粗体文字 7.引用 &gt; 引用一段话 这是引用的话的示例 &lt;!–￼0–&gt;]]></content>
@@ -13,13 +28,25 @@
   </entry>
   <entry>
     <title><![CDATA[01-CSS基础]]></title>
-    <url>%2F2019%2F10%2F09%2F01-CSS%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"></content>
+    <url>%2F2019%2F10%2F09%2FB-01-CSS%E5%9F%BA%E7%A1%80%2F</url>
+    <content type="text"><![CDATA[1. CSS简介1.1 css概述 层叠样式表 (Cascading Style Sheets) css可以用来为网页创建样式表，通过样式表可以对网页进行装饰。 1.2 基本语法 CSS的样式表由一个一个的样式构成，一个样式又由 选择器 和 声明块 构成。 语法：选择器 {样式名:样式值；样式名:样式值; } 1.3 行内样式 可以直接将样式写到标签内部的style属性中，这种样式不用填写选择器，直接编写 声明即可。 &lt;p style=”color: red;font-size: 30px”&gt;&lt;/p&gt; 这种方式编写简单，定位准确。但是由于 直接将css代码写到了html标签的内部，导 致结构与表现耦合，同时导致样式不能够 复用，所以这种方式我们不使用。 1.4 内部样式表 可以直接将样式写到&lt;style&gt;标签中。 &lt;style&gt; p{color:red; font-size: 30px;} &lt;/style&gt; 这样使css独立于html代码，而且可以同时为 多个元素设置样式，这是我们使用的比较多的 一种方式。 但是这种方式，样式只能在一个页面中使用， 不能在多个页面中重复使用。 1.5 外部样式表 可以将所有的样式保存到一个外部的css文 件中，然后通过标签将样式表引入 到文件中。 &lt;link rel=”stylesheet” type=”text/css” href=”style.css”&gt; 这种方式将样式表放入到了页面的外部， 可以在多个页面中引入，同时浏览器加载 文件时可以使用缓存，这是我们开发中使 用的最多的方式。 2. 文本格式化2.1 单位 px 对于不同的显示器来说一个像素 的大小是不同的。 百分比 也可以使用一个百分数来表示一个大小，百分比是相对于父元素来说的。 em em和百分比类似，也是相对于父元素说的，1em就相 当于100%，2em相当于200%，1.5em相当于150%。 2.2 颜色 颜色英文单词 aqua、black、blue、fuchsia、gray、green、 lime、maroon、navy、olive、orange、 purple、red、silver、teal、white、yellow 十六进制颜色 颜色 是由指定浓度的红绿蓝混合而成的。比如：：#6600FF RGB值 –也可以使用计算机中常用的RGB值来表示 颜色。 –可以使用0255的数值，也可以使 用0%100%的百分比数。 RGB(100%,0%,0%) RGB(0,255,0) –第一个数表示红色的浓度，第二个数表示 绿色浓度，第三个数表示蓝色的浓度。 RGBA –RGBA表示一个颜色和RGB类似，只不过比 RGB多了一个A（alpha）来表示透明度， 透明度需要一个0-1的值。 RGBA(255,100,5,0.5) – 0表示完全透明， 1表示完全不透明。 2. 文字属性2.0 字体属性的简写 font可以一次性同时设置多个字体的样式。 语法： font:加粗 斜体 小型大写 大小/行高 字体 这里前边几个加粗、斜体和小型大写的顺 序无所谓，也可以不写，但是大小和字体 必须写且必须写到后两个。 2.1 文字大小 font-size用来指定文字的大小。 2.2 字体 font-family可以指定标签中文字使用 的字体。 例如：p{font-family:Arial} 通过font-family可以同时指定多个字体。 例如：p{font-family:Arial , Helvetica , sans-serif} 这里面sans-serif并不是指的具体某一个字体。而是一类字体。 2.3 字体分类 serif（衬线字体） sans-serif（非衬线字体） monospace （等宽字体） cursive （草书字体） fantasy （虚幻字体） 以上这些分类都是一些大的分类，并没有 涉及具体的类型，如果将字体指定为这些 格式，浏览器会自己选择指定类型的字体。 2.4 斜体和粗体 font-style用来指定文本的斜体。 – 指定斜体：font-style:italic – 指定非斜体：font-style:normal font-weight用来指定文本的粗体。 – 指定粗体：font-weight:bold – 指定非粗体：font-weight:normal 2.5 小型大写字母 font-variant属性可以将字母类型设置为小型大写。 – font-variant:small-caps 2.6 行间距 line-height用于设置行高，行高越大则行 间距越大。 行间距 = line-height – font-size 2.7 大写化 text-transform样式用于将元素中的字母全 都变成大小。 大写：text-transform:uppercase 小写：text-tansform:lowercase 首字母大写： text-transform:capitalize 正常：text-transform:none 2.8 文本的修饰 text-decoration属性，用来给文本添加各 种修饰。通过它可以为文本的上方、下方 或者中间添加线条。 可选值：underline / overline /line-through / none 2.9 字母间距和单词间距 letter-spacing用来设置字符之间的间距。 word-spacing用来设置单词之间的间距。 这两个属性都可以直接指定一个长度或百分数作为值。正数代表的是增加距离，而负数代表减少距离。 2.10 对齐文本 text-align用于设置文本的对齐方式。 可选值： – left：左对齐 – right：右对齐 – justify：两边对齐 – center：居中对齐 2.11 首行缩进 text-indent用来设置首行缩进。 该样式需要指定一个长度，并且只对第一 行生效。]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+        <category>CSS基础</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>样式表</tag>
+        <tag>css基本语法</tag>
+        <tag>文本格式化</tag>
+        <tag>文字属性</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[01-HTML基础]]></title>
-    <url>%2F2019%2F10%2F09%2F01-HTML%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[1. HTML简介1.1 HTML概述 HTML(Hypertext Markup Language)：超文本标记语言。 它负责网页三要素中的 结构。 HTML使用标签的的形式来标识网页中的不 同组成部分。 所谓超文本指的是超链接，使用超链接可 以让我们从一个页面跳转到另一个页面。 1.2 标签 HTML中的标记指的就是标签 HTML使用标记标签来描述网页 结构： 1.&lt;标签名&gt;标签内容&lt;/标签&gt; 2.&lt;标签名 /&gt; 1.3 元素 我们还将一个完整的标签称为元素 父元素、子元素、祖先元素、后代元素1.4 属性 通过属性为HTML元素提供附加信息。 属性需要设置在开始标签或自结束标签中。 属性总是以名称/值对的形式出现。 有些属性可以是任意值，有些则必须是指定值。 常见属性 ：id、class、tittle 1.5 注释 HTML注释中的内容不会在网页中显示。 格式: &lt;!– 注释内容 –&gt; 注释不能嵌套！2. HTML的发展2.1 发展历史 1993年6月：HTML第一个版本发布。 1995年11月：HTML2.0 1997年1月：HTML3.2（W3C推荐） 1999年12月：HTML4.01（W3C推荐） 2000年底：XHTML1.0（W3C推荐） 2014年10月：HTML5（W3C推荐）2.2 doctype(文档声明) 说明：不进行文档声明或者不进行正确的文档声明浏览器有可能会出现 怪异模式，为避免这种情况，所以一定要进行正确的文档声明 html4 1.过渡版:&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN” “http://www.w3.org/TR/html4/loose.dtd&quot;&gt; 2.严格版:&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd&quot;&gt; 3.框架集:&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Frameset//EN” “http://www.w3.org/TR/html4/frameset.dtd&quot;&gt; xhtml1.0 1.过渡版:&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “ http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt; 2.严格版:&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt; 3.框架集:&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt; html5 &lt;!DOCTYPE html&gt; 3. 编码3.1 编码问题 在计算机的内部，文件都是以二进制编码 保存的。 所谓的二进制编码就是指1和0，也就是我 们的所有内容都需要转换为1和0。 中国两个字在计算机的底层保存的可能要 转换为10100101这种二进制码，这一过程 称为编码。 计算机在读取文件时需要将10100101在转 换为中国给我们显示这一过程称为解码。 3.2 字符集 字 符集规定了如何将文本转换为二进制编码。 常见的字符集：ASKII、ISO8859-1、GBK、 GB2312、UTF-8。 如果编码和解码所用的字符集不一致，就会出现乱码问题。 为了避免乱码，我们统一使用utf-8。 &lt;meta charset=”utf-8” /&gt; 3.3 &lt;meta&gt; meta的作用： –&lt;meta&gt; 标签可提供有关页面的元信息，比如 针对搜索引擎和更新频度的描述和关键词。 –&lt;meta&gt; 标签位于文档的头部，不包含任何内 容。&lt;meta&gt; 标签的属性定义了与文档相关联 的名称/值对。 meta的用法: – 设置页面的字符集 :&lt;meta charset=”utf-8”&gt; – 设置网页的描 :&lt;meta name=”description” content=””&gt; – 设置页面的关键字 :&lt;meta name=”keywords” content=””&gt; – 请求的重定向 :&lt;meta http-equiv=”refresh” content=”5;url=地址”/&gt; 4. 常用标签4.1 &lt;html&gt; 作用：&lt;html&gt;标签用于告诉浏览器这个文档中包含 的信息是用HTML编写的。 用法：\ 所有的网页的内容都需要编写到html标签中， 一个页面中html标签只能有一个；html标签中有两个子标签head和body。 4.2 &lt;head&gt; 作用：&lt;head&gt;标签用来表示网页的元数据，head中 包含了浏览器和搜索引擎使用的其他不可见信 息。 用法： head标签作为html标签的子元素的出现，一 个网页中只能有一个head。 4.3 &lt;title&gt; 作用：&lt;title&gt;标签表示网页的标题，一般会在网页的标 题栏上显示；title标签中的文字，是页面优化的最重要因素。在 搜索引擎的搜索时最先看到的、最醒目的内容。 用法： 建议将title标签紧贴着head标签编写，这样搜索 引擎可以快速检索到标题标签； 网站中的多个页面的title也不应该重复，这样不利 于搜索隐藏检索。 4.4 &lt;body&gt; 作用：&lt;body&gt;标签用来设置网页的主体，所有在页 面中能看到的内容都应该编写到body标签中。 用法： body标签作为html的子标签使用。 4.5 &lt;h1&gt;~&lt;h6&gt; 作用：h1h6都是网页中的标题标签，用来表示网页 中的一个标题，不同的是，从h1h6重要性越 来越低； 标题标签相当于正文的标题，通常认为重要性 仅次于页面的title； 一般标题标签我们只会使用到h3，h3以后的标 题标签对于搜索引擎就没有什么意义了； 一个页面中只会使用一个h1标签。 4.6 &lt;p&gt; 作用：\ 标签表示网页中的一个段落； 一般浏览器会在段落的前和后各加上一个换行， 也就是段落会在页面中自成一行。 4.7 &lt;br /&gt; 作用：&lt;br /&gt;标签表示一个换行标签，使用br标签可 以使br标签后的内容另起一行。 4.8 &lt;hr /&gt; 作用：&lt;hr /&gt;标签是水平线标签，使用hr标签可以在 页面中打印一条水平线，水平线可以将页面分 成上下两个部分。 4.9 &lt;img /&gt; 作用：&lt; img /&gt;标签是图片标签，可以用来向页面中 引入一张外部的图片。 属性： src • 指向一个外部的图片的路径；alt • 图片的描述 4.10 &lt;a&gt; 作用：标签是超链接标签，通过a标签，可以快 速跳转到其他页面。 属性：href • 指向一个链接地址；– target • 设置打开目标页面的位置(可选值：_blank新窗口、 _self当前窗口)。5. 实体(转义字符)5.1 实体 在HTML中预留了一些字符，这些预留字符是不能在网页中直接使用的。 比如&lt;和&gt;,我们不能直接在页面中使用&lt;和 &gt;号，因为浏览器会将它解析为html标签 为了可以使用这些预留字符，我们必须在 html中使用字符实体。 语法: &amp;实体名;5.2 实体字符 小于号&lt; : &amp;lt; 大于号&gt; : &amp;gt; 空格 : &amp;nbsp; 和符号&amp; : &amp;amp 版权© : &amp;copy; 引号” : &amp;quot; 注册商标® : &amp;reg;商标™ : &amp;trade;6. 开发工具6.1 文本编辑器 记事本 Notepad++(免费) Sublime(收费)6.2 IDE(集成开发工具) DreamWeaver（收费） WebStorm（收费） Hbuilder（免费）]]></content>
+    <url>%2F2019%2F10%2F09%2FA-01-HTML%E5%9F%BA%E7%A1%80%2F</url>
+    <content type="text"><![CDATA[1. HTML简介1.1 HTML概述 HTML(Hypertext Markup Language)：超文本标记语言。 它负责网页三要素中的 结构。 HTML使用标签的的形式来标识网页中的不 同组成部分。 所谓超文本指的是超链接，使用超链接可 以让我们从一个页面跳转到另一个页面。 1.2 标签 HTML中的标记指的就是标签 HTML使用标记标签来描述网页 结构： 1.&lt;标签名&gt;标签内容&lt;/标签&gt; 2.&lt;标签名 /&gt; 1.3 元素 我们还将一个完整的标签称为元素 父元素、子元素、祖先元素、后代元素1.4 属性 通过属性为HTML元素提供附加信息。 属性需要设置在开始标签或自结束标签中。 属性总是以名称/值对的形式出现。 有些属性可以是任意值，有些则必须是指定值。 常见属性 ：id、class、tittle 1.5 注释 HTML注释中的内容不会在网页中显示。 格式: &lt;!– 注释内容 –&gt; 注释不能嵌套！2. HTML的发展2.1 发展历史 1993年6月：HTML第一个版本发布。 1995年11月：HTML2.0 1997年1月：HTML3.2（W3C推荐） 1999年12月：HTML4.01（W3C推荐） 2000年底：XHTML1.0（W3C推荐） 2014年10月：HTML5（W3C推荐）2.2 doctype(文档声明) 说明：不进行文档声明或者不进行正确的文档声明浏览器有可能会出现 怪异模式，为避免这种情况，所以一定要进行正确的文档声明 html4 1.过渡版:&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Transitional//EN” “http://www.w3.org/TR/html4/loose.dtd&quot;&gt; 2.严格版:&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd&quot;&gt; 3.框架集:&lt;!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01 Frameset//EN” “http://www.w3.org/TR/html4/frameset.dtd&quot;&gt; xhtml1.0 1.过渡版:&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “ http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt; 2.严格版:&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Strict//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt; 3.框架集:&lt;!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Frameset//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt; html5 &lt;!DOCTYPE html&gt; 3. 编码3.1 编码问题 在计算机的内部，文件都是以二进制编码 保存的。 所谓的二进制编码就是指1和0，也就是我 们的所有内容都需要转换为1和0。 中国两个字在计算机的底层保存的可能要 转换为10100101这种二进制码，这一过程 称为编码。 计算机在读取文件时需要将10100101在转 换为中国给我们显示这一过程称为解码。 3.2 字符集 字 符集规定了如何将文本转换为二进制编码。 常见的字符集：ASKII、ISO8859-1、GBK、 GB2312、UTF-8。 如果编码和解码所用的字符集不一致，就会出现乱码问题。 为了避免乱码，我们统一使用utf-8。 &lt;meta charset=”utf-8” /&gt; 3.3 &lt;meta&gt; meta的作用： –&lt;meta&gt; 标签可提供有关页面的元信息，比如 针对搜索引擎和更新频度的描述和关键词。 –&lt;meta&gt; 标签位于文档的头部，不包含任何内 容。&lt;meta&gt; 标签的属性定义了与文档相关联 的名称/值对。 meta的用法: – 设置页面的字符集 :&lt;meta charset=”utf-8”&gt; – 设置网页的描 :&lt;meta name=”description” content=””&gt; – 设置页面的关键字 :&lt;meta name=”keywords” content=””&gt; – 请求的重定向 :&lt;meta http-equiv=”refresh” content=”5;url=地址”/&gt; 4. 常用标签4.1 &lt;html&gt; 作用：&lt;html&gt;标签用于告诉浏览器这个文档中包含 的信息是用HTML编写的。 用法：\ 所有的网页的内容都需要编写到html标签中， 一个页面中html标签只能有一个；html标签中有两个子标签head和body。 4.2 &lt;head&gt; 作用：&lt;head&gt;标签用来表示网页的元数据，head中 包含了浏览器和搜索引擎使用的其他不可见信 息。 用法： head标签作为html标签的子元素的出现，一 个网页中只能有一个head。 4.3 &lt;title&gt; 作用：&lt;title&gt;标签表示网页的标题，一般会在网页的标 题栏上显示；title标签中的文字，是页面优化的最重要因素。在 搜索引擎的搜索时最先看到的、最醒目的内容。 用法： 建议将title标签紧贴着head标签编写，这样搜索 引擎可以快速检索到标题标签； 网站中的多个页面的title也不应该重复，这样不利 于搜索隐藏检索。 4.4 &lt;body&gt; 作用：&lt;body&gt;标签用来设置网页的主体，所有在页 面中能看到的内容都应该编写到body标签中。 用法： body标签作为html的子标签使用。 4.5 &lt;h1&gt;~&lt;h6&gt; 作用：h1h6都是网页中的标题标签，用来表示网页 中的一个标题，不同的是，从h1h6重要性越 来越低； 标题标签相当于正文的标题，通常认为重要性 仅次于页面的title； 一般标题标签我们只会使用到h3，h3以后的标 题标签对于搜索引擎就没有什么意义了； 一个页面中只会使用一个h1标签。 4.6 &lt;p&gt; 作用：\ 标签表示网页中的一个段落； 一般浏览器会在段落的前和后各加上一个换行， 也就是段落会在页面中自成一行。 4.7 &lt;br /&gt; 作用：&lt;br /&gt;标签表示一个换行标签，使用br标签可 以使br标签后的内容另起一行。 4.8 &lt;hr /&gt; 作用：&lt;hr /&gt;标签是水平线标签，使用hr标签可以在 页面中打印一条水平线，水平线可以将页面分 成上下两个部分。 4.9 &lt;img /&gt; 作用：&lt; img /&gt;标签是图片标签，可以用来向页面中 引入一张外部的图片。 属性： src • 指向一个外部的图片的路径；alt • 图片的描述 4.10 &lt;a&gt; 作用：标签是超链接标签，通过a标签，可以快 速跳转到其他页面。 属性：href • 指向一个链接地址；– target • 设置打开目标页面的位置(可选值：_blank新窗口、 _self当前窗口)。5. 实体(转义字符)5.1 实体 在HTML中预留了一些字符，这些预留字符是不能在网页中直接使用的。 比如&lt;和&gt;,我们不能直接在页面中使用&lt;和 &gt;号，因为浏览器会将它解析为html标签 为了可以使用这些预留字符，我们必须在 html中使用字符实体。 语法: &amp;实体名;5.2 实体字符 小于号&lt; : &amp;lt; 大于号&gt; : &amp;gt; 空格 : &amp;nbsp; 和符号&amp; : &amp;amp 版权© : &amp;copy; 引号” : &amp;quot; 注册商标® : &amp;reg;商标™ : &amp;trade;6. 开发工具6.1 文本编辑器 记事本 Notepad++(免费) Sublime(收费)6.2 IDE(集成开发工具) DreamWeaver（收费） WebStorm（收费） Hbuilder（免费） 7. 文本标签7.1 &lt;em&gt;和&lt;strong&gt; em标签用于表示一段内容中的着重点。 strong标签用于表示一个内容的重要性。 通常em显示为斜体，而strong显示为粗体；这两个标签可以单独使用，也可以一起使用。7.2 &lt;i&gt;和&lt;b&gt; i标签会使文字变成斜体。 b标签会使文字变成粗体。 这两个标签和em和strong类似，但是这两个标签没有语义。 所以根据html5标准，当我们只想设置文本 特殊显示，而不需要强调内容时就可以使 用i和b标签。7.3 &lt;small&gt; small标签表示细则一类的旁注，通常包括 免责声明、注意事项、法律限制、版权信 息等。 浏览器在显示small标签时会显示一个比父 元素小的字号。7.4 &lt;cite&gt; 使用cite标签(《》)可以指明对某内容的引用或参 考。例如，戏剧、文章或图书的标题，歌 曲、电影、照片或雕塑的名称等。7.5 &lt;blockquote&gt;和&lt;q&gt; blockquote和q表示标记引用的文本。 blockquote用于长引用(“”)，q用于短引用。 在两个标签中还可以使用cite属性来表示引用的地址。7.6 &lt;sup&gt;和&lt;sub&gt; sup和sub用于定义上标和下标7.7 &lt;ins&gt;和&lt;del&gt; ins表示插入的内容，显示时通常会加上下 划线。 del表示删除的内容，显示时通常会加上删 除线。7.8 &lt;code&gt;和&lt;pre&gt; 如果你的内容包含代码示例或文件名，就 可以使用code元素。 pre元素表示的是预格式化文本，可以使用 pre包住code来表示一段代码。7.9 有序列表 使用ol和li来创建一个有序列表。7.10 无序列表 使用ul和li来创建一个有序列表。7.9 定义列表 使用dl、dd、dt来创建一个定义列表。12345678&lt;dl&gt; &lt;dt&gt;定义项1&lt;/dt&gt; &lt;dd&gt;定义描述1&lt;/dd&gt; &lt;dt&gt;定义项2&lt;/dt&gt; &lt;dd&gt;定义描述2&lt;/dd&gt; &lt;dt&gt;定义项3&lt;/dt&gt; &lt;dd&gt;定义描述3&lt;/dd&gt; &lt;/dl&gt;]]></content>
       <categories>
         <category>前端</category>
         <category>HTML</category>
@@ -28,9 +55,7 @@
       <tags>
         <tag>html</tag>
         <tag>html的发展</tag>
-        <tag>编码</tag>
-        <tag>Path环境变量</tag>
-        <tag>java基础语法</tag>
+        <tag>html标签</tag>
       </tags>
   </entry>
   <entry>
@@ -67,11 +92,11 @@
         <category>java</category>
       </categories>
       <tags>
-        <tag>Path环境变量</tag>
-        <tag>java基础语法</tag>
         <tag>java发展</tag>
         <tag>JRE和JDK</tag>
         <tag>DOS命令</tag>
+        <tag>Path环境变量</tag>
+        <tag>java基础语法</tag>
       </tags>
   </entry>
   <entry>
