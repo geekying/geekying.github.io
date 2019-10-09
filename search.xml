@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[我的博客搭建过程]]></title>
+    <url>%2F2019%2F10%2F09%2F%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;在b站上看了codesheep和geekmubai的视频教程（视频是Mac系统），二者结合，搭建了自己的博客（我的是Windows系统），主题及修改则是到处查着修改，比较混乱，暂时还没整理。只整理了一下搭建的过程并记录了下来，如下所示： 1.去官网安装node.js 去官网安装node.js12345打开命令行(win + R --&gt; cmd --&gt; 回车)C:\Users\颖&gt;npm -v （查看npm是否安装好） 6.9.0C:\Users\颖&gt;node -v （查看node是否安装好）10.16.0 2.安装hexo博客框架1234C:\Users\颖&gt;npm install -g cnpm --registry=https://registry.npm.taobao.org (用npm安装cnpm,把镜像源指向淘宝) C:\Users\颖&gt;cnpm C:\Users\颖&gt;cnpm -v （查看cnpm是否安装好）C:\Users\颖&gt;cnpm install -g hexo-cli （用cnpm安装hexo博客框架） 3.建立一个空的blog文件夹123C:\Users\颖&gt;cd blog （进入blog文件夹里） C:\Users\颖\blog&gt;hexo init （初始化一个博客，会生成一些东西可以在命令行用dir查看） C:\Users\颖\blog&gt;hexo s （在本地启动博客） 4.把博客部署到github 在github中新建一个仓库，这个仓库的名称必须是Git名字+github.io 1C:\Users\颖\blog&gt;cnpm install --save hexo-deployer-git （安装一个部署插件） 5.打开blog中的_config.yml文件，用记事本打开到最底部，做如下修改：123456deploy: type: git repo: https://github.com/geekying/geekying.github.io.git (github中新建的仓库的地址) branch: master ``` ## 6.去官网下载git，安装完成后做如下操作： $ git config –global user.name “geekying”$ git config –global user.email “congyingw@sina.com“$ ssh-keygen -t rsa -C “congyingw@sina.com“ 12- 在github中新建一个密钥，内容为刚才生成的.ssh中的id_rsa.pub文件中的密钥## 7.回到命令行，完成部署 C:\Users\颖\blog&gt;hexo d （hexo deploy）12##8.更换主题 - (我换成了next主题https://github.com/kjhuanhao/HEXO-HHC-NEXT) C:\Users\颖\blog&gt;git clone https://github.com/kjhuanhao/HEXO-HHC-NEXT （克隆一下主题） 12345678- 打开blog中的.config文件，用记事本打开到最底部，做如下修改：``` themes：next 回到命令行C:\Users\颖\blog&gt;hexo clean C:\Users\颖\blog&gt;hexo g (generate生成)C:\Users\颖\blog&gt;hexo s (server) C:\Users\颖\blog&gt;hexo d (deploy) 9.新建一篇博客C:\Users\颖\blog&gt;hexo n &quot;标题&quot; &emsp;&emsp;在blog文件夹里找到source/_post中的markdown文件，进行内容编辑，编辑好之后重复更换主题的最后四条语句即可。]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[04-CSS之表格和表单]]></title>
     <url>%2F2019%2F10%2F09%2FB-04-CSS%E4%B9%8B%E8%A1%A8%E6%A0%BC%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE%2F</url>
     <content type="text"><![CDATA[1.表格1.1 表格概述 表格的作用就是用来表示格式化的数据。 1.2 表格标签 table、tr、th、td -使用table标签创建一个表格。 -tr表示表格中的一行。 -tr中可以编写一个或多个th或td。 -th表示表头。 -表示表格中的一个单元格。 caption、thead、tbody、tfoot -caption表示表格的标题。 -thead表示表格的头部。 -tbody表示表格的主体。 -tfoot表示表格的底部。 1.3 合并单元格 合并单元格指将两个或两个以上的单元格合并为一个单元格。 合并单元格可以通过在th或td中设置属性来完成。 横向合并 colspan 纵向合并 rowspan 1.4 表格的样式 之前学习的很多属性都可以用来设置表格的样式，比如color可以用 来设置文本的颜色。padding可以设置内容和表格边框的距离。 text-align：设置文本的水平对齐。 vertical-align：设置文本的垂直对齐。 – 可选值：top、baseline、middle、bottom border-spacing：边框间距 border-collapse：合并边框 – collapse：合并边框 – separate：不合并边框 2. 表单2.1 表单概述 现实生活中的表单是用来提交信息的。 网页中的表单是用来向服务器提交信息的，我们最常用到的表单就是baidu的搜索框。 表单可以将用户填写的信息提交的服务器 2.2 表单项12345文本框 &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;密码框 &lt;input type=&quot;password&quot; name=&quot;pwd&quot;&gt;多选框 &lt;input type=&quot;checkbox&quot; name=&quot;sports&quot;&gt; 单选框 &lt;input type=&quot;radio&quot; name=&quot;gender&quot;&gt;提交按钮 &lt;input type=&quot;submit&quot; value=&quot; 提交 &quot;&gt;下拉列表 &lt;select&gt; &lt;option&gt;北京&lt;/option&gt; &lt;/select&gt; 2.3 表单标签 inpute input是使用的最多的表单项，它可以 根据不同的type属性呈现不同的状态。 type属性可选值： – text：文本框 – password：密码框 – submit：提交按钮 – radio：单选按钮 – checkbox：多选框 – reset ：重置按钮 select、option -select用于创建一个下拉列表。 -option表示下拉列表中的列表项。 -optgroup用于为列表项分组。 textarea textarea用来创建一个文本域，实际效果和 文本框类似，只是可以输入多行数据。 可用属性： -cols：文本域的列数 -rows：文本域的行数 fieldset、legend、label -fieldset用来为表单项进行分组。 -legend用于指定每组的名字。 -label标签用来为表单项定义描述文字。]]></content>
@@ -109,9 +120,9 @@
         <category>java</category>
       </categories>
       <tags>
+        <tag>流程控制语句</tag>
         <tag>Path环境变量</tag>
         <tag>java基础语法</tag>
-        <tag>流程控制语句</tag>
         <tag>运算符</tag>
         <tag>数据输入</tag>
       </tags>
@@ -135,5 +146,10 @@
     <title><![CDATA[Hello World]]></title>
     <url>%2F2019%2F10%2F08%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[我的博客搭建过程]]></title>
+    <url>%2F2019%2F08%2F06%2F%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;在b站上看了codesheep和geekmubai的视频教程（视频是Mac系统），二者结合，搭建了自己的博客（我的是Windows系统）。&emsp;&emsp;第一次搭建的时候感觉很难，总会时不时地出错。熬夜到两点搭建好以后，很不幸的是——第二天打开电脑的时候电脑出问题了，于是给电脑重新装了系统，然后就什么都没了（因为blog文件夹我也忘记拷了）。所以又重新搭建了一次，这次感觉也不是那么难，于是便自己整理了一下搭建的过程并记录了下来，如下所示：&emsp;&emsp;1.去官网安装node.js &emsp;&emsp;&emsp;&ensp;打开命令行 &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;npm -v （查看npm是否安装好） &emsp;&emsp;&emsp;&ensp;6.9.0 &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;node -v （查看node是否安装好） &emsp;&emsp;&emsp;&ensp;10.16.0&emsp;&emsp;2.安装hexo博客框架 &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;npm install -g cnpm –registry=https://registry.npm.taobao.org (用npm安装cnpm,把镜像源指向淘宝) &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;cnpm &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;cnpm -v （查看cnpm是否安装好） &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;cnpm install -g hexo-cli （用cnpm安装hexo博客框架）&emsp;&emsp;3.建立一个空的blog文件夹 &emsp;&emsp;&emsp;&ensp;C:\Users\颖&gt;cd blog （进入blog文件夹里） &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo init （初始化一个博客，会生成一些东西可以在命令行用dir查看） &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo s （在本地启动博客）&emsp;&emsp;4.把博客部署到github,在github中新建一个仓库，这个仓库的名称必须是Git名字+github.io &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;cnpm install –save hexo-deployer-git （安装一个部署插件）&emsp;&emsp;5.打开blog中的_config.yml文件，用记事本打开到最底部，做如下修改： &emsp;&emsp;&emsp;&ensp;deploy: &emsp;&emsp;&emsp;&ensp;type: git &emsp;&emsp;&emsp;&ensp;repo: https://github.com/geekying/geekying.github.io.git (github中新建的仓库的地址) &emsp;&emsp;&emsp;&ensp;branch: master&emsp;&emsp;6.去官网下载git，安装完成后做如下操作： &emsp;&emsp;&emsp;&ensp;$ git config –global user.name “geekying” &emsp;&emsp;&emsp;&ensp;$ git config –global user.email “zzuli_wcy0511@sina.com“ &emsp;&emsp;&emsp;&ensp;$ ssh-keygen -t rsa -C “zzuli_0511@sina.com“&emsp;&emsp;7.回到命令行，完成部署 &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo d （hexo deploy）&emsp;&emsp;8.更换主题 （我换成了yilia主题https://github.com/litten/hexo-theme-yilia） &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia （克隆一下主题） &emsp;&emsp;&ensp;打开blog中的.config文件，用记事本打开到最底部，做如下修改： &emsp;&emsp;&emsp;&ensp;themes：yilia &emsp;&emsp;&ensp;回到命令行 &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo clean &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo g (generate生成) &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo s (server) &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo d (deploy)&emsp;&emsp;9.新建一篇博客 &emsp;&emsp;&emsp;&ensp;C:\Users\颖\blog&gt;hexo n “标题”&emsp;&emsp;&ensp;在blog文件夹里找到source/_post中的markdown文件，进行内容编辑，编辑好之后重复更换主题的最后四条语句即可。&emsp;&emsp;暂时用的是别人的主题，作者是在blog文件夹中的_config.yml文件中更换的，头像、git、微博等内容都是在blog/themes/yilia中的_config.yml文件中更换的。至于如何制作主题，我还在学习的过程中。]]></content>
   </entry>
 </search>
