@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. 盒子模型1.1 盒子概述 CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。 1.2 盒子模型 一个盒子我们会分成几个部分： – 内容区(content)">
+<meta name="description" content="1. 盒子模型1.1 盒子概述 CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。  1.2 盒子模型 一个盒子我们会分成几个部分： – 内容区(content)">
 <meta name="keywords" content="css,css盒子模型,溢出,定位,css背景设置">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS盒子模型+元素背景设置">
 <meta property="og:url" content="http://yoursite.com/2019/10/09/B-03-CSS盒子模型+元素背景设置/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. 盒子模型1.1 盒子概述 CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。 1.2 盒子模型 一个盒子我们会分成几个部分： – 内容区(content)">
+<meta property="og:description" content="1. 盒子模型1.1 盒子概述 CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。  1.2 盒子模型 一个盒子我们会分成几个部分： – 内容区(content)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-10T04:24:55.357Z">
+<meta property="og:updated_time" content="2019-10-10T13:54:36.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS盒子模型+元素背景设置">
-<meta name="twitter:description" content="1. 盒子模型1.1 盒子概述 CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。 1.2 盒子模型 一个盒子我们会分成几个部分： – 内容区(content)">
+<meta name="twitter:description" content="1. 盒子模型1.1 盒子概述 CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。  1.2 盒子模型 一个盒子我们会分成几个部分： – 内容区(content)">
 
 
 
@@ -420,23 +420,24 @@
 
       
         <h2 id="1-盒子模型"><a href="#1-盒子模型" class="headerlink" title="1. 盒子模型"></a>1. 盒子模型</h2><h3 id="1-1-盒子概述"><a href="#1-1-盒子概述" class="headerlink" title="1.1 盒子概述"></a>1.1 盒子概述</h3><ul>
-<li><p>CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。</p>
-<h3 id="1-2-盒子模型"><a href="#1-2-盒子模型" class="headerlink" title="1.2 盒子模型"></a>1.2 盒子模型</h3></li>
+<li>CSS处理网页时，它认为每个元素都包含在一 个不可见的盒子里，这样方便布局。</li>
+</ul>
+<h3 id="1-2-盒子模型"><a href="#1-2-盒子模型" class="headerlink" title="1.2 盒子模型"></a>1.2 盒子模型</h3><ul>
 <li><p>一个盒子我们会分成几个部分：</p>
 <p>– 内容区(content)  </p>
 <a id="more"></a>
 <p>– 内边距(padding)</p>
 <p>– 边框(border) </p>
 <p>– 外边距(margin)</p>
-<h3 id="1-3-内容区"><a href="#1-3-内容区" class="headerlink" title="1.3 内容区"></a>1.3 内容区</h3></li>
-<li><p>内容区指的是盒子中放置内容的区域，也就是元素 中的文本内容，子元素都是存在于内容区中的。</p>
 </li>
-<li><p>如果没有为元素设置内边距和边框，则内容区大小 默认和盒子大小是一致的。</p>
-</li>
-<li><p>通过width和height两个属性可以设置内容区的大 小。</p>
-</li>
-<li><p>width和height属性只适用于块元素。</p>
-<h3 id="1-4-内边距"><a href="#1-4-内边距" class="headerlink" title="1.4 内边距"></a>1.4 内边距</h3></li>
+</ul>
+<h3 id="1-3-内容区"><a href="#1-3-内容区" class="headerlink" title="1.3 内容区"></a>1.3 内容区</h3><ul>
+<li>内容区指的是盒子中放置内容的区域，也就是元素 中的文本内容，子元素都是存在于内容区中的。</li>
+<li>如果没有为元素设置内边距和边框，则内容区大小 默认和盒子大小是一致的。</li>
+<li>通过width和height两个属性可以设置内容区的大 小。</li>
+<li>width和height属性只适用于块元素。</li>
+</ul>
+<h3 id="1-4-内边距"><a href="#1-4-内边距" class="headerlink" title="1.4 内边距"></a>1.4 内边距</h3><ul>
 <li><p>内边距指的就是元素内容区与边框以内 的空间。 </p>
 </li>
 <li><p>默认情况下width和height不包含padding的大小。</p>
@@ -456,7 +457,9 @@
 <p>– 同时指定上左右下四个方向的内边距</p>
 </li>
 <li><p>同时在css中还提供了padding-top、padding-right、paddingright、padding-bottom分别用来指定四个方向的内边距。</p>
-<h3 id="1-5-边框"><a href="#1-5-边框" class="headerlink" title="1.5 边框"></a>1.5 边框</h3></li>
+</li>
+</ul>
+<h3 id="1-5-边框"><a href="#1-5-边框" class="headerlink" title="1.5 边框"></a>1.5 边框</h3><ul>
 <li><p>可以在元素周围创建边框，边框是元素可见框的最外部。</p>
 </li>
 <li><p>可以使用border属性来设置盒子的边框： </p>
@@ -477,15 +480,15 @@
 <p>– ridge（脊线） </p>
 <p>– inset（凹边） </p>
 <p>– outset（凸边）</p>
-<h3 id="1-6-外边距"><a href="#1-6-外边距" class="headerlink" title="1.6 外边距"></a>1.6 外边距</h3></li>
-<li><p>外边距是元素边框与周围元素相距的空间。</p>
 </li>
-<li><p>使用margin属性可以设置外边距。</p>
-</li>
-<li><p>用法和padding类似，同样也提供了四个方向的 margin-top/right/bottom/left。 </p>
-</li>
-<li><p>当将左右外边距设置为auto时，浏览器会将左右外 边距设置为相等，所以这行代码margin:0 auto可以使元素居中。</p>
-<h2 id="2-盒子的位置及大小相关"><a href="#2-盒子的位置及大小相关" class="headerlink" title="2. 盒子的位置及大小相关"></a>2. 盒子的位置及大小相关</h2><h3 id="2-1-display"><a href="#2-1-display" class="headerlink" title="2.1 display"></a>2.1 display</h3></li>
+</ul>
+<h3 id="1-6-外边距"><a href="#1-6-外边距" class="headerlink" title="1.6 外边距"></a>1.6 外边距</h3><ul>
+<li>外边距是元素边框与周围元素相距的空间。</li>
+<li>使用margin属性可以设置外边距。</li>
+<li>用法和padding类似，同样也提供了四个方向的 margin-top/right/bottom/left。 </li>
+<li>当将左右外边距设置为auto时，浏览器会将左右外 边距设置为相等，所以这行代码margin:0 auto可以使元素居中。<h2 id="2-盒子的位置及大小相关"><a href="#2-盒子的位置及大小相关" class="headerlink" title="2. 盒子的位置及大小相关"></a>2. 盒子的位置及大小相关</h2></li>
+</ul>
+<h3 id="2-1-display"><a href="#2-1-display" class="headerlink" title="2.1 display"></a>2.1 display</h3><ul>
 <li><p>不能为行内元素设置width、height、 margin-top和margin-bottom。</p>
 </li>
 <li><p>可以通过修改display来修改元素的性 质。 </p>
@@ -495,7 +498,9 @@
 <p>– inline：设置元素为行内元素 </p>
 <p>– inline-block：设置元素为行内块元素 </p>
 <p>– none：隐藏元素（元素将在页面中完全消失）</p>
-<h3 id="2-2-visibility"><a href="#2-2-visibility" class="headerlink" title="2.2 visibility"></a>2.2 visibility</h3></li>
+</li>
+</ul>
+<h3 id="2-2-visibility"><a href="#2-2-visibility" class="headerlink" title="2.2 visibility"></a>2.2 visibility</h3><ul>
 <li><p>visibility属性主要用于元素是否可见。</p>
 </li>
 <li><p>和display不同，使用visibility隐藏一个元素，隐藏后其在文档中所占的位置会依然保持，不会被其他元素覆盖。</p>
@@ -503,7 +508,9 @@
 <li><p>可选值：</p>
 <p>– visible：可见的 </p>
 <p>– hidden：隐藏的(占位)</p>
-<h3 id="2-3-overflow"><a href="#2-3-overflow" class="headerlink" title="2.3 overflow"></a>2.3 overflow</h3></li>
+</li>
+</ul>
+<h3 id="2-3-overflow"><a href="#2-3-overflow" class="headerlink" title="2.3 overflow"></a>2.3 overflow</h3><ul>
 <li><p>当相关标签里面的内容超出了样式的宽度 和高度是，就会发生一些奇怪的事情，浏 览器会让内容溢出盒子。</p>
 </li>
 <li><p>可以通过overflow来控制内容溢出的情况。</p>
@@ -513,9 +520,12 @@
 <p>– scroll：添加滚动条(不管是否溢出，并且水平和垂直都添加) </p>
 <p>– auto：根据需要添加滚动条</p>
 <p>– hidden：隐藏超出盒子的内容</p>
-<h3 id="2-4-文档流"><a href="#2-4-文档流" class="headerlink" title="2.4 文档流"></a>2.4 文档流</h3></li>
-<li><p>文档流指的是文档中可现实的对象在排列时所占用的位置。</p>
-<h3 id="2-5-浮动"><a href="#2-5-浮动" class="headerlink" title="2.5 浮动"></a>2.5 浮动</h3></li>
+</li>
+</ul>
+<h3 id="2-4-文档流"><a href="#2-4-文档流" class="headerlink" title="2.4 文档流"></a>2.4 文档流</h3><ul>
+<li>文档流指的是文档中可现实的对象在排列时所占用的位置。</li>
+</ul>
+<h3 id="2-5-浮动"><a href="#2-5-浮动" class="headerlink" title="2.5 浮动"></a>2.5 浮动</h3><ul>
 <li><p>浮动指的是使元素脱离原来的文本流，在父元素中浮动起来。</p>
 </li>
 <li><p>浮动使用float属性。</p>
@@ -537,7 +547,9 @@
 <li><p>元素浮动以后即完全脱离文档流，这时不会再影响父元素的高度。也就是浮动元素不会撑开父元素。</p>
 </li>
 <li><p>浮动元素默认会变为块元素，即使设置display:inline以后其依然是个块元素。</p>
-<h3 id="2-6-清除浮动"><a href="#2-6-清除浮动" class="headerlink" title="2.6 清除浮动"></a>2.6 清除浮动</h3></li>
+</li>
+</ul>
+<h3 id="2-6-清除浮动"><a href="#2-6-清除浮动" class="headerlink" title="2.6 清除浮动"></a>2.6 清除浮动</h3><ul>
 <li><p>clear属性可以用于清除元素周围的浮动对元素的影响。</p>
 </li>
 <li><p>元素不会因为上方出现了浮动元素而改变位置。 </p>
@@ -547,101 +559,172 @@
 <p>– right：忽略右侧浮动 </p>
 <p>– both：忽略全部浮动 </p>
 <p>– none：不忽略浮动，默认值</p>
-<h3 id="2-7-定位"><a href="#2-7-定位" class="headerlink" title="2.7 定位"></a>2.7 定位</h3></li>
-<li><p>position属性可以控制Web浏览器如何以及在何处显示特定的元素。</p>
 </li>
-<li><p>可以使用position属性把一个元素放置到网页中的任何位置。</p>
+</ul>
+<h3 id="2-7-定位"><a href="#2-7-定位" class="headerlink" title="2.7 定位"></a>2.7 定位</h3><ul>
+<li><p>定位：定位指的就是将指定的元素摆放到页面的任意位置，通过定位可以任意的摆放元素。</p>
 </li>
-<li><p>可选值： </p>
-<p>– static </p>
-<p>– relative </p>
-<p>– absolute </p>
-<p>– fixed</p>
-<h3 id="2-8-相对定位"><a href="#2-8-相对定位" class="headerlink" title="2.8 相对定位"></a>2.8 相对定位</h3></li>
+<li><p>通过position属性来设置元素的定位</p>
+</li>
+<li><p>可选值：</p>
+<p>-static：默认值，元素没有开启定位</p>
+<p>-relative：开启元素的相对定位</p>
+<p>-absolute：开启元素的绝对定位</p>
+<p>-fixed：开启元素的固定定位（也是绝对定位的一种）</p>
+</li>
+<li><p>当开启了元素的定位（position属性值是一个非static的值）时，可以通过left right top bottom四个属性来设置元素的偏移量<br>– left：元素相对于其定位位置的左侧偏移量。</p>
+<p>– right：元素相对于其定位位置的右侧偏移量。</p>
+<p>– top：元素相对于其定位位置的上边的偏移量。</p>
+<p>– bottom：元素相对于其定位位置下边的偏移量。</p>
+<p>*通常偏移量只需要使用两个就可以对一个元素进行定位。一般选择水平方向的一个偏移量和垂直方向的偏移量来为一个元素进行定位。</p>
+</li>
+</ul>
+<p>*/</p>
+<h3 id="2-8-相对定位"><a href="#2-8-相对定位" class="headerlink" title="2.8 相对定位"></a>2.8 相对定位</h3><ul>
 <li><p>每个元素在页面的文档流中都有一个自然位置。相对于这个位置对元素进行移动就称为相对定位。周围的元素完全不受此影响。</p>
 </li>
-<li><p>将position属性设置为relative时，则开启了元素的相对定位。</p>
+<li><p>当元素的position属性设置为relative时，则开启了元素的相对定位。</p>
 </li>
-<li><p>开启了相对定位以后，可以使用top、right、 bottom、left四个属性对元素进行定位。</p>
+<li><p>开启了相对定位以后，可以使用top、right、bottom、left四个属性对元素进行定位。</p>
 </li>
 <li><p>相对定位的特点:</p>
+<p>– 当开启了元素的相对定位以后，而不设置偏移量时，元素不会发生任何变化。</p>
+<p>– 相对定位是相对于元素在文档流中原来的位置进行定位。</p>
+<p>– 相对定位的元素不会脱离文档流。</p>
+<p>– 相对定位会使元素的层级提升，使元素可以覆盖文本流中的元素。</p>
+<p>– 相对定位不会改变元素的性质，块还是块，内联还是内联</p>
 </li>
 </ul>
-<p>   – 如果不设置元素的偏移量，元素位置不会发生改变。</p>
-<p>   – 相对定位不会使元素脱离文本流。元素在文本流中的位置不会改变。</p>
-<p>   – 相对定位不会改变元素原来的特性。</p>
-<p>   – 相对定位会使元素的层级提升，使元素可以覆盖文 本流中的元素。</p>
 <h3 id="2-9-绝对定位"><a href="#2-9-绝对定位" class="headerlink" title="2.9 绝对定位"></a>2.9 绝对定位</h3><ul>
-<li>绝对定位指使元素相对于html元素或离他最近的祖先定位元素进行定位。</li>
-<li>将position属性设置为absolute时，则开启了元素的绝对定位。</li>
-<li>开启了绝对定位以后，可以使用top、right、 bottom、left四个属性对元素进行定位。</li>
-<li>绝对定位的特点：</li>
+<li><p>绝对定位指使元素相对于html元素或离他最近的祖先定位元素进行定位。</p>
+</li>
+<li><p>当position属性值设置为absolute时，则开启了元素的绝对定位。</p>
+</li>
+<li><p>开启了绝对定位以后，可以使用top、right、 bottom、left四个属性对元素进行定位。</p>
+</li>
+<li><p>绝对定位的特点：</p>
+<p>– 开启绝对定位，会使元素脱离文档流。</p>
+<p>– 开启绝对定位以后，如果不设置偏移量，则元素的位置不会发生变化。</p>
+<p>– 绝对定位是相对于离他最近的开启了定位的祖先元素进行定位的（一般情况，开启了子元素的绝对定位都会同时开启父元素的相对定位）。如果所有的祖先元素都没有开启定位，则会相对于浏览器窗口进行定位。</p>
+<p>– 绝对定位会使元素提升一个层级。</p>
+<p>– 绝对定位会改变元素的性质(内联元素变成块元素)。</p>
+<p>– 块元素的宽度和高度默认都被内容撑开</p>
+</li>
 </ul>
-<p>  – 绝对定位会使元素完全脱离文本流。</p>
-<p>  – 绝对定位的块元素的宽度会被其内容撑开。</p>
-<p>  – 绝对定位会使行内元素变成块元素。</p>
-<p>  – 一般使用绝对定位时会同时为其父元素指定一 个相对定位，以确保元素可以相对于父元素进 行定位。</p>
 <h3 id="2-10-固定定位"><a href="#2-10-固定定位" class="headerlink" title="2.10 固定定位"></a>2.10 固定定位</h3><ul>
-<li><p>固定定位的元素会被锁定在屏幕的某个位置上，当 访问者滚动网页时，固定元素会在屏幕上保持不动。</p>
+<li><p>固定定位的元素会被锁定在屏幕的某个位置上，当访问者滚动网页时，固定元素会在屏幕上保持不动。</p>
 </li>
-<li><p>当将position属性设置为fixed时，则开启了元素的 固定定位。</p>
+<li><p>当将position属性设置为fixed时，则开启了元素的固定定位。</p>
 </li>
-<li><p>当开启了固定定位以后，可以使用top、right、 bottom、left四个属性对元素进行定位。</p>
+<li><p>当开启了固定定位以后，可以使用top、right、bottom、left四个属性对元素进行定位。</p>
 </li>
-<li><p>固定定位的其他特性和绝对定位类似。</p>
-<h3 id="2-11-z-index"><a href="#2-11-z-index" class="headerlink" title="2.11 z-index"></a>2.11 z-index</h3></li>
-<li><p>元素开启定位以后就可以设置z-index这个属性。</p>
+<li><p>绝对定位的特点：</p>
+<p>–固定定位也是一种绝对定位，它的大部分特点都和绝对定位一样。</p>
+<p>–固定定位永远都会相对于浏览器窗口进行定位。</p>
+<p>– 固定定位会固定在浏览器窗口某个位置，不会随滚动条滚动。</p>
+<p>– IE6不支持固定定位。</p>
+<blockquote>
+<p>后三条是不同之处。</p>
+</blockquote>
 </li>
-<li><p>这个属性可以提升定位元素所在的层级。</p>
+</ul>
+<h3 id="2-11-层级"><a href="#2-11-层级" class="headerlink" title="2.11 层级"></a>2.11 层级</h3><ul>
+<li>如果定位元素的层级是一样，则下边的元素会盖住上边的。</li>
+<li>通过z-index属性可以用来设置元素的层级。可以为z-index指定一个正整数作为值，该值将会作为当前元素的层级。</li>
+<li>层级越高，越优先显示。(也就是z-index 值较大的元素会显示在网页的最上层)</li>
+<li>对于没有开启定位的元素不能使用z-index。</li>
+</ul>
+<h2 id="3-css背景设置"><a href="#3-css背景设置" class="headerlink" title="3. css背景设置"></a>3. css背景设置</h2><h3 id="3-0-background"><a href="#3-0-background" class="headerlink" title="3.0 background"></a>3.0 background</h3><ul>
+<li>background是背景的简写属性，通过这个属性可以一次性设置多个样式，而且样式的顺序没有要求。 </li>
+<li>例如： background: green url(img/1.jpg) no-repeat center center fixed</li>
+</ul>
+<h3 id="3-1-background-color"><a href="#3-1-background-color" class="headerlink" title="3.1 background-color"></a>3.1 background-color</h3><ul>
+<li>background-color属性用来为元素设置背景颜色。</li>
+<li>需要指定一个颜色值，当指定了一个颜色以后，整个元素的可见区域都会使用这个颜色作为背景色。</li>
+<li>如果不设置背景颜色，元素默认背景颜色为透明，实际上会显示父元素的背景颜色。</li>
+</ul>
+<h3 id="3-2-background-image"><a href="#3-2-background-image" class="headerlink" title="3.2 background-image"></a>3.2 background-image</h3><ul>
+<li><p>使用background-image来设置背景图片</p>
 </li>
-<li><p>z-index可以指定一个整数作为参数，值越大元素显示的优先级越高，也就是z-index 值较大的元素会显示在网页的最上层。</p>
-<h2 id="3-css背景设置"><a href="#3-css背景设置" class="headerlink" title="3. css背景设置"></a>3. css背景设置</h2><h3 id="3-0-background"><a href="#3-0-background" class="headerlink" title="3.0 background"></a>3.0 background</h3></li>
-<li><p>background是背景的简写属性，通过这个属性可以一次性设置多个样式，而且样式的顺序没有要求。 </p>
+<li><p>语法：background-image:url(相对路径);</p>
 </li>
-<li><p>例如： background: green url(1.jpg) no-repeat center center fixed</p>
-<h3 id="3-1-background-color"><a href="#3-1-background-color" class="headerlink" title="3.1 background-color"></a>3.1 background-color</h3></li>
-<li><p>background-color属性用来为元素设置背景颜色。</p>
+<li><p>显示规则：</p>
+<p>– 如果背景图片大于元素，默认会显示图片的左上角。</p>
+<p>– 如果背景图片和元素一样大，则会将背景图片全部显示。</p>
+<p>– 如果背景图片小于元素大小，则会默认将背景图片平铺以充满元素。</p>
 </li>
-<li><p>需要指定一个颜色值，当指定了一个颜色以后，整个元素的可见区域都会使用这个颜色作为背景色。</p>
+<li><p>可以同时为一个元素指定背景颜色和背景图片</p>
+<p>– 这样背景颜色将会作为背景图片的底色。</p>
+<p>– 一般情况下设置背景图片时都会同时指定一个背景颜色。</p>
 </li>
-<li><p>如果不设置背景颜色，元素默认背景颜色为透明，实际上会显示父元素的背景颜色。</p>
-<h3 id="3-2-background-image"><a href="#3-2-background-image" class="headerlink" title="3.2 background-image"></a>3.2 background-image</h3></li>
-<li><p>background-image可以为元素指定背景图片。</p>
+</ul>
+<h3 id="3-3-background-repeat"><a href="#3-3-background-repeat" class="headerlink" title="3.3 background-repeat"></a>3.3 background-repeat</h3><ul>
+<li><p>background-repeat用于设置背景图片的重复方式。</p>
 </li>
-<li><p>和background-color类似，这不过这里使用的是一个图片作为背景。</p>
-</li>
-<li><p>需要一个url地址作为参数，url地址需要指向一个外部图片的路径。</p>
-</li>
-<li><p>例如：background-image: url(1.jpg)</p>
-<h3 id="3-3-background-repeat"><a href="#3-3-background-repeat" class="headerlink" title="3.3 background-repeat"></a>3.3 background-repeat</h3></li>
-<li><p>background-repeat用于控制背景图片的 重复方式。</p>
+<li><p>可选值：<br>– repeat：默认值，背景图片会双方向重复（平铺）。</p>
+<p>– no-repeat：背景图片不会重复，有多大就显示多大。</p>
+<p>– repeat-x：背景图片沿水平方向重复。</p>
+<p>– repeat-y：背景图片沿垂直方向重复。</p>
 </li>
 <li><p>如果只设置背景图片默认背景图片将会使 用平铺的方式，可以通过该属性进行修改。</p>
 </li>
-<li><p>可选值：</p>
-<p>– repeat：默认值，图片左右上下平铺 </p>
-<p>– no-repeat：只显示图片一次，不会平铺 </p>
-<p>– repeat-x：沿x轴水平平铺一张图片</p>
-<p>– repeat-y：沿y轴水平平铺一张图片</p>
-<h3 id="3-4-background-position"><a href="#3-4-background-position" class="headerlink" title="3.4 background-position"></a>3.4 background-position</h3></li>
-<li><p>background-position用来精确控制背景 图片在元素中的位置。</p>
+</ul>
+<h3 id="3-4-background-position"><a href="#3-4-background-position" class="headerlink" title="3.4 background-position"></a>3.4 background-position</h3><ul>
+<li><p>通过background-position可以调整背景图片在元素中的位置(背景图片默认是贴着元素的左上角显示)。</p>
 </li>
-<li><p>可以通过三种方式来确定图片在水平方向 和垂直方向的起点。 </p>
-<p>– 关键字：top right bottom left center </p>
-<p>– 百分比 </p>
+<li><p>可选值：该属性可以使用 top right left bottom center中的两个值，来指定一个背景图片的位置</p>
+<p>– top left 左上</p>
+<p>– bottom right 右下</p>
+<p>– 如果只给出一个值，则第二个值默认是center</p>
+</li>
+<li><p>也可以直接指定两个偏移量：</p>
+<ul>
+<li><p>第一个值是水平偏移量</p>
+<p>– 如果指定的是一个正值，则图片会向右移动指定的像素。</p>
+<p>– 如果指定的是一个负值，则图片会向左移动指定的像素。</p>
+</li>
+<li><p>第二个是垂直偏移量</p>
+<p>– 如果指定的是一个正值，则图片会向下移动指定的像素。</p>
+<p>– 如果指定的是一个负值，则图片会向上移动指定的像素。</p>
+</li>
+</ul>
+</li>
+<li><p>可以通过三种方式来确定图片在水平方向和垂直方向的起点。 </p>
+<p>– 关键字 </p>
 <p>– 数值</p>
-<h3 id="3-5-background-attachment"><a href="#3-5-background-attachment" class="headerlink" title="3.5 background-attachment"></a>3.5 background-attachment</h3></li>
-<li><p>background-attachment用来设置背景图 片是否随页面滚动。</p>
+<p>– 百分比</p>
 </li>
-<li><p>可选值： </p>
-<p>– scroll：随页面滚动 </p>
-<p>– fixed：不随页面滚动</p>
-<h3 id="3-6-CSS-Sprite-雪碧图"><a href="#3-6-CSS-Sprite-雪碧图" class="headerlink" title="3.6 CSS Sprite (雪碧图)"></a>3.6 CSS Sprite (雪碧图)</h3></li>
+</ul>
+<h3 id="3-5-background-attachment"><a href="#3-5-background-attachment" class="headerlink" title="3.5 background-attachment"></a>3.5 background-attachment</h3><ul>
+<li><p>background-attachment用来设置背景图片是否随页面一起滚动</p>
+</li>
+<li><p>可选值：</p>
+<p>– scroll：默认值，背景图片随着窗口滚动。</p>
+<p>– fixed：背景图片会固定在某一位置，不随页面滚动。</p>
+</li>
+<li><p>当背景图片的background-attachment设置为fixed时，    背景图片的定位永远相对于浏览器的窗口。</p>
+</li>
+<li><p>不随窗口滚动的图片，一般都是设置给body，而不设置给其他元素。</p>
+</li>
+</ul>
+<h3 id="3-6-CSS-Sprite-雪碧图"><a href="#3-6-CSS-Sprite-雪碧图" class="headerlink" title="3.6 CSS Sprite (雪碧图)"></a>3.6 CSS Sprite (雪碧图)</h3><ul>
 <li><p>CSS Sprites是一种网页图片应用处理方式。 </p>
 </li>
 <li><p>通过这种方式我们可以将网页中的零星图 片集中放到一张大图上。</p>
 </li>
 <li><p>这样一来，一次请求便可以同时加载多张 图片，大大提高了图片的加载效率。</p>
+</li>
+<li><p>消除按钮闪烁(闪烁会造成一次不佳的用户体验)。</p>
+</li>
+<li><p>产生问题的原因：</p>
+<p>– 背景图片是以外部资源的形式加载进网页的，浏览器每加载一个外部资源就需要单独的发送一次请求。<br>– 但是我们外部资源并不是同时加载，浏览器会在资源被使用才去加载资源。</p>
+<p>– 由于加载图片需要一定的时间，所以在加载和显示过程会有一段时间，背景图片无法显示，导致出现闪烁的情况。</p>
+<p>– 为了解决该问题，可以将三个图片整合为一张图片，这样可以同时将三张图片一起加载，就不会出现闪烁的问题了。</p>
+<p>– 然后在通过background-position来切换要显示的图片的位置，这种技术叫做图片整合技术（CSS-Sprite）。</p>
+</li>
+<li><p>优点：</p>
+<p>– 将多个图片整合为一张图片里，浏览器只需要发送一次请求，可以同时加载多个图片，提高访问效率，提高了用户体验。</p>
+<p>– 将多个图片整合为一张图片，减小了图片的总大小，提高请求的速度，增加了用户体验。</p>
 </li>
 </ul>
 
@@ -692,7 +775,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/09/B-04-CSS之表格的基本设置/" rel="prev" title="CSS之表格和表单">
+              <a href="/2019/10/09/B-04-CSS之表格和表单/" rel="prev" title="CSS之表格和表单">
                 CSS之表格和表单 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -897,7 +980,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-盒子模型"><span class="nav-number">1.</span> <span class="nav-text">1. 盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-盒子概述"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 盒子概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-盒子模型"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 盒子模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-内容区"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 内容区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-内边距"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 内边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-边框"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-外边距"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 外边距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-盒子的位置及大小相关"><span class="nav-number">2.</span> <span class="nav-text">2. 盒子的位置及大小相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-display"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 display</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-visibility"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 visibility</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-overflow"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 overflow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-文档流"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-浮动"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-清除浮动"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 清除浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-定位"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-相对定位"><span class="nav-number">2.8.</span> <span class="nav-text">2.8 相对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-绝对定位"><span class="nav-number">2.9.</span> <span class="nav-text">2.9 绝对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-10-固定定位"><span class="nav-number">2.10.</span> <span class="nav-text">2.10 固定定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-11-z-index"><span class="nav-number">2.11.</span> <span class="nav-text">2.11 z-index</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-css背景设置"><span class="nav-number">3.</span> <span class="nav-text">3. css背景设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-0-background"><span class="nav-number">3.1.</span> <span class="nav-text">3.0 background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-background-color"><span class="nav-number">3.2.</span> <span class="nav-text">3.1 background-color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-background-image"><span class="nav-number">3.3.</span> <span class="nav-text">3.2 background-image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-background-repeat"><span class="nav-number">3.4.</span> <span class="nav-text">3.3 background-repeat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-background-position"><span class="nav-number">3.5.</span> <span class="nav-text">3.4 background-position</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-background-attachment"><span class="nav-number">3.6.</span> <span class="nav-text">3.5 background-attachment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-CSS-Sprite-雪碧图"><span class="nav-number">3.7.</span> <span class="nav-text">3.6 CSS Sprite (雪碧图)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-盒子模型"><span class="nav-number">1.</span> <span class="nav-text">1. 盒子模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-盒子概述"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 盒子概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-盒子模型"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 盒子模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-内容区"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 内容区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-内边距"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 内边距</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-边框"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 边框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-外边距"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 外边距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-盒子的位置及大小相关"><span class="nav-number">2.</span> <span class="nav-text">2. 盒子的位置及大小相关</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-display"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 display</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-visibility"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 visibility</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-overflow"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 overflow</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-文档流"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 文档流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-浮动"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-清除浮动"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 清除浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-定位"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-相对定位"><span class="nav-number">2.8.</span> <span class="nav-text">2.8 相对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-绝对定位"><span class="nav-number">2.9.</span> <span class="nav-text">2.9 绝对定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-10-固定定位"><span class="nav-number">2.10.</span> <span class="nav-text">2.10 固定定位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-11-层级"><span class="nav-number">2.11.</span> <span class="nav-text">2.11 层级</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-css背景设置"><span class="nav-number">3.</span> <span class="nav-text">3. css背景设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-0-background"><span class="nav-number">3.1.</span> <span class="nav-text">3.0 background</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-background-color"><span class="nav-number">3.2.</span> <span class="nav-text">3.1 background-color</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-background-image"><span class="nav-number">3.3.</span> <span class="nav-text">3.2 background-image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-background-repeat"><span class="nav-number">3.4.</span> <span class="nav-text">3.3 background-repeat</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-background-position"><span class="nav-number">3.5.</span> <span class="nav-text">3.4 background-position</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-background-attachment"><span class="nav-number">3.6.</span> <span class="nav-text">3.5 background-attachment</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-CSS-Sprite-雪碧图"><span class="nav-number">3.7.</span> <span class="nav-text">3.6 CSS Sprite (雪碧图)</span></a></li></ol></li></ol></div>
             
 
           </div>
