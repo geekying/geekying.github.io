@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[CSS之CSS Hack(不推荐使用)]]></title>
+    <url>%2F2019%2F10%2F11%2FB-07-CSS%E4%B9%8BCSS-Hack%2F</url>
+    <content type="text"><![CDATA[用到时进行查阅即可。]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+        <category>CSS之CSS Hack</category>
+      </categories>
+      <tags>
+        <tag>css Hack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PS基本操作]]></title>
+    <url>%2F2019%2F10%2F11%2FB-06-CSS%E4%B9%8BPS%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[1. PS基本操作(1)1.1 设置PS的单位为像素(px) 进入PS –&gt; 界面选项 –&gt; 单位与标尺 –&gt; 像素 –&gt; 确定 1.2 标尺 ctrl + R 出现标尺，再按标尺消失。(要先放一张图片) 1.3 辅助线 鼠标放在标尺上，往下/右拖，就会出现辅助线，不需要的话再拖回去即可。(左边要选中拖动) ctrl + H ：隐藏辅助线，再按显示。 1.4 调整图片大小 alt + 滚轮 ：放大/缩小 ctrl + 1 ：恢复到100% ctrl + 0 ：适应屏幕大小 1.5 虚线框(4种) F8 ：显示虚线框选中部分的宽高等信息 ctrl + D ：让虚线框消失]]></content>
+      <categories>
+        <category>前端</category>
+        <category>PS</category>
+        <category>PS基本操作</category>
+      </categories>
+      <tags>
+        <tag>ps基本操作</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS之IE兼容问题]]></title>
+    <url>%2F2019%2F10%2F11%2FB-06-CSS%E4%B9%8BIE%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[1. IE6对图片格式png24支持度不高1.1 导致的问题 如果使用的图片格式是png24，则会导致透明效果无法正常显示。 1.2 解决方法 可以使用png8来代替png24，即可解决问题– 缺点：但是使用png8代替png24以后，图片的清晰度会有所下降。 使用JavaScript来解决该问题，需要向页面中引入一个外部的JavaScript文件，后在写一下简单的JS代码，来处理该问题。 123456&lt;!-- 在body标签的最后引入外部的JS文件 --&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;js/DD_belatedPNG_0.0.8a-min.js&quot;&gt;&lt;/script&gt;&lt;!--再创建一个新的script标签，并且编写一些js代码 --&gt;&lt;script type=&quot;text/javascript&quot;&gt; DD_belatedPNG.fix(&quot;*&quot;);&lt;/script&gt; CSS Hack – 同方法2，代码如下： 1234&lt;!--[if IE 6]&gt; &lt;script src=&quot;js/DD_belatedPNG_0.0.8a-min.js&quot;&gt;&lt;/script&gt; &lt;script type=&quot;text/javascript&quot;&gt;DD_belatedPNG.fix(&apos;img&apos;);&lt;/script&gt;&lt;![endif]--&gt;]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+        <category>CSS之IE兼容问题</category>
+      </categories>
+      <tags>
+        <tag>高度塌陷</tag>
+        <tag>IE兼容问题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS之框架集]]></title>
+    <url>%2F2019%2F10%2F11%2FB-05-CSS%E4%B9%8B%E6%A1%86%E6%9E%B6%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[1. 框架集1.1 概述 框架集和内联框架的作用类似，都是用于在一个页面中引入其他的外部的页面。 框架集可以同时引入多个页面，而内联框架只能引入一个，在h5标准中，推荐使用框架集，而不使用内联框架。 使用frameset来创建一个框架集，注意frameset不能和body出现在同一个页面中，所以要使用框架集，页面中就不可以使用body标签。 属性： – rows，指定框架集中的所有的框架，一行一行的排列。 – cols， 指定框架集中的所有的页面，一列一列的排列。 – 这两个属性frameset必须选择一个，并且需要在属性中指定每一部分所占的大小。 frameset中也可以再嵌套frameset。 frameset和iframe一样，它里边的内容都不会被搜索引擎所检索，所以如果搜索引擎检索到的页面是一个框架页的话，它是不能去判断里边的内容的。 使用框架集则意味着页面中不能有自己的内容，只能引入其他的页面，而每单独加载一个页面，浏览器都需要重新发送一次请求，引入几个页面就需要发送几次请求，用户的体验比较差。如果非得用建议使用frameset而不使用iframe。 演示： 123456789101112&lt;frameset cols=&quot;30% , * , 30%&quot;&gt; &lt;!-- 在frameset中使用frame子标签来指定要引入的页面 ,引入几个页面就写几个frame --&gt; &lt;frame src=&quot;01.表格.html&quot; /&gt; &lt;frame src=&quot;02.表格.html&quot; /&gt; &lt;!-- 嵌套一个frameset --&gt; &lt;frameset rows=&quot;30%,50%,*&quot;&gt; &lt;frame src=&quot;04.表格的布局.html&quot; /&gt; &lt;frame src=&quot;05.完善clearfix.html&quot; /&gt; &lt;frame src=&quot;06.表单.html&quot; /&gt; &lt;/frameset&gt;&lt;/frameset&gt;]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS</category>
+        <category>CSS之框架集</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+        <tag>框架集</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CSS常见问题及解决方法]]></title>
     <url>%2F2019%2F10%2F10%2FB-00-CSS%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[1. 高度塌陷1.1 塌陷原因 在文档流中，父元素的高度默认是被子元素撑开的。但是当为子元素设置浮动以后，子会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。由于父元素的高度塌陷了，则父元素下的所有元素都会向上移动，这样将会导致页面布局混乱。 1.2 解决方法（均为设置塌陷元素） 把父元素的高度写死 -缺点：不能自动适应子元素高度 根据W3C的标准，在页面中元素都一个隐含的属性叫做Block Formatting Context，简称BFC，该属性可以设置打开或者关闭，默认是关闭的。 *当开启元素的BFC以后，元素将会具有如下的特性： 1.父元素的垂直外边距不会和子元素重叠 2.开启BFC的元素不会被浮动元素所覆盖 3.开启BFC的元素可以包含浮动的子元素 *如何开启元素的BFC 1.设置元素浮动 -使用这种方式开启，虽然可以撑开父元素，但是会导致父元素的宽度丢失，而且使用这种方式也会导致下边的元素上移，不能解决问题 2.设置元素绝对定位 -与设置浮动效果相同 3.设置元素为inline-block -可以解决问题，但是会导致宽度丢失，不推荐使用这种方式 4.将元素的overflow设置为一个非visible的值 -具体代码： overflow: auto; overflow: hidden; -ie6代码： zoom: 1; *清除浮动（受的影响） 清除浮动1： 可以直接在高度塌陷的父元素的最后，添加一个空白的div，然后在对其进行清除浮动，这样可以通过这个空白的div来撑开父元素的高度，基本没有副作用。 在浮动的元素后面加一个空的兄弟元素，并给这个空元素设置清除浮动 clear: both; -缺点：使用这种方式虽然可以解决问题，但是会在页面中添加多余的结构。 清除浮动2： 可以通过after伪类向元素的最后添加一个空白的块元素，然后对其清除浮动，这样做和添加一个div的原理一样，可以达到一个相同的效果， 而且不会在页面中添加多余的div，这是我们最推荐使用的方式，几乎没有副作用 12345678910111213141516.clearfix:after&#123; /*添加一个内容*/ content: &quot;&quot;; /*转换为一个块元素*/ display: block; /*清除两侧的浮动*/ clear: both;&#125;/* * 在IE6中不支持after伪类, * 所以在IE6中还需要使用hasLayout来处理 */.clearfix&#123; zoom:1;&#125;]]></content>
+    <content type="text"><![CDATA[1. 高度塌陷1.1 塌陷原因 在文档流中，父元素的高度默认是被子元素撑开的。但是当为子元素设置浮动以后，子会完全脱离文档流，此时将会导致子元素无法撑起父元素的高度，导致父元素的高度塌陷。由于父元素的高度塌陷了，则父元素下的所有元素都会向上移动，这样将会导致页面布局混乱。 1.2 解决方法（均为设置塌陷元素） 把父元素的高度写死 -缺点：不能自动适应子元素高度 根据W3C的标准，在页面中元素都一个隐含的属性叫做Block Formatting Context，简称BFC，该属性可以设置打开或者关闭，默认是关闭的。 *当开启元素的BFC以后，元素将会具有如下的特性： 1.父元素的垂直外边距不会和子元素重叠 2.开启BFC的元素不会被浮动元素所覆盖 3.开启BFC的元素可以包含浮动的子元素 *如何开启元素的BFC 1.设置元素浮动 -使用这种方式开启，虽然可以撑开父元素，但是会导致父元素的宽度丢失，而且使用这种方式也会导致下边的元素上移，不能解决问题 2.设置元素绝对定位 -与设置浮动效果相同 3.设置元素为inline-block -可以解决问题，但是会导致宽度丢失，不推荐使用这种方式 4.将元素的overflow设置为一个非visible的值 -具体代码： overflow: auto; overflow: hidden; -ie6代码： zoom: 1; *清除浮动（受的影响） 清除浮动1： 可以直接在高度塌陷的父元素的最后，添加一个空白的div，然后在对其进行清除浮动，这样可以通过这个空白的div来撑开父元素的高度，基本没有副作用。 在浮动的元素后面加一个空的兄弟元素，并给这个空元素设置清除浮动 clear: both; -缺点：使用这种方式虽然可以解决问题，但是会在页面中添加多余的结构。 清除浮动2： 可以通过after伪类向元素的最后添加一个空白的块元素，然后对其清除浮动，这样做和添加一个div的原理一样，可以达到一个相同的效果， 而且不会在页面中添加多余的div，这是我们最推荐使用的方式，几乎没有副作用 12345678910111213141516.clearfix:after&#123; /*添加一个内容*/ content: &quot;&quot;; /*转换为一个块元素*/ display: block; /*清除两侧的浮动*/ clear: both;&#125;/* * 在IE6中不支持after伪类, * 所以在IE6中还需要使用hasLayout来处理 */.clearfix&#123; zoom:1;&#125; 完善clearfix: 同时解决外边距重叠和高度塌陷 12345678910.clearfix:before,.clearfix:after&#123; content: &quot;&quot;; display: table; clear: both;&#125;.clearfix&#123; zoom: 1;&#125; 2. 父子元素的外边距重叠2.1 解决方法： 1234567.box1:before&#123; content: &quot;&quot;; /* display:table可以将一个元素设置为表格显示 */ display: table;&#125;]]></content>
       <categories>
         <category>前端</category>
         <category>CSS</category>
@@ -12,6 +66,7 @@
       <tags>
         <tag>css常见问题</tag>
         <tag>高度塌陷</tag>
+        <tag>垂直外边距重叠</tag>
       </tags>
   </entry>
   <entry>
