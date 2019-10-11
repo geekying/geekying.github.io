@@ -824,34 +824,66 @@
 <li><p>input是使用的最多的表单项，它可以 根据不同的type属性呈现不同的状态。</p>
 </li>
 <li><p>type属性可选值：</p>
-<p>– text：文本框 </p>
-<p>– password：密码框 </p>
-<p>– submit：提交按钮 </p>
-<p>– radio：单选按钮 </p>
-<p>– checkbox：多选框 </p>
-<p>– reset ：重置按钮</p>
+<ul>
+<li><p>text：文本框</p>
+<p>– 使用input来创建一个文本框，它的type属性是text。</p>
+</li>
+<li><p>password：密码框</p>
+<p>– 使用input创建一个密码框，它的type属性值是password。 </p>
+</li>
+<li><p>radio：单选按钮 </p>
+<p>– 使用input来创建一个单选按钮，它的type属性使用radio。</p>
+<p>– 单选按钮通过name属性进行分组，name属性相同是一组按钮。</p>
+<p>– 像这种需要用户选择但是不需要用户直接填写内容的表单项，还必须指定一个value属性，这样被选中的表单项value属性值将会最终提交给服务器。</p>
+<p>– 如果希望在单选按钮中指定默认选中的选项，则可以在希望选中的项中添加checked=”checked”属性。 </p>
+</li>
+<li><p>checkbox：多选框 </p>
+<p>– 使用input创建一个多选框，它的type属性使用checkbox。</p>
+<p>– 多选框通过name属性进行分组，name属性相同是一组按钮。</p>
+<p>– 像这种需要用户选择但是不需要用户直接填写内容的表单项，还必须指定一个value属性，这样被选中的表单项value属性值将会最终提交给服务器。</p>
+<p>– 如果希望在多选框中指定默认选中的选项，则可以在希望选中的项中添加checked=”checked”属性。</p>
+</li>
+<li><p>submit：提交按钮</p>
+<p>– 提交按钮可以将表单中的信息提交给服务器。</p>
+<p>– 使用input创建一个提交按钮,它的type属性值是submit。</p>
+<p>– 在提交按钮中可以通过value属性来指定按钮上的文字。</p>
+</li>
+<li><p>reset ：重置按钮</p>
+<p>– 点击重置按钮以后表单中内容将会恢复为默认值。</p>
+<p>– 使用input创建一个重置按钮,它的type属性值是reset。</p>
+<p>– 在重置按钮中可以通过value属性来指定重置上的文字。</p>
+</li>
+</ul>
 </li>
 <li><p>如果希望表单项中的数据会提交到服务器中，还必须给表单项指定一个name属性(name表示提交内容的名字)。    </p>
 </li>
 <li><p>用户填写的信息会附在url地址的后边以查询字符串的形式发送给服务器。url地址?查询字符串</p>
-<p>– 格式：<br>属性名=属性值&amp;属性名=属性值&amp;属性名=属性值&amp;属性名=属性值</p>
-<p>– 在文本框中也可以指定value属性值，该值将会作为文本框的默认值显示。</p>
+<p>– 查询字符串的格式：<br>属性名=属性值&amp;属性名=属性值&amp;属性名=属性值&amp;属性名=属性值</p>
+</li>
+<li><p>在文本框中也可以指定value属性值，该值将会作为文本框的默认值显示。</p>
+</li>
+<li><p>通过修改value属性值，可以修改按钮上的文字</p>
 </li>
 </ul>
 </li>
-<li><p>fieldset、legend、label </p>
+<li><p>fieldset、legend、label (长表单)</p>
 <p>-fieldset用来为表单项进行分组。</p>
 <p>-legend用于指定每组的名字。</p>
 <p>-label标签用来为表单项定义描述文字。</p>
 </li>
 <li><p>select、option、optgroup</p>
-<p>– 使用select来创建一个下拉列表。</p>
-<p>– option表示下拉列表中的列表项。</p>
-<p>– optgroup用于为列表项分组。</p>
-<p>–下拉列表的name属性需要指定给select，而value属性需要指定给option。</p>
+<ul>
+<li><p>optgroup用于为列表项分组。</p>
+</li>
+<li><p>option表示下拉列表中的列表项。</p>
+</li>
+<li><p>使用select来创建一个下拉列表。</p>
+<p>– 下拉列表的name属性需要指定给select，而value属性需要指定给option。</p>
 <p>– 可以通过在option中添加selected=”selected”来将选项设置为默认选中。</p>
 <p>– 当为select添加一个multiple=”multiple”，则下拉列表变为一个多选的下拉列表。</p>
 <p>– 在select中可以使用optgroup对选项进行分组，同一个optgroup中的选项是一组，可以通过label属性来指定分组的名字。</p>
+</li>
+</ul>
 </li>
 <li><p>textarea</p>
 <p>– textarea用来创建一个文本域，实际效果和 文本框类似，只是可以输入多行数据。</p>
