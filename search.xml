@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[CSS3之自定义字体]]></title>
-    <url>%2F2019%2F10%2F14%2FB-09-CSS3%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%2F</url>
-    <content type="text"></content>
+    <title><![CDATA[B-10-CSS3之新增UI方案]]></title>
+    <url>%2F2019%2F10%2F14%2FB-10-CSS3%E4%B9%8B%E6%96%B0%E5%A2%9EUI%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[1. 文本新增属性1.1 opacity1.2 rgba1.3 背景透明文字不透明1.4 文字1.5 背景1.6 超出省略2. 盒模型新增属性2.1 盒模型阴影2.2 盒模型倒影2.3 盒模型resize2.4 怪异盒模型3. 新增UI样式3.1 圆角3.2 边框图片3.3 背景3.4 渐变]]></content>
       <categories>
         <category>前端</category>
-        <category>CSS3- CSS3之选择器</category>
+        <category>CSS3</category>
       </categories>
       <tags>
-        <tag>css自定义字体</tag>
+        <tag>css新增UI方案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS3之字体]]></title>
+    <url>%2F2019%2F10%2F14%2FB-09-CSS3%E4%B9%8B%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E4%BD%93%2F</url>
+    <content type="text"><![CDATA[1. 自定义字体2. 字体图标]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS3</category>
+      </categories>
+      <tags>
+        <tag>css字体</tag>
       </tags>
   </entry>
   <entry>
