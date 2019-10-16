@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. 文本新增属性1.1 opacity1.2 rgba1.3 背景透明文字不透明1.4 文字1.5 背景1.6 超出省略2. 盒模型新增属性2.1 盒模型阴影2.2 盒模型倒影2.3 盒模型resize2.4 怪异盒模型3. 新增UI样式3.1 圆角3.2 边框图片3.3 背景3.4 渐变">
+<meta name="description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。  默认值：1.0    不可继承   1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta name="keywords" content="css新增UI方案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="B-10-CSS3之新增UI方案">
 <meta property="og:url" content="http://yoursite.com/2019/10/14/B-10-CSS3之新增UI方案/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. 文本新增属性1.1 opacity1.2 rgba1.3 背景透明文字不透明1.4 文字1.5 背景1.6 超出省略2. 盒模型新增属性2.1 盒模型阴影2.2 盒模型倒影2.3 盒模型resize2.4 怪异盒模型3. 新增UI样式3.1 圆角3.2 边框图片3.3 背景3.4 渐变">
+<meta property="og:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。  默认值：1.0    不可继承   1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-14T08:57:41.525Z">
+<meta property="og:updated_time" content="2019-10-16T04:38:05.624Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B-10-CSS3之新增UI方案">
-<meta name="twitter:description" content="1. 文本新增属性1.1 opacity1.2 rgba1.3 背景透明文字不透明1.4 文字1.5 背景1.6 超出省略2. 盒模型新增属性2.1 盒模型阴影2.2 盒模型倒影2.3 盒模型resize2.4 怪异盒模型3. 新增UI样式3.1 圆角3.2 边框图片3.3 背景3.4 渐变">
+<meta name="twitter:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。  默认值：1.0    不可继承   1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 
 
 
@@ -408,7 +408,338 @@
       
 
       
-        <h2 id="1-文本新增属性"><a href="#1-文本新增属性" class="headerlink" title="1. 文本新增属性"></a>1. 文本新增属性</h2><h3 id="1-1-opacity"><a href="#1-1-opacity" class="headerlink" title="1.1 opacity"></a>1.1 opacity</h3><h3 id="1-2-rgba"><a href="#1-2-rgba" class="headerlink" title="1.2 rgba"></a>1.2 rgba</h3><h3 id="1-3-背景透明文字不透明"><a href="#1-3-背景透明文字不透明" class="headerlink" title="1.3 背景透明文字不透明"></a>1.3 背景透明文字不透明</h3><h3 id="1-4-文字"><a href="#1-4-文字" class="headerlink" title="1.4 文字"></a>1.4 文字</h3><h3 id="1-5-背景"><a href="#1-5-背景" class="headerlink" title="1.5 背景"></a>1.5 背景</h3><h3 id="1-6-超出省略"><a href="#1-6-超出省略" class="headerlink" title="1.6 超出省略"></a>1.6 超出省略</h3><h2 id="2-盒模型新增属性"><a href="#2-盒模型新增属性" class="headerlink" title="2. 盒模型新增属性"></a>2. 盒模型新增属性</h2><h3 id="2-1-盒模型阴影"><a href="#2-1-盒模型阴影" class="headerlink" title="2.1 盒模型阴影"></a>2.1 盒模型阴影</h3><h3 id="2-2-盒模型倒影"><a href="#2-2-盒模型倒影" class="headerlink" title="2.2 盒模型倒影"></a>2.2 盒模型倒影</h3><h3 id="2-3-盒模型resize"><a href="#2-3-盒模型resize" class="headerlink" title="2.3 盒模型resize"></a>2.3 盒模型resize</h3><h3 id="2-4-怪异盒模型"><a href="#2-4-怪异盒模型" class="headerlink" title="2.4 怪异盒模型"></a>2.4 怪异盒模型</h3><h2 id="3-新增UI样式"><a href="#3-新增UI样式" class="headerlink" title="3. 新增UI样式"></a>3. 新增UI样式</h2><h3 id="3-1-圆角"><a href="#3-1-圆角" class="headerlink" title="3.1 圆角"></a>3.1 圆角</h3><h3 id="3-2-边框图片"><a href="#3-2-边框图片" class="headerlink" title="3.2 边框图片"></a>3.2 边框图片</h3><h3 id="3-3-背景"><a href="#3-3-背景" class="headerlink" title="3.3 背景"></a>3.3 背景</h3><h3 id="3-4-渐变"><a href="#3-4-渐变" class="headerlink" title="3.4 渐变"></a>3.4 渐变</h3>
+        <h2 id="1-文本新增属性"><a href="#1-文本新增属性" class="headerlink" title="1. 文本新增属性"></a>1. 文本新增属性</h2><h3 id="1-1-opacity"><a href="#1-1-opacity" class="headerlink" title="1.1 opacity"></a>1.1 opacity</h3><ul>
+<li><p>opacity属性指定了一个元素的透明度。</p>
+</li>
+<li><p>默认值：1.0    不可继承</p>
+</li>
+</ul>
+<h3 id="1-2-rgba"><a href="#1-2-rgba" class="headerlink" title="1.2 rgba"></a>1.2 rgba</h3><ul>
+<li>rgba(0,0,0,.8);</li>
+<li>应用场景：背景透明文字不透明</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="1-3-文字阴影"><a href="#1-3-文字阴影" class="headerlink" title="1.3 文字阴影"></a>1.3 文字阴影</h3><ul>
+<li><p>text-shadow用来为文字添加阴影，而且可以添加多层，阴影值之间用逗号隔开。（多个阴影时，第一个阴影在最上边）</p>
+</li>
+<li><p>默认值：none 不可继承 </p>
+</li>
+<li><p>值：</p>
+<p>– &lt;color&gt;可选。可以在偏移量之前或之后指定。如果没有指定颜色，则使用UA（用户代理）选择的颜色。</p>
+<p>– &lt;offset-x&gt; &lt;offset-y&gt;必选。这些长度值指定阴影相对文字的偏移量。</p>
+<p>  ！ &lt;offset-x&gt; 指定水平偏移量，若是负值则阴影位于文字左边。<br>  ！ &lt;offset-y&gt; 指定垂直偏移量，若是负值则阴影位于文字上面。</p>
+<p>  ！ 如果两者均为0，则阴影位于文字正后方(如果设置了&lt;blur-  radius&gt; 则会产生模糊效果)。</p>
+<p>– &lt;blur-radius&gt;可选。这是 &lt;length&gt; 值。如果没有指定，则默认为0。值越大，模糊半径越大，阴影也就越大越淡。</p>
+</li>
+<li><p>应用场景：</p>
+<p>– 浮雕文字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">    font: 100px/200px &quot;微软雅黑&quot;;</span><br><span class="line">    color: white;</span><br><span class="line">    text-shadow: black 1px 1px 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>– 文字模糊</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">    font: 100px/200px &quot;微软雅黑&quot;;</span><br><span class="line">    color: black;</span><br><span class="line">    transition: 1s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">h1:hover&#123;</span><br><span class="line">    color: rgba(0,0,0,0);</span><br><span class="line">    text-shadow: black 0 0 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>– 模糊背景</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- css代码 --&gt;</span><br><span class="line"></span><br><span class="line">#wrap&#123;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: rgba(0,0,0,.5);</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line">#wrap #bg&#123;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    background: url(img/avatar.jpg) no-repeat;</span><br><span class="line">    background-size:100% 100% ;</span><br><span class="line">    z-index: -1;</span><br><span class="line">    filter: blur(10px);</span><br><span class="line">&#125;</span><br><span class="line">img&#123;</span><br><span class="line">    margin: 24px 0 0 24px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">&lt;div id=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;img src=&quot;img/avatar.jpg&quot; width=&quot;64px&quot; height=&quot;64px&quot;/&gt;</span><br><span class="line">    &lt;div id=&quot;bg&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="1-4-文字描边"><a href="#1-4-文字描边" class="headerlink" title="1.4 文字描边"></a>1.4 文字描边</h3><ul>
+<li>只有webkit内核才支持：-webkit-text-stroke（准确的来说不能算是css3的东西，但需要知道）</li>
+</ul>
+<h3 id="1-5-文字排版"><a href="#1-5-文字排版" class="headerlink" title="1.5 文字排版"></a>1.5 文字排版</h3><ul>
+<li><p>direction:控制文字的方向。</p>
+</li>
+<li><p>一定要配合unicode-bidi:bidi-override;来使用</p>
+</li>
+<li><p>text-overflow :确定如何向用户发出未显示的溢出内容信号。它可以被剪切，显示一个省略号（’…’）。</p>
+</li>
+<li><p>应用场景：文字溢出显示省略号</p>
+<p>– white-space: nowrap;</p>
+<p>– overflow: hidden;</p>
+<p>– text-overflow: ellipsis;</p>
+<p>– 包裹区域必须不能让子元素撑开</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">   &lt;!-- css代码 --&gt;</span><br><span class="line">div&#123;</span><br><span class="line">	width: 200px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	border: 1px solid;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	white-space: nowrap;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">   &lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">   &lt;div&gt;尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="2-盒模型新增属性"><a href="#2-盒模型新增属性" class="headerlink" title="2. 盒模型新增属性"></a>2. 盒模型新增属性</h2><h3 id="2-1-盒模型阴影"><a href="#2-1-盒模型阴影" class="headerlink" title="2.1 盒模型阴影"></a>2.1 盒模型阴影</h3><ul>
+<li><p>box-shadow ：</p>
+<p>– 以逗号分割列表来描述一个或多个阴影效果，可以用到几乎任何元素上。 </p>
+<p>– 如果元素同时设置了 border-radius ，阴影也会有圆角效果。多个阴影时和多个 text shadows 规则相同(第一个阴影在最上面)。</p>
+</li>
+<li><p>默认值:  none    不可继承</p>
+</li>
+<li><p>值：</p>
+<p>– inset：默认阴影在边框外。使用inset后，阴影在边框内。</p>
+<p>– &lt;offset-x&gt; &lt;offset-y&gt;：这是头两个 &lt;length&gt; 值，用来设置阴影偏移量。</p>
+<p>  ! &lt;offset-x&gt; 设置水平偏移量，如果是负值则阴影位于元素左边。</p>
+<p>  ! &lt;offset-y&gt; 设置垂直偏移量，如果是负值则阴影位于元素上面。</p>
+<p>  ! 如果两者都是0，那么阴影位于元素后面。这时如果设置&lt;blur-radius&gt; 或&lt;spread-radius&gt; 则有模糊效果。</p>
+<p>– &lt;blur-radius&gt;：这是第三个 &lt;length&gt; 值。值越大，模糊面积越大，阴影就越大越淡。 不能为负值。默认为0，此时阴影边缘锐利。</p>
+<p>– &lt;spread-radius&gt;：这是第四个 &lt;length&gt; 值。取正值时，阴影扩大；取负值时，阴影.收缩。默认为0，此时阴影与元素同样大。</p>
+<p>– &lt;color&gt;：阴影颜色，如果没有指定，则由浏览器决定。</p>
+</li>
+</ul>
+<h3 id="2-2-盒模型倒影"><a href="#2-2-盒模型倒影" class="headerlink" title="2.2 盒模型倒影"></a>2.2 盒模型倒影</h3><ul>
+<li><p>-webkit-box-reflect : 设置元素的倒影（准确的来说不能算是css3的东西，但需要知道）</p>
+</li>
+<li><p>默认值:none  不可继承</p>
+</li>
+<li><p>值：（必须是123的顺序）</p>
+<p>– 倒影的方向：(第一个值) above, below, right, left<br>– 倒影的距离：(第二个值) 长度单位<br>– 渐变：(第三个值)</p>
+</li>
+</ul>
+<h3 id="2-3-盒模型resize"><a href="#2-3-盒模型resize" class="headerlink" title="2.3 盒模型resize"></a>2.3 盒模型resize</h3><ul>
+<li><p>resize ：CSS 属性允许你控制一个元素的可调整大小性。</p>
+</li>
+<li><p>（一定要配合overflow：auto使用）</p>
+</li>
+<li><p>默认值：none  不可继承</p>
+</li>
+<li><p>值：</p>
+<p>– none：元素不能被用户缩放。</p>
+</li>
+</ul>
+<p>  – both：允许用户在水平和垂直方向上调整元素的大小。</p>
+<p>  – horizontal：允许用户在水平方向上调整元素的大小。</p>
+<p>  – vertical：允许用户在垂直方向上调整元素的大小。</p>
+<h3 id="2-4-box-sizing"><a href="#2-4-box-sizing" class="headerlink" title="2.4 box-sizing"></a>2.4 box-sizing</h3><ul>
+<li><p>box-sizing 属性用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型。可以使用此属性来模拟不正确支持CSS盒子模型规范的浏览器的行/列为。</p>
+</li>
+<li><p>默认值：content-box  不可继承</p>
+</li>
+</ul>
+<h3 id="2-5-怪异盒模型"><a href="#2-5-怪异盒模型" class="headerlink" title="2.5 怪异盒模型"></a>2.5 怪异盒模型</h3><h2 id="3-新增UI样式"><a href="#3-新增UI样式" class="headerlink" title="3. 新增UI样式"></a>3. 新增UI样式</h2><h3 id="3-1-圆角"><a href="#3-1-圆角" class="headerlink" title="3.1 圆角"></a>3.1 圆角</h3><ul>
+<li><p>传统的圆角生成方案，必须使用多张图片作为背景图案。</p>
+</li>
+<li><p>CSS3圆角的出现，使得我们再也不必浪费时间去制作这些图片了，而且还有其他多个优点：</p>
+<p>– 减少维护的工作量。图片文件的生成、更新、编写网页代码，这些工作都不再需要了。</p>
+<p>– 提高网页性能。由于不必再发出多余的HTTP请求，网页的载入速度将变快。</p>
+<p>– 增加视觉可靠性。某些情况下（网络拥堵、服务器出错、网速过慢等等），背景图片会下载失败，导致视觉效果不佳。CSS3就不会发生这种情况。</p>
+</li>
+<li><p>border-radius：用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个(椭)圆与边框的交集形成圆角效果。</p>
+</li>
+<li><p>默认值  :  0   不可继承</p>
+</li>
+<li><p>值：</p>
+<ul>
+<li><p>固定的px值定义圆形半径或椭圆的半长轴，半短轴。不能用负值</p>
+</li>
+<li><p>使用百分数定义圆形半径或椭圆的半长轴，半短轴。水平半轴相对于盒模型的宽度；垂直半轴相对于盒模型的高度。不能用负值</p>
+</li>
+<li><p>这是一个简写属性，用来设置 </p>
+<p>– border-top-left-radius,</p>
+<p>– border-top-right-radius,</p>
+<p>– border-bottom-right-radius,</p>
+<p>– border-bottom-left-radius</p>
+</li>
+<li><p>半径的第一个语法取值可取1~4个值:</p>
+<p>– border-radius: radius </p>
+<p>– border-radius: top-left-and-bottom-right      top-right-and-bottom-left </p>
+<p>– border-radius: top-left     top-right-and-bottom-left     bottom-right </p>
+<p>– border-radius: top-left     top-right     bottom-right      bottom-left </p>
+</li>
+<li><p>半径的第二个语法取值也可取1~4个值</p>
+<p>– border-radius: (first radius values) / radius   </p>
+<p>– border-radius: (first radius values) / top-left-and-bottom-right      top-right-and-bottom-left </p>
+<p>– border-radius: (first radius values) / top-left     top-right-and-bottom-left     bottom-right </p>
+<p>– border-radius: (first radius values) / top-left     top-right     bottom-right       bottom-left </p>
+</li>
+<li><p>注意</p>
+<p>! 百分比值:</p>
+<p>– 在旧版本的 Chrome 和 Safari 中不支持。(fixed in Sepember 2010)</p>
+<p>– 在 11.50 版本以前的 Opera 中实现有问题。</p>
+<p>–  Gecko 2.0 (Firefox 4) 版本前实现不标准：水平半轴和垂直半轴都相对于盒子模型的宽度。</p>
+<p>– 在旧版本的 iOS (iOS 5 之前) 和 Android 中 (WebKit 532 之前) 不支持。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-边框图片"><a href="#3-2-边框图片" class="headerlink" title="3.2 边框图片"></a>3.2 边框图片</h3><ul>
+<li><p>border-image： CSS属性允许在元素的边框上绘制图像。</p>
+<p>– 这使得绘制复杂的外观组件更加简单，使用 border-image 时，其将会替换掉 border-style 属性所设置的边框样式。</p>
+</li>
+<li><p>默认值：  不可继承</p>
+<p>– border-image-source: none</p>
+<p>– border-image-slice: 100%</p>
+<p>– border-image-width: 1</p>
+<p>– border-image-outset: none</p>
+<p>– border-image-repeat: stretch</p>
+</li>
+</ul>
+<h3 id="3-3-背景"><a href="#3-3-背景" class="headerlink" title="3.3 背景"></a>3.3 背景</h3><h4 id="3-3-1-css2"><a href="#3-3-1-css2" class="headerlink" title="3.3.1 css2"></a>3.3.1 css2</h4><ul>
+<li><p>background-color</p>
+<ul>
+<li><p>background-color 会设置元素的背景色。</p>
+</li>
+<li><p>默认值：  transparent    不可继承</p>
+</li>
+</ul>
+</li>
+<li><p>background-image</p>
+<ul>
+<li><p>background-image属性用于为一个元素设置一个或多个背景图像，图像在绘制时，以z轴方向堆叠的方式进行。先指定的图像会在之后指定的图像上面进行绘制。</p>
+</li>
+<li><p>注意：background-color会在image之下进行绘制，边框和内容会在image之上进行绘制。</p>
+</li>
+<li><p>默认值：none   不可继承 </p>
+</li>
+</ul>
+</li>
+<li><p>background-repeat</p>
+<ul>
+<li><p>background-repeat CSS 属性定义背景图像的重复方式。背景图像可以沿着水平轴，垂直轴，两个轴重复，或者根本不重复。</p>
+</li>
+<li><p>默认值：repeat 不可继承</p>
+</li>
+<li><p>值： </p>
+<p>– repeat-x   =    repeat no-repeat</p>
+<p>– repeat-y   =    no-repeat repeat</p>
+<p>–  repeat      =    repeat repeat </p>
+<p>– no-repeat  =    no-repeat no-repeat </p>
+<p> – 第一个值代表水平方向。</p>
+<p> – 第二个值代表垂直方向。</p>
+</li>
+</ul>
+</li>
+<li><p>background-position</p>
+<ul>
+<li><p>background-position属性 ：指定背景位置的初始位置</p>
+</li>
+<li><p>默认值：0% 0%   不可继承</p>
+</li>
+<li><p>值：</p>
+<ul>
+<li><p>百分比：参照尺寸为背景图片定位区域的大小减去背景图片的大小。</p>
+<p>– 第一个值：元素在水平方向的位移。</p>
+<p>– 第二个值：元素在垂直方向的位移</p>
+</li>
+<li><p>关键字：</p>
+<p>– top left and left top (！Same as ‘0% 0%’.)</p>
+<p>– top, top center, and center top (！Same as ‘50% 0%’.)</p>
+<p>– right top and top right (！Same as ‘100% 0%’.)</p>
+<p>– left, left center, and center left (！Same as ‘0% 50%’.)</p>
+<p>– center and center center (！Same as ‘50% 50%’.)</p>
+<p>– right, right center, and center right (！Same as ‘100% 50%’.)</p>
+<p>– bottom left and left bottom (！Same as ‘0% 100%’.)</p>
+<p>– bottom, bottom center, and center bottom (！Same as ‘50% 100%’.)</p>
+<p>–  bottom right and right bottom (！Same as ‘100% 100%’.)</p>
+</li>
+</ul>
+</li>
+<li><p>如果只有一个值被指定，则这个值就会默认设置背景图片位置中的水平方向，与此同时垂直方向的默认值被设置成50%。</p>
+</li>
+</ul>
+</li>
+<li><p>background-attachment</p>
+<ul>
+<li><p>background-attachment 决定背景是在视口中固定的还是随包含它的区块滚动的。</p>
+</li>
+<li><p>默认值：scroll 不可继承</p>
+</li>
+<li><p>值：</p>
+<p>– fixed：此关键字表示背景相对于视口固定。即使一个元素拥有滚动机制，背景也不会随着元素的内容滚动。</p>
+<p>– scroll：此关键字表示背景相对于元素本身固定， 而不是随着它的内容滚动。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-3-2-css3"><a href="#3-3-2-css3" class="headerlink" title="3.3.2 css3"></a>3.3.2 css3</h4><ul>
+<li><p>background-origin：设置背景的渲染的起始位置</p>
+<ul>
+<li>border-box    </li>
+<li>padding-box</li>
+<li>content-box</li>
+</ul>
+</li>
+<li><p>background-clip：设置背景裁剪位置</p>
+</li>
+<li><p>background-size </p>
+<ul>
+<li><p>background-size：设置背景图片大小</p>
+</li>
+<li><p>默认值：auto auto  不可继承</p>
+</li>
+<li><p>值：</p>
+<p>– 百分比：  指定背景图片相对背景区（background positioning area）的百分比。</p>
+<p>– 背景区由background-origin设置，默认为盒模型的内容区与内边距。</p>
+<p>– auto：  以背景图片的比例缩放背景图片。</p>
+</li>
+<li><p>注意：</p>
+<p>！单值时，这个值指定图片的宽度，图片的高度隐式的为auto。</p>
+<p>！两个值: 第一个值指定图片的宽度，第二个值指定图片的高度 。     </p>
+</li>
+</ul>
+</li>
+<li><p>background </p>
+<ul>
+<li><p>background是CSS简写属性，用来集中设置各种背景属性。</p>
+</li>
+<li><p>background 可以用来设置一个或多个属性:background-color, background-image, background-position, background-repeat, background-size, background-attachment。 </p>
+</li>
+<li><p>默认值：    不可继承</p>
+<p>– background-image: none</p>
+<p>– background-position: 0% 0%</p>
+<p>– background-size: auto auto</p>
+<p>– background-repeat: repeat</p>
+<p>– background-origin: padding-box</p>
+<p>– background-clip: border-box</p>
+<p>– background-attachment: scroll</p>
+<p>– background-color: transparent</p>
+<p>！ 顺序无关</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-4-渐变"><a href="#3-4-渐变" class="headerlink" title="3.4 渐变"></a>3.4 渐变</h3><h4 id="3-4-1-概述"><a href="#3-4-1-概述" class="headerlink" title="3.4.1 概述"></a>3.4.1 概述</h4><ul>
+<li><p>CSS 渐变 是在 CSS3 Image Module 中新增加的图片类型；使用 CSS 渐变可以在两种颜色间制造出平滑的渐变效果. 用它代替图片，可以加快页面的载入时间、减小带宽占用。同时，因为渐变是由浏览器直接生成的，它在页面缩放时的效果比图片更好，因此你可以更加灵活、便捷的调整页面布局。</p>
+</li>
+<li><p>浏览器支持两种类型的渐变：线性渐变 (linear)，通过 linear-gradient 函数定义，以及 径向渐变 (radial)，通过 radial-gradient 函数定义.</p>
+<h4 id="3-4-2-分类"><a href="#3-4-2-分类" class="headerlink" title="3.4.2 分类"></a>3.4.2 分类</h4></li>
+<li><p>线性渐变</p>
+<ul>
+<li><p>为了创建一个线性渐变，需要设置一个起始点和一个方向（指定为一个角度）。</p>
+</li>
+<li><p>还要定义终止色。终止色就是你想让浏览器去平滑的过渡过去，并且必须指定至少两种，当然也会可以指定更多的颜色去创建更复杂的渐变效果。</p>
+</li>
+<li><p>默认从上到下发生渐变：linear-gradient(red,blue);</p>
+</li>
+<li><p>改变渐变方向：（top bottom left right） linear-gradient(to 结束的方向,red,blue);</p>
+</li>
+<li><p>使用角度：linear-gradient(角度,red,blue);</p>
+</li>
+<li><p>颜色节点的分布（第一个不写为0%，最后一个不写为100%）：linear-gradient(red 长度或者百分比,blue 长度或者百分比);</p>
+</li>
+<li><p>重复渐变： repeating-linear-gradient(60deg,red 0,blue 30%);</p>
+</li>
+</ul>
+</li>
+<li><p>径向渐变</p>
+<ul>
+<li><p>radial-gradient() 函数创建一个&lt;image&gt;，用来展示由原点（渐变中心）辐射开的颜色渐变</p>
+</li>
+<li><p>默认均匀分布: radial-gradient(red,blue);</p>
+<p>– 不均匀分布：radial-gradient(red 50%,blue 70%);</p>
+</li>
+<li><p>改变渐变的形状：radial-gradient(circle ,red,blue);</p>
+<p>– circle</p>
+<p>– ellipse（默认为椭圆）</p>
+</li>
+<li><p>渐变形状的大小:</p>
+<p>– radial-gradient(closest-corner  circle ,red,blue)</p>
+<p>– closest-side   最近边</p>
+<p>– farthest-side  最远边</p>
+<p>– closest-corner 最近角</p>
+<p>– farthest-corner 最远角  （默认值）</p>
+<ul>
+<li>改变圆心：radial-gradient(closest-corner  circle at 10px 10px,red,blue);  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     
@@ -438,8 +769,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/14/B-09-CSS3之自定义字体/" rel="next" title="CSS3之字体">
-                <i class="fa fa-chevron-left"></i> CSS3之字体
+              <a href="/2019/10/14/B-09-CSS3之自定义字体/" rel="next" title="CSS3之自定义字体">
+                <i class="fa fa-chevron-left"></i> CSS3之自定义字体
               </a>
             
           </div>
@@ -653,7 +984,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-文本新增属性"><span class="nav-number">1.</span> <span class="nav-text">1. 文本新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-opacity"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 opacity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-rgba"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 rgba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-背景透明文字不透明"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 背景透明文字不透明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-文字"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 文字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-背景"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-超出省略"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 超出省略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-盒模型新增属性"><span class="nav-number">2.</span> <span class="nav-text">2. 盒模型新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-盒模型阴影"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 盒模型阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-盒模型倒影"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 盒模型倒影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-盒模型resize"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 盒模型resize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-怪异盒模型"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 怪异盒模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-新增UI样式"><span class="nav-number">3.</span> <span class="nav-text">3. 新增UI样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-圆角"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 圆角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-边框图片"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 边框图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-背景"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-渐变"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 渐变</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-文本新增属性"><span class="nav-number">1.</span> <span class="nav-text">1. 文本新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-opacity"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 opacity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-rgba"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 rgba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-文字阴影"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 文字阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-文字描边"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 文字描边</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-文字排版"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 文字排版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-盒模型新增属性"><span class="nav-number">2.</span> <span class="nav-text">2. 盒模型新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-盒模型阴影"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 盒模型阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-盒模型倒影"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 盒模型倒影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-盒模型resize"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 盒模型resize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-box-sizing"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 box-sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-怪异盒模型"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 怪异盒模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-新增UI样式"><span class="nav-number">3.</span> <span class="nav-text">3. 新增UI样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-圆角"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 圆角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-边框图片"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 边框图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-背景"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-css2"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 css2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-css3"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 css3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-渐变"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 渐变</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-概述"><span class="nav-number">3.4.1.</span> <span class="nav-text">3.4.1 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-分类"><span class="nav-number">3.4.2.</span> <span class="nav-text">3.4.2 分类</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

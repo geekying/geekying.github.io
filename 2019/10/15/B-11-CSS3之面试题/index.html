@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. css基本问题 CSS名字：层叠样式表 CSS全拼：Cascading  Style Sheets 样式表的组成：">
+<meta name="description" content="1. css基本问题 CSS名字：层叠样式表 CSS全拼：Cascading  Style Sheets">
 <meta name="keywords" content="面试题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3之面试题">
 <meta property="og:url" content="http://yoursite.com/2019/10/15/B-11-CSS3之面试题/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. css基本问题 CSS名字：层叠样式表 CSS全拼：Cascading  Style Sheets 样式表的组成：">
+<meta property="og:description" content="1. css基本问题 CSS名字：层叠样式表 CSS全拼：Cascading  Style Sheets">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-15T04:37:48.486Z">
+<meta property="og:updated_time" content="2019-10-16T04:33:54.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3之面试题">
-<meta name="twitter:description" content="1. css基本问题 CSS名字：层叠样式表 CSS全拼：Cascading  Style Sheets 样式表的组成：">
+<meta name="twitter:description" content="1. css基本问题 CSS名字：层叠样式表 CSS全拼：Cascading  Style Sheets">
 
 
 
@@ -411,18 +411,27 @@
         <h3 id="1-css基本问题"><a href="#1-css基本问题" class="headerlink" title="1. css基本问题"></a>1. css基本问题</h3><ul>
 <li>CSS名字：层叠样式表</li>
 <li>CSS全拼：Cascading  Style Sheets</li>
-<li>样式表的组成：</li>
 </ul>
 <a id="more"></a>
 
-<p>  – 样式表由 规则 组成</p>
-<p>  – 规则由 选择器+声明块 组成</p>
-<p>  – 声明块由 一条一条的 声明 组成</p>
-<p>  – 声明由 CSS合法的属性名+属性值 组成</p>
+<ul>
+<li><p>样式表的组成：</p>
+<p>– 样式表由 规则 组成</p>
+<p>– 规则由 选择器+声明块 组成</p>
+<p>– 声明块由 一条一条的 声明 组成</p>
+<p>– 声明由 CSS合法的属性名+属性值 组成</p>
+</li>
+</ul>
 <ul>
 <li><p>浏览器渲染样式表的顺序：从右往左</p>
+<p>– 原因：算法的复杂程度低，性能比较高</p>
 </li>
-<li><p>CSS声明的优先级（CSS选择器的优先级说法是是错误的）</p>
+<li><p>阐述对CSS选择器优先级的的理解：</p>
+<ul>
+<li>！详细说明见 CSS3之选择器 中的3.css声明的优先级。</li>
+<li>CSS声明的优先级（CSS选择器的优先级说法是是错误的）</li>
+<li>层叠：先按来源进行刷选；如果来源相同，按选择器的特殊性继续刷选；选择器的特殊性如果相同，按顺序继续刷选。</li>
+</ul>
 </li>
 </ul>
 <h3 id="2-用css做选项卡"><a href="#2-用css做选项卡" class="headerlink" title="2. 用css做选项卡"></a>2. 用css做选项卡</h3><ul>
@@ -441,7 +450,7 @@
 
 </li>
 </ul>
-<h3 id="3-导航栏最后一个不加边框"><a href="#3-导航栏最后一个不加边框" class="headerlink" title="3. 导航栏最后一个不加边框"></a>3. 导航栏最后一个不加边框</h3><ul>
+<h3 id="4-导航栏最后一个不加边框"><a href="#4-导航栏最后一个不加边框" class="headerlink" title="4. 导航栏最后一个不加边框"></a>4. 导航栏最后一个不加边框</h3><ul>
 <li><p>用not伪类</p>
 </li>
 <li><p>代码如下：</p>
@@ -690,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-css基本问题"><span class="nav-number">1.</span> <span class="nav-text">1. css基本问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-用css做选项卡"><span class="nav-number">2.</span> <span class="nav-text">2. 用css做选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-制作自定义按钮"><span class="nav-number">3.</span> <span class="nav-text">3. 制作自定义按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-导航栏最后一个不加边框"><span class="nav-number">4.</span> <span class="nav-text">3. 导航栏最后一个不加边框</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-css基本问题"><span class="nav-number">1.</span> <span class="nav-text">1. css基本问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-用css做选项卡"><span class="nav-number">2.</span> <span class="nav-text">2. 用css做选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-制作自定义按钮"><span class="nav-number">3.</span> <span class="nav-text">3. 制作自定义按钮</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-导航栏最后一个不加边框"><span class="nav-number">4.</span> <span class="nav-text">4. 导航栏最后一个不加边框</span></a></li></ol></div>
             
 
           </div>
