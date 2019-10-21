@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1.使用1.1 双飞翼布局">
+<meta name="description" content="1.经典布局1.1 圣杯布局1.2 双飞翼布局">
 <meta name="keywords" content="三列布局">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS2.1之三列布局">
 <meta property="og:url" content="http://yoursite.com/2019/10/21/B-21-CSS2.1之三列布局/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1.使用1.1 双飞翼布局">
+<meta property="og:description" content="1.经典布局1.1 圣杯布局1.2 双飞翼布局">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-21T08:32:59.634Z">
+<meta property="og:updated_time" content="2019-10-21T12:39:38.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS2.1之三列布局">
-<meta name="twitter:description" content="1.使用1.1 双飞翼布局">
+<meta name="twitter:description" content="1.经典布局1.1 圣杯布局1.2 双飞翼布局">
 
 
 
@@ -408,7 +408,7 @@
       
 
       
-        <h2 id="1-使用"><a href="#1-使用" class="headerlink" title="1.使用"></a>1.使用</h2><h3 id="1-1-双飞翼布局"><a href="#1-1-双飞翼布局" class="headerlink" title="1.1 双飞翼布局"></a>1.1 双飞翼布局</h3><a id="more"></a>
+        <h2 id="1-经典布局"><a href="#1-经典布局" class="headerlink" title="1.经典布局"></a>1.经典布局</h2><h3 id="1-1-圣杯布局"><a href="#1-1-圣杯布局" class="headerlink" title="1.1 圣杯布局"></a>1.1 圣杯布局</h3><h3 id="1-2-双飞翼布局"><a href="#1-2-双飞翼布局" class="headerlink" title="1.2 双飞翼布局"></a>1.2 双飞翼布局</h3><a id="more"></a>
 
 <h2 id="2-详细分析"><a href="#2-详细分析" class="headerlink" title="2.详细分析"></a>2.详细分析</h2><h3 id="2-1-三列布局1"><a href="#2-1-三列布局1" class="headerlink" title="2.1 三列布局1"></a>2.1 三列布局1</h3><ul>
 <li><p>满足条件：</p>
@@ -513,6 +513,30 @@
 <ul>
 <li>代码： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!-- css代码 --&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">       * &#123;</span><br><span class="line">          margin: 0;</span><br><span class="line">          padding: 0;</span><br><span class="line">      &#125;</span><br><span class="line">      body &#123;</span><br><span class="line">          min-width: 600px;</span><br><span class="line">      &#125;</span><br><span class="line">      #header &#123;</span><br><span class="line">          background-color: aqua;</span><br><span class="line">          text-align: center;</span><br><span class="line">          border: 1px solid  deeppink;</span><br><span class="line">      &#125;</span><br><span class="line">      #footer &#123;</span><br><span class="line">          background-color: gray;</span><br><span class="line">          text-align: center;</span><br><span class="line">          border: 1px solid  deeppink;</span><br><span class="line">      &#125; </span><br><span class="line">      #content &#123;</span><br><span class="line">          padding: 0px 200px;</span><br><span class="line">          overflow: hidden;</span><br><span class="line">      &#125;</span><br><span class="line">      #content .left ,#content .right&#123;</span><br><span class="line">          background-color: pink;</span><br><span class="line">          width: 200px;</span><br><span class="line">      &#125;</span><br><span class="line">      #content .center,#content .left,#content .right&#123;</span><br><span class="line">		padding-bottom: 10000px;</span><br><span class="line">		margin-bottom: -10000px;</span><br><span class="line">&#125;</span><br><span class="line">      #content .left &#123;</span><br><span class="line">          position: relative;</span><br><span class="line">          left: -200px;</span><br><span class="line">          float: left;</span><br><span class="line">          margin-left: -100%;</span><br><span class="line">      &#125;</span><br><span class="line">      #content .right &#123;</span><br><span class="line">          position: relative;</span><br><span class="line">          right: -200px;</span><br><span class="line">          float: right;</span><br><span class="line">          margin-left: -200px;</span><br><span class="line">      &#125;</span><br><span class="line">      #content .center &#123;</span><br><span class="line">          float: left;</span><br><span class="line">          width: 100%;</span><br><span class="line">          background-color: aquamarine;</span><br><span class="line">      &#125;</span><br><span class="line">      .clearfix:after &#123;</span><br><span class="line">          content: &quot;&quot;;</span><br><span class="line">          display: table;</span><br><span class="line">          clear: both;</span><br><span class="line">      &#125;</span><br><span class="line">  &lt;/style&gt; </span><br><span class="line">  &lt;!-- html代码 --&gt;</span><br><span class="line">      &lt;div id=&quot;header&quot;&gt;header&lt;/div&gt;</span><br><span class="line">      &lt;div id=&quot;content&quot; class=&quot;clearfix&quot;&gt;</span><br><span class="line">          &lt;div class=&quot;center&quot;&gt;center&lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;left&quot;&gt;</span><br><span class="line">              left&lt;br /&gt;left&lt;br /&gt;left&lt;br /&gt;left</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div id=&quot;footer&quot;&gt;footer&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+<h3 id="2-4-双飞翼布局"><a href="#2-4-双飞翼布局" class="headerlink" title="2.4 双飞翼布局"></a>2.4 双飞翼布局</h3><ul>
+<li><p>满足条件：</p>
+<ul>
+<li>同圣杯布局</li>
+</ul>
+</li>
+<li><p>思路：</p>
+<ul>
+<li>同圣杯布局思路（只有3.5不同）</li>
+<li>3.5 在center的里面放置一个div（.inner）用来放内容：<ul>
+<li>1.设置其内边距padding: 0 -200px;</li>
+<li>2.或者设置其外边距margin: 0 -200px;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>代码：</p>
+<ul>
+<li>同圣杯布局代码,只需做如下修改：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 添加如下css代码 --&gt;</span><br><span class="line">#content .center .inner &#123;</span><br><span class="line">     /* margin: 0px 200px; */</span><br><span class="line">     padding: 0px 200px;</span><br><span class="line"> &#125;</span><br><span class="line">&lt;!-- 修改html代码中center的结构 --&gt;</span><br><span class="line">&lt;div class=&quot;center&quot;&gt;</span><br><span class="line">     &lt;div class=&quot;inner&quot;&gt;</span><br><span class="line">         center里的inner</span><br><span class="line">     &lt;/div&gt;</span><br><span class="line"> &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
 </li>
 </ul>
 
@@ -635,7 +659,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -657,7 +681,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -760,7 +784,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-使用"><span class="nav-number">1.</span> <span class="nav-text">1.使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-双飞翼布局"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 双飞翼布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-详细分析"><span class="nav-number">2.</span> <span class="nav-text">2.详细分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-三列布局1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 三列布局1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-三列布局2"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 三列布局2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-圣杯布局"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 圣杯布局</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-经典布局"><span class="nav-number">1.</span> <span class="nav-text">1.经典布局</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-圣杯布局"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 圣杯布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-双飞翼布局"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 双飞翼布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-详细分析"><span class="nav-number">2.</span> <span class="nav-text">2.详细分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-三列布局1"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 三列布局1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-三列布局2"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 三列布局2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-圣杯布局"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 圣杯布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-双飞翼布局"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 双飞翼布局</span></a></li></ol></li></ol></div>
             
 
           </div>
