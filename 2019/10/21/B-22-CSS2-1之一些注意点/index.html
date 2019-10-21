@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. 绝对定位 绝对定位是相对于初始包含块进行定位的。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。">
+<meta name="description" content="1. 定位参照于谁来定位 没有定位: 包含块 相对定位: 元素本来的位置 固定定位: 视口 绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。 包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。">
 <meta name="keywords" content="css2.1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS2.1之一些小点">
 <meta property="og:url" content="http://yoursite.com/2019/10/21/B-22-CSS2-1之一些注意点/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. 绝对定位 绝对定位是相对于初始包含块进行定位的。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。">
+<meta property="og:description" content="1. 定位参照于谁来定位 没有定位: 包含块 相对定位: 元素本来的位置 固定定位: 视口 绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。 包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-21T12:51:11.963Z">
+<meta property="og:updated_time" content="2019-10-21T14:27:07.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS2.1之一些小点">
-<meta name="twitter:description" content="1. 绝对定位 绝对定位是相对于初始包含块进行定位的。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。">
+<meta name="twitter:description" content="1. 定位参照于谁来定位 没有定位: 包含块 相对定位: 元素本来的位置 固定定位: 视口 绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。 包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。">
 
 
 
@@ -408,9 +408,17 @@
       
 
       
-        <h2 id="1-绝对定位"><a href="#1-绝对定位" class="headerlink" title="1. 绝对定位"></a>1. 绝对定位</h2><ul>
-<li>绝对定位是相对于初始包含块进行定位的。</li>
-<li>初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。</li>
+        <h2 id="1-定位参照于谁来定位"><a href="#1-定位参照于谁来定位" class="headerlink" title="1. 定位参照于谁来定位"></a>1. 定位参照于谁来定位</h2><ul>
+<li>没有定位: 包含块</li>
+<li>相对定位: 元素本来的位置</li>
+<li>固定定位: 视口</li>
+<li>绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。<ul>
+<li>初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。<ul>
+<li>包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <a id="more"></a>
 
@@ -420,6 +428,12 @@
 <li>width属性的值auto和100%的区别：<ul>
 <li>auto包含了外边距，如果再加外边距，宽度不会变</li>
 <li>100% 不包含外边距，如果再加外边距的话，宽度会变 </li>
+</ul>
+</li>
+<li>另外：<ul>
+<li>left、top、right、bottom、width、height 的默认值为auto；</li>
+<li>margin、padding 的默认值为0；</li>
+<li>boder-width ：如果不存在border-style</li>
 </ul>
 </li>
 </ul>
@@ -434,6 +448,13 @@
 <li>外边距margin：不管是几个百分比值，都是margin = 父元素宽度的百分之几。</li>
 </ul>
 </li>
+<li>百分比参照于谁？<ul>
+<li>width、margin、padding:包含块的width</li>
+<li>height:包含块的height</li>
+<li>left:包含块的width</li>
+<li>top :包含块的height</li>
+</ul>
+</li>
 </ul>
 <h2 id="4-浮动"><a href="#4-浮动" class="headerlink" title="4. 浮动"></a>4. 浮动</h2><ul>
 <li>浮动：img标签是一个行内块元素，浮动的初衷是让文字环绕图片。</li>
@@ -443,7 +464,30 @@
 </ul>
 </li>
 </ul>
+<h2 id="5-滚动条"><a href="#5-滚动条" class="headerlink" title="5. 滚动条"></a>5. 滚动条</h2><ul>
+<li><p>滚动条出现规则：</p>
+<ul>
+<li>页面内元素高度过高，自动出现系统滚动条（浏览器的滚动条）。</li>
+<li>给html标签或者body标签中的其中一个加上overflow: scroll; ，滚动条出现在系统上（出现的是浏览器的滚动条）。</li>
+<li>同时给html标签和body标签加上overflow: scroll; ，滚动条不仅出现在系统上（出现的是浏览器的滚动条），body上也出现滚动条。</li>
+<li>移动端开发时一般都会静止系统的默认滚动条，使用自定义的body身上的滚动条。</li>
+</ul>
+</li>
+<li><p>静止系统默认滚动条：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">html,body&#123;</span><br><span class="line">    height: 100%;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用绝对定位模拟固定定位</p>
+<ul>
+<li>静止系统滚动条，让body出现滚动条。</li>
+<li>1.禁止系统滚动条</li>
+<li>2.将滚动条加给body</li>
+<li>3.让body的尺寸变为视口的尺寸</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- css代码 --&gt;</span><br><span class="line">html&#123;</span><br><span class="line">  height: 100%;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line">body &#123;</span><br><span class="line">  height: 100%;</span><br><span class="line">  overflow: scroll;  /*auto也可以*/</span><br><span class="line">&#125;</span><br><span class="line">#test &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 50px;</span><br><span class="line">  top: 50px;</span><br><span class="line">  width: 100px;</span><br><span class="line">  height: 100px;</span><br><span class="line">  background-color: pink;</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">&lt;!-- html代码 --&gt;</span><br><span class="line">&lt;div id=&quot;test&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;div style=&quot;height: 1000px;&quot;&gt;</span><br><span class="line">    zi &lt;br /&gt;zi &lt;br /&gt;zi &lt;br /&gt;</span><br><span class="line">    zi &lt;br /&gt;zi &lt;br /&gt;zi &lt;br /&gt;</span><br><span class="line">    zi &lt;br /&gt;zi &lt;br /&gt;zi &lt;br /&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
+<h2 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h2>
       
     </div>
     
@@ -684,7 +728,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-绝对定位"><span class="nav-number">1.</span> <span class="nav-text">1. 绝对定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-width"><span class="nav-number">2.</span> <span class="nav-text">2. width</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-百分比"><span class="nav-number">3.</span> <span class="nav-text">3. 百分比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-浮动"><span class="nav-number">4.</span> <span class="nav-text">4. 浮动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-定位参照于谁来定位"><span class="nav-number">1.</span> <span class="nav-text">1. 定位参照于谁来定位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-width"><span class="nav-number">2.</span> <span class="nav-text">2. width</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-百分比"><span class="nav-number">3.</span> <span class="nav-text">3. 百分比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-浮动"><span class="nav-number">4.</span> <span class="nav-text">4. 浮动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-滚动条"><span class="nav-number">5.</span> <span class="nav-text">5. 滚动条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6"><span class="nav-number">6.</span> <span class="nav-text">6.</span></a></li></ol></div>
             
 
           </div>
