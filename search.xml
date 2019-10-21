@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vue之基础指令]]></title>
+    <url>%2F2019%2F10%2F21%2FC-02-Vue%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[1. Vue基本代码和MVVM之间对应]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>指令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Vue之初识vue]]></title>
+    <url>%2F2019%2F10%2F21%2FC-01-Vue%E4%B9%8B%E5%88%9D%E8%AF%86vue%2F</url>
+    <content type="text"><![CDATA[1. 什么是Vue.js Vue.js 是目前最火的一个框架，React是最流行的一个框架(React除了开发网站，还可以开发手机App) Vue.js 是前端的主流框架之一，和Angular.js、React.js 一起，并称为前端三大主流框架！ Vue.js 是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。(Vue有配套的第三方类库，可以整合起来做大型项目的开发) 前端的主要工作？主要负责MVC中的V这一层；主要工作就是和界面打交道； 2. 为什么要学习流行框架 企业为了提高开发效率：在企业中，时间就是效率，效率就是金钱； 提高开发效率的发展历程：原生JS –&gt; jQuery之类的类库 –&gt; 前端模板引擎 –&gt; Angular.js / Vue.js (能够帮助我们减少不必要的DOM操作；提高渲染效率；双向数据绑定的概念【通过框架提供的指令，前端程序员只需要关心数据的业务逻辑，不用再关心DOM是如何渲染的了】) 在Vue中，一个核心的概念，就是让用户不再操作DOM元素，解放了用户的双手，让程序员可以更多的时间去关注业务逻辑； 增强自己就业时候的竞争力。 人无我有，人有我优 你平时不忙的时候，都在干嘛？ 3. 框架和库的区别 框架：是一套完整的解决方案；对项目的侵入性较大，项目如果需要更换框架，则需要重新架构整个项目。 node中的express； 库(插件)：提供某一个小功能，对项目的侵入性较小，如果某个库无法完成某些需求，可以很容易切换到其它库实现需求。 1.从jQuery切换到Zepto 从EJS切换到art-template 4. Node(后端)中的MVC与前端中的MVVM之间的区别 MVC是后端的分层开发概念； MVVM是前端视图层的概念，主要关注于视图层分离，也就是说：MVVM把前端的视图层分为了三部分： Module View VM ViewModule 为什么有了MVC还要有MVVM？详情见图解]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CSS2.1之三列布局]]></title>
+    <url>%2F2019%2F10%2F21%2FB-21-CSS2.1%E4%B9%8B%E4%B8%89%E5%88%97%E5%B8%83%E5%B1%80%2F</url>
+    <content type="text"><![CDATA[1.使用1.1 双飞翼布局 2.详细分析2.1 三列布局1 满足条件： 1.两边固定，中间自适应 ---&gt; 1.1 1.2 2.中间列要完整显示 ---&gt; 2.1！只考虑这两点设计出来的三列布局的缺点是：中间列不能够优先渲染，用户体验比较差。 思路： 1.1 每一列用一个div,共分为left、center、right三列； 1.2 用绝对定位（必须相对于初始包含块进行定位），将left和right位置固定； 2.1 给中间列一个内边距 padding = 左右列的width； 代码： 1234567891011121314151617181920212223242526272829&lt;!-- css代码 --&gt;&lt;style&gt; * &#123; margin: 0; padding: 0; &#125; #left,#right &#123; width: 200px; background-color: pink; &#125; #left &#123; position: absolute; left: 0; top: 0 &#125; #right &#123; position: absolute; right: 0; top: 0; &#125; #center &#123; background-color: aquamarine; padding: 0px 200px; &#125;&lt;/style&gt; &lt;!-- html代码 --&gt; &lt;div id=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div id=&quot;center&quot;&gt;center&lt;/div&gt; &lt;div id=&quot;right&quot;&gt;right&lt;/div&gt; 2.2 三列布局2 满足条件: 1.两边固定，中间自适应 ---&gt; 1.1 2.中间列要完整显示 ---&gt; 3.中间列要优先加载 ---&gt; 3.1 3.2！这样设计出来的三列布局的缺点是：中间列与左右两边的列直接有重叠，结构不干净。 思路： 1.1 每一列用一个div,共分为left、center、right三列； 3.1 使用浮动将left和right放到相应的位置； 3.2 使用浮动以后，由于left、center、right依次放置的，所以right浮不上去 1.为了保持左右一致，调换位置让两个都浮上去。(布局好了，但并没有达到想要的效果) 2.为了保持左右一致，调换位置让两个都浮不上去。—&gt; 为圣杯布局做准备 代码： 12345678910111213141516171819202122232425&lt;!-- css代码 --&gt;&lt;style&gt; * &#123; margin: 0; padding: 0; &#125; #left,#right &#123; width: 200px; background-color: pink; &#125; #left &#123; float: left; &#125; #right &#123; float: right; &#125; #center &#123; background-color: aquamarine; padding: 0px 200px; &#125;&lt;/style&gt; &lt;!-- html代码 --&gt; &lt;div id=&quot;left&quot;&gt;left&lt;/div&gt; &lt;div id=&quot;center&quot;&gt;center&lt;/div&gt; &lt;div id=&quot;right&quot;&gt;right&lt;/div&gt; 2.3 圣杯布局 满足条件: 1.两边固定，中间自适应---&gt; 1.1 1.2 2.中间列要完整显示---&gt; 2.1 3.中间列要优先加载---&gt; 3.1 3.2 思路： 1.1 每一列用一个div,共分为left、center、right三列； 3.1 使用浮动将left和right放到相应的位置； 3.2 使用浮动以后，由于left、center、right依次放置的，所以right浮不上去 2.为了保持左右一致，调换位置让两个都浮不上去。 3.3 让中间也浮动，把中间的宽度设置为100%,此时左右两边仍然像刚开始那样（两个都浮不上去）。 3.4 此时浮不上去是因为宽度不够了，所以利用margin-left(左外边距)为负值让三列布局到一行上。 3.5 使两边的列与中间的列没有重复。 1.给包裹三列布局的div一个左右的内边距（padding：0 左右两列的宽度） 2.使用相对定位：调整旁边两列的位置（使两列位置调整到两头）。 4.最后，设置页面（body）的最小宽度：min-width: (2 * (left宽 + right宽))px; ！这样设计出来的三列布局的缺点是：左右两列的高度与中间列的高度不能够同步改变。 5.使用伪等高布局原理实现高度同步： 1.设置左中右三列的padding-bottom: 10000px;用下内边距撑开高度需要同步的几个元素 2.设置左中右三列的margin-bottom: -1000px;再用负的下外边距收回盒子底部。 3.给包裹左中右三列的父div设置overflow: hidden; 伪等高原理: 用浮动使元素在同一列 padding-bottom: 10000px;用下内边距撑开高度需要同步的几个元素 margin-bottom: -1000px;再用负的下外边距收回盒子底部 给包裹的父div设置overflow: hidden; 代码： 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364 &lt;!-- css代码 --&gt; &lt;style&gt; * &#123; margin: 0; padding: 0; &#125; body &#123; min-width: 600px; &#125; #header &#123; background-color: aqua; text-align: center; border: 1px solid deeppink; &#125; #footer &#123; background-color: gray; text-align: center; border: 1px solid deeppink; &#125; #content &#123; padding: 0px 200px; overflow: hidden; &#125; #content .left ,#content .right&#123; background-color: pink; width: 200px; &#125; #content .center,#content .left,#content .right&#123; padding-bottom: 10000px; margin-bottom: -10000px;&#125; #content .left &#123; position: relative; left: -200px; float: left; margin-left: -100%; &#125; #content .right &#123; position: relative; right: -200px; float: right; margin-left: -200px; &#125; #content .center &#123; float: left; width: 100%; background-color: aquamarine; &#125; .clearfix:after &#123; content: &quot;&quot;; display: table; clear: both; &#125; &lt;/style&gt; &lt;!-- html代码 --&gt; &lt;div id=&quot;header&quot;&gt;header&lt;/div&gt; &lt;div id=&quot;content&quot; class=&quot;clearfix&quot;&gt; &lt;div class=&quot;center&quot;&gt;center&lt;/div&gt; &lt;div class=&quot;left&quot;&gt; left&lt;br /&gt;left&lt;br /&gt;left&lt;br /&gt;left &lt;/div&gt; &lt;div class=&quot;right&quot;&gt;right&lt;/div&gt; &lt;/div&gt; &lt;div id=&quot;footer&quot;&gt;footer&lt;/div&gt;]]></content>
+      <categories>
+        <category>前端</category>
+        <category>CSS2.1</category>
+      </categories>
+      <tags>
+        <tag>三列布局</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git基本操作]]></title>
     <url>%2F2019%2F10%2F21%2Fgit%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[1. Git安装 git仓储有三个区：工作区、暂存区、版本库。 2. 初始化Git仓储/(仓库) 这个仓库会存放，git对我们项目代码进行备份的文件。 在项目目录右键打开 git bash。 命令：git init 3. 自报家门 就是在git中设置当前使用的用户是谁。 命令： 配置用户名：git config --global user.name &quot;你的的用户名&quot; 配置邮箱：git config --global user.email &quot;你的邮箱&quot; 4. 把代码存储到.git仓储中 1.把代码放到仓储的门口。 git add ./文件名 2.把仓储门口的代码放到里面的房间中去。 git commit -m &quot;对这次添加内容的说明&quot; 也可以一次性把修改的代码放到房间里(版本库)。 git add ./ git commit --all &quot;说明&quot; –all 表示把所有修改的文件提交到版本库。 5. 查看当前的状态 命令：git status 可以用来查看当前代码有没有被放到仓储中去。 一共有三种状态： 红色：工作区的代码没有放入暂存区，更没有到版本库中。 绿色：工作区的代码放入了暂存区，还没有保存到版本库。 工作区干净 (版本库保存的代码与工作区的代码一致)。 6. git中的忽略文件 .gitignore,在这个文件中可以设置要被忽略的文件或者目录。 被忽略的文件不会被提交到仓储里去。 在.gitignore中可以书写要被忽略的文件的路径。以/开头，一行写一个路径，这些路径所对应的文件都会被忽略，不会被提交到仓储中去。 写法： /.idea 会忽略.idea文件 /js 会忽略js目录里的所有文件 /js/*.js 会忽略js目录下的所有js文件 7. 查看日志 git log 查看历史提交的日志。 git log --oneline 可以看到简洁版的历史提交日志 就是查看提交过的历史（每一次提交的东西都会被git备份）。 8. 回退到指定的版本 git reset --hard Head~0 表示回退到上一次代码提交时的状态。 git reset --hard Head~1 表示回退到上上次代码提交时的状态。 git reset --hard [版本号] 可以通过版本号精确的回退到某一次提交时的状态。 需要先查看日志，然后看每一个日志前面的版本号(每个版本号都是唯一的)。 git reflog 可以看到每一次切换版本的记录：可以看到所有提交的版本号。 9. 分支 默认是有一个主分支 master。 9.1 创建分支 git branch dev 创建了一个dev分支。 在刚创建的dev分支里的东西和master分支里的东西是一样的。 9.2 切换分支 git checkout dev 切换到指定的分支，这里切换到名为dev的分支。 git branch 可以查看当前所在的分支。 9.3 合并分支 git merge dev 合并分支内容，把当前分支与指定的分支(dev)，进行合并。 当前分支是指 git branch 命令输出的前面有*号的分支 合并时如果有冲突，需要手动去处理，处理还需要再提交一次。 手动处理：git会自动合并冲突，然后需要自己去那个文件里面看哪个内容需要就留下，不需要的就手动从文件内容里面删除，然后再存储 10. GitHub https://github.com 不是git，只是一个网站 只不过这个网站提供了允许别人通过git上传代码的功能 10.1 github准备工作 在github中新建一个仓库(用来存储项目),仓库新建好之后有一个地址(点击HTTP会显示)，后面内容中的 [地址1] 为这个地址。 ! 用这个地址需要输入账号密码，可能会不安全，也比较麻烦，所以还可以使用密钥。 在github中新建一个密钥，将用git生成的密钥中的公钥文件中的内容添加到github中新建的密钥中。这个密钥也有一个地址(点击SSH会显示)，后面内容中的 [地址2] 为这个地址。 10.1 提交代码到github(当作git服务器来使用) git push [地址1] master 示例：git push https://github.com/huoqishi/test112.git 会把当前分支的内容传到远程的master分支上 git pull [地址1] master 示例：git pull https://github.com/huoqishi/test112.git 会把远程分支(master)的数据得到：(注意本地要初始化一个仓库) git clone [地址1] 会得到远程仓储相同的数据，如果多次执行会覆盖本地内容。 10.2 ssh方式上传代码 公钥、私钥，两者之间是有关联的。 用git生成公钥和私钥： ssh-keygen -t rsa -C &quot;邮箱&quot; 上传代码或者获取数据： git push [地址2] master git pull [地址2] master git clone [地址2] master 10.3 更简洁的上传方式 git remote add origin [地址2] 将地址用一个变量(这里用的origin)代替 git push origin -u master 在push时，加上-u参数，那么再下一次push时，就只需要写git push就能上传代码。 加上-u之后，git会将当前分支与远程的分支进行关联。 上传代码或者获取数据： git push git pull git clone 10.4 在push和pull操作冲突时 先pull,再push。]]></content>
