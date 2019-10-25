@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。  默认值：1.0    不可继承   1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
+<meta name="description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta name="keywords" content="css新增UI方案">
 <meta property="og:type" content="article">
 <meta property="og:title" content="B-10-CSS3之新增UI方案">
 <meta property="og:url" content="http://yoursite.com/2019/10/14/B-10-CSS3之新增UI方案/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。  默认值：1.0    不可继承   1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
+<meta property="og:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-22T06:02:49.662Z">
+<meta property="og:updated_time" content="2019-10-25T12:08:13.166Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B-10-CSS3之新增UI方案">
-<meta name="twitter:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。  默认值：1.0    不可继承   1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
+<meta name="twitter:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 
 
 
@@ -420,10 +420,9 @@
 
       
         <h2 id="1-文本新增属性"><a href="#1-文本新增属性" class="headerlink" title="1. 文本新增属性"></a>1. 文本新增属性</h2><h3 id="1-1-opacity"><a href="#1-1-opacity" class="headerlink" title="1.1 opacity"></a>1.1 opacity</h3><ul>
-<li><p>opacity属性指定了一个元素的透明度。</p>
-</li>
-<li><p>默认值：1.0    不可继承</p>
-</li>
+<li>opacity属性指定了一个元素的透明度。</li>
+<li>默认值：1.0    不可继承</li>
+<li>可以简写为<code>.1</code>~<code>.9</code>，1.0是不透明，0是完全透明，值越小透明度越高。</li>
 </ul>
 <h3 id="1-2-rgba"><a href="#1-2-rgba" class="headerlink" title="1.2 rgba"></a>1.2 rgba</h3><ul>
 <li>rgba(0,0,0,.8);</li>
@@ -457,9 +456,10 @@
 </ul>
 <h3 id="1-4-文字描边"><a href="#1-4-文字描边" class="headerlink" title="1.4 文字描边"></a>1.4 文字描边</h3><ul>
 <li>只有webkit内核才支持：-webkit-text-stroke（准确的来说不能算是css3的东西，但需要知道）</li>
+<li><code>-webkit-text-stroke: blue 4px;</code>，描边里面的文字颜色可以设置为透明色rgba(0,0,0,0)</li>
 </ul>
 <h3 id="1-5-文字排版"><a href="#1-5-文字排版" class="headerlink" title="1.5 文字排版"></a>1.5 文字排版</h3><ul>
-<li><p>direction:控制文字的方向。</p>
+<li><p>direction:控制文字的方向(ltr/rtl)。</p>
 </li>
 <li><p>一定要配合unicode-bidi:bidi-override;来使用</p>
 </li>
@@ -469,15 +469,16 @@
 <p>– white-space: nowrap;</p>
 <p>– overflow: hidden;</p>
 <p>– text-overflow: ellipsis;</p>
-<p>– 包裹区域必须不能让子元素撑开</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">   &lt;!-- css代码 --&gt;</span><br><span class="line">div&#123;</span><br><span class="line">	width: 200px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	border: 1px solid;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	white-space: nowrap;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">   &lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">   &lt;div&gt;尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>– 包裹区域必须不能让子元素撑开。</p>
+<p>– 设置<code>text-overflow: ellipsis;</code>时，div的文字外面不能包裹p标签，否则文字只会溢出隐藏并不会显示省略号。（我自己加的）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!-- css代码 --&gt;</span><br><span class="line">div&#123;</span><br><span class="line">	width: 200px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	border: 1px solid;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	white-space: nowrap;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  &lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div&gt;尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h2 id="2-盒模型新增属性"><a href="#2-盒模型新增属性" class="headerlink" title="2. 盒模型新增属性"></a>2. 盒模型新增属性</h2><h3 id="2-1-盒模型阴影"><a href="#2-1-盒模型阴影" class="headerlink" title="2.1 盒模型阴影"></a>2.1 盒模型阴影</h3><ul>
 <li><p>box-shadow ：</p>
 <p>– 以逗号分割列表来描述一个或多个阴影效果，可以用到几乎任何元素上。 </p>
-<p>– 如果元素同时设置了 border-radius ，阴影也会有圆角效果。多个阴影时和多个 text shadows 规则相同(第一个阴影在最上面)。</p>
+<p>– 如果元素同时设置了 border-radius ，阴影也会有圆角效果。多个阴影时和多个 text-shadow 规则相同(第一个阴影在最上面)。</p>
 </li>
 <li><p>默认值:  none    不可继承</p>
 </li>
@@ -488,7 +489,7 @@
 <p>  ! &lt;offset-y&gt; 设置垂直偏移量，如果是负值则阴影位于元素上面。</p>
 <p>  ! 如果两者都是0，那么阴影位于元素后面。这时如果设置&lt;blur-radius&gt; 或&lt;spread-radius&gt; 则有模糊效果。</p>
 <p>– &lt;blur-radius&gt;：这是第三个 &lt;length&gt; 值。值越大，模糊面积越大，阴影就越大越淡。 不能为负值。默认为0，此时阴影边缘锐利。</p>
-<p>– &lt;spread-radius&gt;：这是第四个 &lt;length&gt; 值。取正值时，阴影扩大；取负值时，阴影.收缩。默认为0，此时阴影与元素同样大。</p>
+<p>– &lt;spread-radius&gt;：这是第四个 &lt;length&gt; 值。取正值时，阴影扩大（阴影覆盖到元素上的距离）；取负值时，阴影收缩（阴影藏在元素下面的距离）。默认为0，此时阴影与元素同样大。</p>
 <p>– &lt;color&gt;：阴影颜色，如果没有指定，则由浏览器决定。</p>
 </li>
 </ul>
@@ -498,7 +499,7 @@
 <li><p>默认值:none  不可继承</p>
 </li>
 <li><p>值：（必须是123的顺序）</p>
-<p>– 倒影的方向：(第一个值) above, below, right, left<br>– 倒影的距离：(第二个值) 长度单位<br>– 渐变：(第三个值)</p>
+<p>– 倒影的方向：(第一个值) above, below, right, left<br>– 倒影的距离：(第二个值) 长度单位<br>– 渐变：(第三个值，可选值，可以不设置)</p>
 </li>
 </ul>
 <h3 id="2-3-盒模型resize"><a href="#2-3-盒模型resize" class="headerlink" title="2.3 盒模型resize"></a>2.3 盒模型resize</h3><ul>
@@ -516,7 +517,15 @@
 <p>  – horizontal：允许用户在水平方向上调整元素的大小。</p>
 <p>  – vertical：允许用户在垂直方向上调整元素的大小。</p>
 <h3 id="2-4-box-sizing"><a href="#2-4-box-sizing" class="headerlink" title="2.4 box-sizing"></a>2.4 box-sizing</h3><ul>
-<li><p>box-sizing 属性用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型。可以使用此属性来模拟不正确支持CSS盒子模型规范的浏览器的行/列为。</p>
+<li><p>box-sizing属性定义了用户代理应该如何计算一个元素的总宽度和总高度。</p>
+</li>
+<li><p>可取值：</p>
+<ul>
+<li><code>box-sizing: content-box;</code> border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。注意: <code>border-box</code>不包含<code>margin</code>。</li>
+<li><code>box-sizing: border-box;</code> 默认值，标准盒子模型。width 与 height只包括内容的宽和高， 不包括边框（border），内边距（padding），外边距（margin）。注意: 内边距、边框和外边距都在这个盒子的外部。</li>
+</ul>
+</li>
+<li><p>box-sizing 属性用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型。可以使用此属性来模拟不正确支持CSS盒子模型规范的浏览器的行为。</p>
 </li>
 <li><p>默认值：content-box  不可继承</p>
 </li>
@@ -870,7 +879,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">36</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -881,7 +890,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -892,7 +901,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">53</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
