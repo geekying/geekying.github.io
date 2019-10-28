@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-25T12:08:13.166Z">
+<meta property="og:updated_time" content="2019-10-28T06:29:32.581Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B-10-CSS3之新增UI方案">
 <meta name="twitter:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
@@ -516,7 +516,7 @@
 <p>  – both：允许用户在水平和垂直方向上调整元素的大小。</p>
 <p>  – horizontal：允许用户在水平方向上调整元素的大小。</p>
 <p>  – vertical：允许用户在垂直方向上调整元素的大小。</p>
-<h3 id="2-4-box-sizing"><a href="#2-4-box-sizing" class="headerlink" title="2.4 box-sizing"></a>2.4 box-sizing</h3><ul>
+<h3 id="2-4-box-sizing-怪异盒模型"><a href="#2-4-box-sizing-怪异盒模型" class="headerlink" title="2.4 box-sizing(怪异盒模型)"></a>2.4 box-sizing(怪异盒模型)</h3><ul>
 <li><p>box-sizing属性定义了用户代理应该如何计算一个元素的总宽度和总高度。</p>
 </li>
 <li><p>可取值：</p>
@@ -530,7 +530,7 @@
 <li><p>默认值：content-box  不可继承</p>
 </li>
 </ul>
-<h3 id="2-5-怪异盒模型"><a href="#2-5-怪异盒模型" class="headerlink" title="2.5 怪异盒模型"></a>2.5 怪异盒模型</h3><h2 id="3-新增UI样式"><a href="#3-新增UI样式" class="headerlink" title="3. 新增UI样式"></a>3. 新增UI样式</h2><h3 id="3-1-圆角"><a href="#3-1-圆角" class="headerlink" title="3.1 圆角"></a>3.1 圆角</h3><ul>
+<h2 id="3-新增UI样式"><a href="#3-新增UI样式" class="headerlink" title="3. 新增UI样式"></a>3. 新增UI样式</h2><h3 id="3-1-圆角"><a href="#3-1-圆角" class="headerlink" title="3.1 圆角"></a>3.1 圆角</h3><ul>
 <li><p>传统的圆角生成方案，必须使用多张图片作为背景图案。</p>
 </li>
 <li><p>CSS3圆角的出现，使得我们再也不必浪费时间去制作这些图片了，而且还有其他多个优点：</p>
@@ -561,8 +561,7 @@
 <p>– border-radius: top-left     top-right     bottom-right      bottom-left </p>
 </li>
 <li><p>半径的第二个语法取值也可取1~4个值</p>
-<p>– border-radius: (first radius values) / radius   </p>
-<p>– border-radius: (first radius values) / top-left-and-bottom-right      top-right-and-bottom-left </p>
+<p>– border-radius: (first radius values) / radius<br>– border-radius: (first radius values) / top-left-and-bottom-right      top-right-and-bottom-left </p>
 <p>– border-radius: (first radius values) / top-left     top-right-and-bottom-left     bottom-right </p>
 <p>– border-radius: (first radius values) / top-left     top-right     bottom-right       bottom-left </p>
 </li>
@@ -589,6 +588,8 @@
 </li>
 </ul>
 <h3 id="3-3-背景"><a href="#3-3-背景" class="headerlink" title="3.3 背景"></a>3.3 背景</h3><h4 id="3-3-1-css2"><a href="#3-3-1-css2" class="headerlink" title="3.3.1 css2"></a>3.3.1 css2</h4><ul>
+<li><p>默认情况下，背景图片是从padding开始绘制的，超出的部分是从border开始剪裁的。背景颜色是除了margin。</p>
+</li>
 <li><p>background-color</p>
 <ul>
 <li><p>background-color 会设置元素的背景色。</p>
@@ -599,12 +600,10 @@
 </li>
 <li><p>background-image</p>
 <ul>
-<li><p>background-image属性用于为一个元素设置一个或多个背景图像，图像在绘制时，以z轴方向堆叠的方式进行。先指定的图像会在之后指定的图像上面进行绘制。</p>
-</li>
-<li><p>注意：background-color会在image之下进行绘制，边框和内容会在image之上进行绘制。</p>
-</li>
-<li><p>默认值：none   不可继承 </p>
-</li>
+<li>background-image属性用于为一个元素设置一个或多个背景图像，图像在绘制时，以z轴方向堆叠的方式进行。先指定的图像会在之后指定的图像上面进行绘制。</li>
+<li>注意：background-color会在image之下进行绘制，边框和内容会在image之上进行绘制。</li>
+<li>默认值：none   不可继承 </li>
+<li>background-image可以设置多个背景图片，用逗号隔开[url(img1), url(img2)]；</li>
 </ul>
 </li>
 <li><p>background-repeat</p>
@@ -631,7 +630,9 @@
 </li>
 <li><p>值：</p>
 <ul>
-<li><p>百分比：参照尺寸为背景图片定位区域的大小减去背景图片的大小。</p>
+<li><p>数值：单位是px。正值右移下移，负值左移上移。</p>
+</li>
+<li><p>百分比：参照尺寸为背景图片定位区域的大小减去背景图片的大小【(盒子的宽高 - 图片的宽高) * 设置的百分比 = 数值（xxx px）】（不是参照图片也不是参照盒子）。</p>
 <p>– 第一个值：元素在水平方向的位移。</p>
 <p>– 第二个值：元素在垂直方向的位移</p>
 </li>
@@ -674,6 +675,15 @@
 </ul>
 </li>
 <li><p>background-clip：设置背景裁剪位置</p>
+<ul>
+<li><p>取值：border-box 、padding-box、content-box、text</p>
+</li>
+<li><p>取值为text时，是从文本开始，要配合使用。</p>
+<p><code>background-clip: text;</code></p>
+<p><code>-webkit-background-clip: text;</code></p>
+<p><code>color: transparent;颜色透明，这个不是必须的</code></p>
+</li>
+</ul>
 </li>
 <li><p>background-size </p>
 <ul>
@@ -723,7 +733,7 @@
 </li>
 <li><p>还要定义终止色。终止色就是你想让浏览器去平滑的过渡过去，并且必须指定至少两种，当然也会可以指定更多的颜色去创建更复杂的渐变效果。</p>
 </li>
-<li><p>默认从上到下发生渐变：linear-gradient(red,blue);</p>
+<li><p>默认从上到下发生渐变：<code>background-image: linear-gradient(red,blue);</code></p>
 </li>
 <li><p>改变渐变方向：（top bottom left right） linear-gradient(to 结束的方向,red,blue);</p>
 </li>
@@ -746,7 +756,7 @@
 <p>– circle</p>
 <p>– ellipse（默认为椭圆）</p>
 </li>
-<li><p>渐变形状的大小:</p>
+<li><p>渐变形状的大小(size):</p>
 <p>– radial-gradient(closest-corner  circle ,red,blue)</p>
 <p>– closest-side   最近边</p>
 <p>– farthest-side  最远边</p>
@@ -757,6 +767,8 @@
 </ul>
 </li>
 </ul>
+</li>
+<li><p>渐变使用总结：<code>background-image:radial-gradient(大小 圆心/形状,颜色1 距离/百分比,颜色2 距离/百分,颜色3 距离/百分... );</code></p>
 </li>
 </ul>
 
@@ -879,7 +891,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">36</span>
+                  <span class="site-state-item-count">40</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -901,7 +913,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">56</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1004,7 +1016,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-文本新增属性"><span class="nav-number">1.</span> <span class="nav-text">1. 文本新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-opacity"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 opacity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-rgba"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 rgba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-文字阴影"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 文字阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-文字描边"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 文字描边</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-文字排版"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 文字排版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-盒模型新增属性"><span class="nav-number">2.</span> <span class="nav-text">2. 盒模型新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-盒模型阴影"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 盒模型阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-盒模型倒影"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 盒模型倒影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-盒模型resize"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 盒模型resize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-box-sizing"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 box-sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-怪异盒模型"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 怪异盒模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-新增UI样式"><span class="nav-number">3.</span> <span class="nav-text">3. 新增UI样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-圆角"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 圆角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-边框图片"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 边框图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-背景"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-css2"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 css2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-css3"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 css3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-渐变"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 渐变</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-概述"><span class="nav-number">3.4.1.</span> <span class="nav-text">3.4.1 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-分类"><span class="nav-number">3.4.2.</span> <span class="nav-text">3.4.2 分类</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-文本新增属性"><span class="nav-number">1.</span> <span class="nav-text">1. 文本新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-opacity"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 opacity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-rgba"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 rgba</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-文字阴影"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 文字阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-文字描边"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 文字描边</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-文字排版"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 文字排版</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-盒模型新增属性"><span class="nav-number">2.</span> <span class="nav-text">2. 盒模型新增属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-盒模型阴影"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 盒模型阴影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-盒模型倒影"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 盒模型倒影</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-盒模型resize"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 盒模型resize</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-box-sizing-怪异盒模型"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 box-sizing(怪异盒模型)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-新增UI样式"><span class="nav-number">3.</span> <span class="nav-text">3. 新增UI样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-圆角"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 圆角</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-边框图片"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 边框图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-背景"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 背景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-1-css2"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 css2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-3-2-css3"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 css3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-渐变"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 渐变</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-1-概述"><span class="nav-number">3.4.1.</span> <span class="nav-text">3.4.1 概述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-4-2-分类"><span class="nav-number">3.4.2.</span> <span class="nav-text">3.4.2 分类</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

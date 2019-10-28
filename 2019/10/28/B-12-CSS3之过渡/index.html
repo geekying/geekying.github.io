@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="过渡,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. transition介绍1.1 注意！ ！过渡在CSS3中比较重要。 并不是所有的属性都有过渡。 查看地址：https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties  1.2 概述 众所周知，css效率极高，其变化的过程往往都是在一瞬间完成，速度极快。 CSS transition 提供了一种在更改CSS">
+<meta name="keywords" content="过渡">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3之过渡">
+<meta property="og:url" content="http://yoursite.com/2019/10/28/B-12-CSS3之过渡/index.html">
+<meta property="og:site_name" content="小颖子的hexo博客">
+<meta property="og:description" content="1. transition介绍1.1 注意！ ！过渡在CSS3中比较重要。 并不是所有的属性都有过渡。 查看地址：https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties  1.2 概述 众所周知，css效率极高，其变化的过程往往都是在一瞬间完成，速度极快。 CSS transition 提供了一种在更改CSS">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-28T12:49:07.232Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3之过渡">
+<meta name="twitter:description" content="1. transition介绍1.1 注意！ ！过渡在CSS3中比较重要。 并不是所有的属性都有过渡。 查看地址：https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties  1.2 概述 众所周知，css效率极高，其变化的过程往往都是在一瞬间完成，速度极快。 CSS transition 提供了一种在更改CSS">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/28/B-12-CSS3之过渡/">
+
+
+
+
+
+  <title>CSS3之过渡 | 小颖子的hexo博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+   <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小颖子的hexo博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">wcy's blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/B-12-CSS3之过渡/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS3之过渡</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T14:46:46+08:00">
+                2019-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+        </div>
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-transition介绍"><a href="#1-transition介绍" class="headerlink" title="1. transition介绍"></a>1. transition介绍</h2><h3 id="1-1-注意！"><a href="#1-1-注意！" class="headerlink" title="1.1 注意！"></a>1.1 注意！</h3><ul>
+<li>！过渡在CSS3中比较重要。</li>
+<li>并不是所有的属性都有过渡。</li>
+<li>查看地址：<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_animated_properties</a></li>
+</ul>
+<h3 id="1-2-概述"><a href="#1-2-概述" class="headerlink" title="1.2 概述"></a>1.2 概述</h3><ul>
+<li>众所周知，css效率极高，其变化的过程往往都是在一瞬间完成，速度极快。</li>
+<li>CSS transition 提供了一种在更改CSS属性时控制动画速度的方法。 其可以让属性变化成为一个持续一段时间的过程，而不是立即生效的。比如，将一个元素的颜色从白色改为黑色，通常这个改变是立即生效的，使用 CSS transitions 后该元素的颜色将逐渐从白色变为黑色，按照一定的曲线速率变化。这个过程可以自定义。</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="1-3-简写属性transition"><a href="#1-3-简写属性transition" class="headerlink" title="1.3 简写属性transition"></a>1.3 简写属性transition</h3><ul>
+<li><p>transition是一个简写属性，用于 transition-property,transition-duration,transition-timing-function, 和transition-delay。 </p>
+</li>
+<li><p>CSS过渡由简写属性 transition 定义是最好的方式，可以避免属性值列表长度不一，节省调试时间 。</p>
+</li>
+<li><p>默认值：</p>
+<ul>
+<li>transition-delay: 0s</li>
+<li>transition-duration: 0s</li>
+<li>transition-property: all</li>
+<li>transition-timing-function: ease</li>
+</ul>
+</li>
+<li><p>！注意</p>
+<ul>
+<li>在transition属性中，各个值的书写顺序是很重要的：第一个可以解析为时间的值会被赋值给transition-duration，第二个可以解析为时间的值会被赋值给transition-delay。</li>
+<li>只写一个时间，会给周期；延时会使用默认值（不延时）。</li>
+<li>给多个属性设置不同的过渡周期/延时：每个属性前面写一个/两个时间（其它的使用默认值），前一个属性与后一个属性之间用逗号隔开。</li>
+</ul>
+</li>
+<li><p>推荐抒写顺序：<code>transition: 过渡时间 过渡样式  过渡形式  延迟时间 [，过渡时间  过渡样式  过渡形式  延迟时间]</code></p>
+</li>
+<li><p>兼容性</p>
+<ul>
+<li>transition 可以不用厂商前缀，不过鉴于标准刚刚稳定，对于基于 Webkit的浏览器仍然需要厂商前缀。如果想兼容旧版本的浏览器那么也需要厂商前缀（例如Firefox 15 及之前版本, Opera 12 及之前版本)。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><h3 id="2-1-transition-property"><a href="#2-1-transition-property" class="headerlink" title="2.1 transition-property"></a>2.1 transition-property</h3><ul>
+<li>指定应用过渡属性的名称。</li>
+<li>默认值：all，表示所有可被动画的属性都表现出过渡动画。</li>
+<li>可以指定多个 property 。</li>
+<li>属性值：<ul>
+<li>none：没有过渡动画。</li>
+<li>all：所有可被动画的属性都表现出过渡动画。</li>
+<li>IDENT：属性名称 （可以指定多个）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2transition-duration"><a href="#2-2transition-duration" class="headerlink" title="2.2transition-duration"></a>2.2transition-duration</h3><ul>
+<li>属性以秒或毫秒为单位指定过渡动画所需的时间。</li>
+<li>默认值：0s ，表示不出现过渡动画。</li>
+<li>可以指定多个时长，每个时长会被应用到由 transition-property 指定的对应属性上。<ul>
+<li>如果指定的时长个数小于属性个数，那么时长列表会重复。</li>
+<li>如果时长列表更长，那么该列表会被裁减。</li>
+<li>两种情况下，属性列表都保持不变。</li>
+</ul>
+</li>
+<li>属性值<ul>
+<li>以毫秒或秒为单位的数值</li>
+<li><time> 类型。<ul>
+<li>表示过渡属性从旧的值转变到新的值所需要的时间。</li>
+<li>如果时长是 0s ，表示不会呈现过渡动画，属性会瞬间完成转变。不接受负值。</li>
+<li>！一定要加单位(不能写0 一定要写0s  1s,0s,1s)！</li>
+</ul>
+</time></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-transition-timing-function"><a href="#2-3-transition-timing-function" class="headerlink" title="2.3 transition-timing-function"></a>2.3 transition-timing-function</h3><ul>
+<li>CSS属性受到 transition的影响，会产生不断变化的中间值，而 CSS transition-timing-function 属性用来描述这个中间值是怎样计算的。</li>
+<li>实质上，通过这个函数会建立一条加速度曲线，因此在整个transition变化过程中，变化速度可以不断改变。</li>
+<li>默认值：ease<ul>
+<li>可以规定多个timing function,通过使用 transition-property属性，可以根据主列表(transition property的列表)给每个CSS属性应用相应的timing function。</li>
+<li>如果timing function的个数比主列表中数量少，缺少的值被设置为初始值（ease）。</li>
+<li>如果timing function比主列表要多，timing function函数列表会被截断至合适的大小。这两种情况下声明的CSS属性都是有效的。</li>
+</ul>
+</li>
+<li>属性值：<ul>
+<li>1、ease：（加速然后减速）默认值，ease函数等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)。</li>
+<li>2、linear：（匀速），linear 函数等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)。</li>
+<li>3、ease-in：(加速)，ease-in 函数等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)。</li>
+<li>4、ease-out：（减速），ease-out 函数等同于贝塞尔曲线(0, 0, 0.58, 1.0)。</li>
+<li>5、ease-in-out：（加速然后减速），ease-in-out 函数等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)。</li>
+<li>6、cubic-bezier： 贝塞尔曲线（<a href="https://cubic-bezier.com/#.17,.67,.83,.67）" target="_blank" rel="noopener">https://cubic-bezier.com/#.17,.67,.83,.67）</a></li>
+<li>7、是跳动着变化的。<ul>
+<li>step-start：等同于steps(1,start)</li>
+<li>step-end：等同于steps(1,end)</li>
+<li>steps(<integer>,[,[start|end]]?)<br>– 第一个参数：必须为正整数，指定函数的步数<br>– 第二个参数：指定每一步的值发生变化的时间点（默认值end）</integer></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-transition-delay"><a href="#2-4-transition-delay" class="headerlink" title="2.4 transition-delay"></a>2.4 transition-delay</h3><ul>
+<li><p>transition-delay属性规定了在过渡效果开始作用之前需要等待的时间。</p>
+</li>
+<li><p>默认值：0s </p>
+</li>
+<li><p>可以指定多个延迟时间，每个延迟将会分别作用于你所指定的相符合的css属性。</p>
+<ul>
+<li>如果指定的时长个数小于属性个数，那么时长列表会重复。</li>
+<li>如果时长列表更长，那么该列表会被裁减。两种情况下，属性列表都保持不变</li>
+</ul>
+</li>
+<li><p>属性值：值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。</p>
+<ul>
+<li>取值为正时会延迟一段时间来响应过渡效果。</li>
+<li>取值为负时会导致过渡立即开始。</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-当属性值的列表长度不一致时"><a href="#2-5-当属性值的列表长度不一致时" class="headerlink" title="2.5 当属性值的列表长度不一致时"></a>2.5 当属性值的列表长度不一致时</h3><ul>
+<li>transition-property: background,width,height;<br>transition-duration: 3s,2s;<br>transition-delay:3s,2s;<br>transition-timing-function:linear;</li>
+</ul>
+<p>transition-property: background,width,height;<br>transition-duration: 3s,2s,3s;<br>transition-delay:3s,2s,3s;<br>transition-timing-function:linear,ease,ease;</p>
+<ul>
+<li>！超出的情况下是会被全部截掉的！</li>
+<li>！不够的时候，关于时间的会重复列表，transition-timing-function的时候使用的是默认值(ease)。</li>
+</ul>
+<h3 id="2-6-检测过渡是否完成"><a href="#2-6-检测过渡是否完成" class="headerlink" title="2.6 检测过渡是否完成"></a>2.6 检测过渡是否完成</h3><ul>
+<li>当过渡完成时触发一个事件，在符合标准的浏览器下，这个事件是 transitionend, 在 WebKit 下是webkitTransitionEnd。</li>
+<li>每一个拥有过渡的属性在其完成过渡时都会触发一次transitionend事件。</li>
+<li>在transition完成前设置 display: none，事件同样不会被触发。</li>
+<li>详细代码：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.onload=function()&#123;</span><br><span class="line">    var testNode = document.querySelector(&quot;#test&quot;);</span><br><span class="line">    //dom2事件</span><br><span class="line">    testNode.addEventListener(&quot;transitionend&quot;,function()&#123;</span><br><span class="line">        alert(&quot;over&quot;)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="3-过渡的天坑"><a href="#3-过渡的天坑" class="headerlink" title="3. 过渡的天坑"></a>3. 过渡的天坑</h2><h3 id="3-1-坑1"><a href="#3-1-坑1" class="headerlink" title="3.1 坑1"></a>3.1 坑1</h3><ul>
+<li><p>此坑是由异步和css的快速解析造成的(浏览器的渲染机制造成的)。</p>
+</li>
+<li><p>如下一段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">body&#123;</span><br><span class="line">    width: 60%;</span><br><span class="line">    height: 60%;</span><br><span class="line">    border: 1px solid;</span><br><span class="line">    margin: 100px auto 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#test&#123;</span><br><span class="line">    width: 100px;</span><br><span class="line">    height: 100px;</span><br><span class="line">    background: pink;</span><br><span class="line">    text-align: center;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: 0;</span><br><span class="line">    right: 0;</span><br><span class="line">    bottom: 0;</span><br><span class="line">    top: 0;</span><br><span class="line">    margin: auto;</span><br><span class="line">    </span><br><span class="line">    transition-property: width;</span><br><span class="line">    transition-duration: 2s;</span><br><span class="line">    transition-timing-function: linear;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">body:hover #test&#123;</span><br><span class="line">    transition-property: height;</span><br><span class="line">    width: 200px;</span><br><span class="line">    height: 200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述代码中的注意点（分析）：</p>
+<ul>
+<li>鼠标移入body时，width会瞬间变成200px(因为来不及过渡，过渡就变成了height)，height会发生过渡。</li>
+<li>鼠标移除body时，widyh会发生过渡(从200px到100px的过渡),而height不会再发生过渡（因为body没有处于hover状态）。</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-1-坑2"><a href="#3-1-坑2" class="headerlink" title="3.1 坑2"></a>3.1 坑2</h3><ul>
+<li><p>此坑与解析有关</p>
+</li>
+<li><p>！transition在元素首次渲染还没有结束的情况下是不会被触发的。</p>
+</li>
+<li><p>如下一段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">   body&#123;</span><br><span class="line">       width: 60%;</span><br><span class="line">       height: 60%;</span><br><span class="line">       border: 1px solid;</span><br><span class="line">       margin: 100px auto 0;</span><br><span class="line">   &#125;</span><br><span class="line">   #test&#123;</span><br><span class="line">       width: 100px;</span><br><span class="line">       height: 100px;</span><br><span class="line">       background: pink;</span><br><span class="line">       text-align: center;</span><br><span class="line">       position: absolute;</span><br><span class="line">       left: 0;</span><br><span class="line">       right: 0;</span><br><span class="line">       bottom: 0;</span><br><span class="line">       top: 0;</span><br><span class="line">       margin: auto;</span><br><span class="line">       </span><br><span class="line">       transition-property: width;</span><br><span class="line">       transition-duration: 2s;</span><br><span class="line">       transition-timing-function: linear;</span><br><span class="line">   &#125;</span><br><span class="line">   //  在body标签后加此内容，过渡是不会触发的。</span><br><span class="line">   &lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">       var test = document.querySelector(&quot;#test&quot;);</span><br><span class="line">       test.style.width=&quot;300px&quot;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">   // 在body标签后的script标签中加此内容，过渡会触发。</span><br><span class="line">   window.onload=function()&#123;</span><br><span class="line">	setTimeout(function()&#123;</span><br><span class="line">		var test = document.querySelector(&quot;#test&quot;);</span><br><span class="line">		test.style.width=&quot;300px&quot;;</span><br><span class="line">	&#125;,3000)		</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">   // 在body标签后的script标签中加此内容，过渡不会触发。</span><br><span class="line">   window.onload=function()&#123;</span><br><span class="line">		var test = document.querySelector(&quot;#test&quot;);</span><br><span class="line">		test.style.width=&quot;300px&quot;;</span><br><span class="line">           test.style.width=&quot;100px&quot;;	</span><br><span class="line">&#125;</span><br><span class="line">   // 在body标签后的script标签中加此内容，过渡不会触发。</span><br><span class="line">   window.onload=function()&#123;</span><br><span class="line">       var test = document.createElement(&quot;div&quot;);</span><br><span class="line">       test.id=&quot;test&quot;;</span><br><span class="line">       document.documentElement.appendChild(test);</span><br><span class="line">       setTimeout(function()&#123;</span><br><span class="line">           test.style.width=&quot;300px&quot;;</span><br><span class="line">       &#125;,2000)</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>上述代码中的注意点（分析）：</p>
+<ul>
+<li>第一段代码不会产生过渡<ul>
+<li>分析：因为这两行代码是同步代码，解析时就会执行(alert等只是会阻塞)，此时页面并没有渲染完毕，过渡在页面首次渲染之前(实际上只是在初始化)，所以不会发生。</li>
+</ul>
+</li>
+<li>第二段代码会产生过渡<ul>
+<li>分析：因为这段代码是异步代码（单独的window.onload或者是单独的定时器也可以），解析时页面已经渲染完毕.</li>
+</ul>
+</li>
+<li>第三段代码不会产生过渡<ul>
+<li>分析：因为宽度没有改变（上面的样式直接被下面的样式覆盖）。</li>
+</ul>
+</li>
+<li>第四段代码不会产生过渡<ul>
+<li>分析：因为是新加进去的节点，所以过渡时页面并没有渲染完毕，所以不会发生过渡。（如果把过渡的代码放入定时器中过渡就可以发生了）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/过渡/" rel="tag"><i class="fa fa-tag"></i> 过渡</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/25/F-02-Node-js之Node基础/" rel="next" title="Node.js之Node基础">
+                <i class="fa fa-chevron-left"></i> Node.js之Node基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/28/B-13-CSS3之动画/" rel="prev" title="CSS3之动画">
+                CSS3之动画 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="颖">
+            
+              <p class="site-author-name" itemprop="name">颖</p>
+              <p class="site-description motion-element" itemprop="description">业精于勤，荒于嬉；行成于思，毁于随。</p>
+          </div>
+           <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                查阅链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://geekying.github.io/" title="myblog" target="_blank">myblog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.mozilla.org/zh-CN/" title="MDN web文档" target="_blank">MDN web文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3school.com.cn/" title="w3c在线教程" target="_blank">w3c在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/v2/guide/" title="Vue.js在线教程" target="_blank">Vue.js在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://icomoon.io/" title="文字图标" target="_blank">文字图标</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.iciba.com/" title="爱词霸" target="_blank">爱词霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.whitcast.top/" title="JavaSE基础教程" target="_blank">JavaSE基础教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.jq22.com/" title="jquery插件库" target="_blank">jquery插件库</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.htmleaf.com/" title="jquery之家" target="_blank">jquery之家</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/coding-interviews" title="牛客网-剑指offer编程题" target="_blank">牛客网-剑指offer编程题</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/js-assessment" title="牛客网-js能力测评" target="_blank">牛客网-js能力测评</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://marxi.co/" title="markdown语法" target="_blank">markdown语法</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://getbootstrap.com" title="bootstrap" target="_blank">bootstrap</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://v3.bootcss.com/components/" title="bootstrap中文" target="_blank">bootstrap中文</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="git官网" target="_blank">git官网</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-transition介绍"><span class="nav-number">1.</span> <span class="nav-text">1. transition介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-注意！"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 注意！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-概述"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-简写属性transition"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 简写属性transition</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-使用"><span class="nav-number">2.</span> <span class="nav-text">2.使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-transition-property"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 transition-property</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2transition-duration"><span class="nav-number">2.2.</span> <span class="nav-text">2.2transition-duration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-transition-timing-function"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 transition-timing-function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-transition-delay"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 transition-delay</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-当属性值的列表长度不一致时"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 当属性值的列表长度不一致时</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-检测过渡是否完成"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 检测过渡是否完成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-过渡的天坑"><span class="nav-number">3.</span> <span class="nav-text">3. 过渡的天坑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-坑1"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 坑1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-坑2"><span class="nav-number">3.2.</span> <span class="nav-text">3.1 坑2</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">颖</span>
+  
+</div>
+<span id="busuanzi_container_site_pv">
+    本站总访问量:<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+   <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="变形,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. 2d变形 transform 属性允许你修改CSS视觉格式模型的坐标空间. transform 属性 , 只对 block 级元素(一般都是div)生效！ 变形与过渡一般一起使用。  1.1 ！旋转（rotate） transform:rotate(角度);    正值:顺时针旋转  rotate(360deg) 负值:逆时针旋转  rotate(-360deg) 只能设单值。正数表示顺时针">
+<meta name="keywords" content="变形">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3之变形">
+<meta property="og:url" content="http://yoursite.com/2019/10/28/B-14-CSS3之变形/index.html">
+<meta property="og:site_name" content="小颖子的hexo博客">
+<meta property="og:description" content="1. 2d变形 transform 属性允许你修改CSS视觉格式模型的坐标空间. transform 属性 , 只对 block 级元素(一般都是div)生效！ 变形与过渡一般一起使用。  1.1 ！旋转（rotate） transform:rotate(角度);    正值:顺时针旋转  rotate(360deg) 负值:逆时针旋转  rotate(-360deg) 只能设单值。正数表示顺时针">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-28T15:44:05.521Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3之变形">
+<meta name="twitter:description" content="1. 2d变形 transform 属性允许你修改CSS视觉格式模型的坐标空间. transform 属性 , 只对 block 级元素(一般都是div)生效！ 变形与过渡一般一起使用。  1.1 ！旋转（rotate） transform:rotate(角度);    正值:顺时针旋转  rotate(360deg) 负值:逆时针旋转  rotate(-360deg) 只能设单值。正数表示顺时针">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/28/B-14-CSS3之变形/">
+
+
+
+
+
+  <title>CSS3之变形 | 小颖子的hexo博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+   <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小颖子的hexo博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">wcy's blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/28/B-14-CSS3之变形/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS3之变形</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T14:47:59+08:00">
+                2019-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/CSS3/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS3</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+        </div>
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-2d变形"><a href="#1-2d变形" class="headerlink" title="1. 2d变形"></a>1. 2d变形</h2><ul>
+<li>transform 属性允许你修改CSS视觉格式模型的坐标空间.</li>
+<li>transform 属性 , 只对 block 级元素(一般都是div)生效！</li>
+<li>变形与过渡一般一起使用。</li>
+</ul>
+<h3 id="1-1-！旋转（rotate）"><a href="#1-1-！旋转（rotate）" class="headerlink" title="1.1 ！旋转（rotate）"></a>1.1 ！旋转（rotate）</h3><ul>
+<li>transform:rotate(角度);   </li>
+<li>正值:顺时针旋转  rotate(360deg)</li>
+<li>负值:逆时针旋转  rotate(-360deg)</li>
+<li>只能设单值。正数表示顺时针旋转，负数表示逆时针旋转。</li>
+</ul>
+<h3 id="1-2-！平移（translate）"><a href="#1-2-！平移（translate）" class="headerlink" title="1.2 ！平移（translate）"></a>1.2 ！平移（translate）</h3><ul>
+<li>带单位！</li>
+<li>X方向平移:transform:  translateX(tx)</li>
+<li>Y方向平移:transform:  translateY(ty) </li>
+<li>二维平移：transform:  translate(tx[, ty])； 如果ty没有指定，它的值默认为0。</li>
+<li>可设单值，也可设双值。</li>
+<li>正数表示XY轴正向位移，负数为反向位移。设单值表示只X轴位移，Y轴坐标不变。例如transform: translate(100px);等价于transform: translate(100px,0);</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="1-3倾斜-斜切（skew）"><a href="#1-3倾斜-斜切（skew）" class="headerlink" title="1.3倾斜/斜切（skew）"></a>1.3倾斜/斜切（skew）</h3><ul>
+<li><p>transform:skewX(45deg);</p>
+</li>
+<li><p>X方向倾斜:transform: skewX(angle)</p>
+<ul>
+<li>skewX(45deg):参数值以deg为单位，代表与y轴之间的角度。</li>
+</ul>
+</li>
+<li><p>Y方向倾斜:transform: skewY(angle)</p>
+<ul>
+<li>skewY(45deg):参数值以deg为单位，代表与x轴之间的角度。</li>
+</ul>
+</li>
+<li><p>二维倾斜:transform: skew(ax[, ay]);  如果ay未提供，在Y轴上没有倾斜。</p>
+<ul>
+<li>skew(45deg,15deg):参数值以deg为单位。 <ul>
+<li>第一个参数代表与y轴之间的角度。</li>
+<li>第二个参数代表与x轴之间的角度。</li>
+</ul>
+</li>
+<li>单值时表示只X轴扭曲，Y轴不变，如transform: skew(30deg);等价于transform: skew(30deg, 0);。</li>
+<li>考虑到可读性，不推荐用单值，应该用transform: skewX(30deg);。skewY表示只Y轴扭曲，X轴不变  。</li>
+</ul>
+</li>
+<li><p>正值:拉正斜杠方向的两个角</p>
+</li>
+<li><p>负值:拉反斜杠方向的两个角</p>
+</li>
+</ul>
+<h3 id="1-4-缩放（scale）"><a href="#1-4-缩放（scale）" class="headerlink" title="1.4 缩放（scale）"></a>1.4 缩放（scale）</h3><ul>
+<li>transform:scale(2);</li>
+<li>X方向缩放:transform:  scaleX(sx); </li>
+<li>Y方向缩放:transform:  scaleY(sy);</li>
+<li>二维缩放 :transform:  scale(sx[, sy]);  (如果sy 未指定，默认认为和sx的值相同) 。</li>
+<li>要缩小设0.01～0.99之间的值，要放大设超过1的值。</li>
+<li>例如：<ul>
+<li>缩小一倍可以transform: scale(.5);</li>
+<li>放大一倍可以transform: scale(2);</li>
+<li>只想X轴缩放，可以用scaleX(.5)相当于scale(.5, 1)。</li>
+<li>只想Y轴缩放，可以用scaleY(.5)相当于scale(1, .5)。</li>
+</ul>
+</li>
+<li>正值:缩放的程度。</li>
+<li>负值:不推荐使用（有旋转效果）。</li>
+<li>单值时表示只X轴,Y轴上缩放力度一样，如transform: scale(2);等价于transform: scale(2,2);。</li>
+</ul>
+<h3 id="1-5-基点的变换"><a href="#1-5-基点的变换" class="headerlink" title="1.5 基点的变换"></a>1.5 基点的变换</h3><ul>
+<li>transform-origin CSS属性更改一个元素变形的基点。</li>
+<li>基点的变换对平移没有影响（因为位移参照的是自己原来的位置）！</li>
+<li>transform-origin属性可以使用一个，两个或三个值来指定，其中每个值都表示一个偏移量。 没有明确定义的偏移将重置为其对应的初始值。</li>
+<li>取值：<ul>
+<li>关键字：left、center、right、top、bottom</li>
+<li>百分比：自身尺寸的百分比。</li>
+<li>数值</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-6-矩阵（matrix）（了解即可）"><a href="#1-6-矩阵（matrix）（了解即可）" class="headerlink" title="1.6 矩阵（matrix）（了解即可）"></a>1.6 矩阵（matrix）（了解即可）</h3><ul>
+<li>在 2D变换 中，矩阵变换函数 matrix() 接受 6个值，语法形式：transform: matrix(a, b, c, d, e, f); ，这相当于，对元素应用一个变换矩阵。                             </li>
+<li>旋转<ul>
+<li>对某一元素应用旋转变换 rotate(θ)，等价于矩阵变换函数 matrix(cosθ, sinθ, -sinθ, cosθ, 0, 0)。 </li>
+</ul>
+</li>
+<li>平移<ul>
+<li>对某一元素应用旋转变换 translate(X, Y)，等价于使用矩阵变换函数 matrix(1, 0, 0, 1, X, Y)。</li>
+</ul>
+</li>
+<li>倾斜<ul>
+<li>对某一元素应用倾斜变换 skew(α, β)，等价于使用矩阵变换函数matrix(1, tanβ, tanα,1, 0, 0)。</li>
+</ul>
+</li>
+<li>缩放<ul>
+<li>对某一元素应用缩放变换 scale(scaleX, scaleY)，等价于使用矩阵变换函数 matrix(scaleX, 0, 0, scaleY, 0, 0)。</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-7-！变换组合"><a href="#1-7-！变换组合" class="headerlink" title="1.7 ！变换组合"></a>1.7 ！变换组合</h3><ul>
+<li>变换组合的顺序不同，变换结果不同（因为底层原理是矩阵，矩阵的运算是不可逆的）。</li>
+<li>变换组合时,底层是矩阵，计算方向是从右往左进行继续的。</li>
+<li>移动和缩放<ul>
+<li>顺序不同，结果不同</li>
+<li>执行顺序从右往左</li>
+<li>理解：<ul>
+<li>方便理解可以按照从左往右的顺序进行变换。</li>
+<li>缩放时坐标系也跟着缩放。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>移动和旋转<ul>
+<li>顺序不同，结果不同</li>
+<li>执行顺序从右往左</li>
+<li>理解：<ul>
+<li>方便理解可以按照从左往右的顺序进行变换。</li>
+<li>旋转时坐标系跟着旋转。<h2 id="2-3d变形"><a href="#2-3d变形" class="headerlink" title="2. 3d变形"></a>2. 3d变形</h2></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>在浏览器中，X轴是从左到右，Y轴是从上到下，Z轴是从里到外。</li>
+<li>3d变形中有缩放、平移、旋转，没有倾斜/斜切（因为没有意义）。</li>
+</ul>
+<h3 id="2-1-3D旋转"><a href="#2-1-3D旋转" class="headerlink" title="2.1 3D旋转"></a>2.1 3D旋转</h3><ul>
+<li>CSS3中的3D旋转主要包括四个功能函数<ul>
+<li>rotateX(angle) </li>
+<li>rotateY(angle)</li>
+<li>rotateZ(angle)等价于rotate(angle)</li>
+<li>rotate3d(x,y,z,angle)<ul>
+<li>x, y, z分别接受一个数值(number),用来计算矢量方向(direction vector)，矢量方向是三维空间中的一条线, 从坐标系原点到x, y, z值确定的那个点，元素围绕这条线旋转angle指定的值。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>怎么判断绕着谁转？绕着圆心到指定点所形成的射线进行旋转。</li>
+</ul>
+<h3 id="2-2-3D平移"><a href="#2-2-3D平移" class="headerlink" title="2.2 3D平移"></a>2.2 3D平移</h3><ul>
+<li>transform: translateZ(length)是3D Transformaton特有的，其他两个2D中就有。</li>
+<li>translateZ: 它不能是 百分比 值，那样的移动是没有意义的。</li>
+<li>例如：<code>transform: translate3d(translateX[50%],translateY[50%],translateZ[值]);</code>中translateZ 也不能是百分比值，那样的没有变形了。</li>
+</ul>
+<h3 id="2-3-3D缩放"><a href="#2-3-3D缩放" class="headerlink" title="2.3 3D缩放"></a>2.3 3D缩放</h3><ul>
+<li>transform: scale3d(scaleX,scaleY,scaleZ);</li>
+<li>单独使用scaleZ()是没有意义的，使用scale3d时使用的。</li>
+<li>如果只设置scaleZ(number)，你会发现元素并没有被扩大或压缩，scaleZ(number)需要和translateZ(length)配合使用，number乘以length得到的值，是元素沿Z轴移动的距离，从而使得感觉被扩大或压缩 。</li>
+<li>例如：<ul>
+<li><code>transform: translateZ(100px) scaleZ(2);</code>往前走100px。</li>
+<li><code>transform: scaleZ(2) translateZ(100px);</code>往前走200px，相当于<code>transform: translateZ(200px);</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4景深（perspective）"><a href="#2-4景深（perspective）" class="headerlink" title="2.4景深（perspective）"></a>2.4景深（perspective）</h3><ul>
+<li>景深介绍：<ul>
+<li>简单理解：景深就是我们的肉眼距离显示器的距离，景深越大，元素离我们越远，效果就不好。在CSS3中，perspective用于激活一个3D空间，属性值就是景深大小（默认none无景深）。</li>
+<li>应用景深的元素称为“舞台元素”，舞台元素的所有后代元素都会受影响，（如果后代元素中也添加了perspective属性，效果会叠加而不是覆盖）。景深是设置给包裹元素的，作用给包裹里面的设置了3d变换的子元素的。</li>
+<li>子元素的变换（X/Y）为正值：按着头/右手往里推，提着脚/左手往外拉。</li>
+<li>景深: （英语：Depth of field, DOF）景深是指相机对焦点前后相对清晰的成像范围。在光学中，尤其是录影或是摄影，是一个描述在空间中，可以清楚成像的距离范围。虽然透镜只能够将光聚 到某一固定的距离，远离此点则会逐渐模糊，但是在某一段特定的距离内，影像模糊的程度是肉眼无法察觉的，这段距离称之为景深。当焦点设在超焦距处时，景深 会从超焦距的一半延伸到无限远，对一个固定的光圈值来说，这是最大的景深。（了解即可）</li>
+</ul>
+</li>
+<li>景深的两种方式：<ul>
+<li><code>transform: perspective(depth);</code>这样写是作用于自身的，不是作用于后代。<ul>
+<li>transform里面有一个perspective(depth)函数。</li>
+<li>此时应该跟变换组合一起使用：<code>transform: perspective(depth) rotateX(度数);</code>）。</li>
+<li>使用perspective()函数，那么他必须被放置在transform属性的首位，如果放在其他函数之后，则会被忽略。</li>
+<li>depth的默认值是none，可以设置为一个长度值，这个长度是沿着Z轴距离坐标原点的距离。1000px被认为是个正常值</li>
+<li>一般不会使用！</li>
+</ul>
+</li>
+<li>perspective: depth;<ul>
+<li>同perspective()函数一样，depth的默认值是none，可以设置为一个长度值，这个长度是沿着Z轴距离坐标原点的距离。</li>
+<li>他们唯一的区别是，perspective属性是被用于元素的后代元素，而不是元素本身；就是说，为某个元素设置perspective属性后，是对这个元素的子元素起作用，而不是这个元素本身。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>与灭点的关系(原理)：<ul>
+<li>景深越大，灭点越远，元素变形越小；</li>
+<li>景深越小，灭点越近，元素变形越大。</li>
+</ul>
+</li>
+<li>作用：<ul>
+<li>让3d场景有近大远小的效果（我们肉眼距离屏幕的距离）。</li>
+<li>是一个不可继承的属性，但是作用于后代元素</li>
+</ul>
+</li>
+<li>景深基点：perspective-origin<ul>
+<li>控制视角的位置，是由两个属性控制的。</li>
+<li>这个属性来设置你在X, Y轴坐标确定的那个点来看这个元素，Z轴是被perspective属性设置的。</li>
+<li>同perspective属性，也是设置在父元素上，对后代元素起作用。  </li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-灭点"><a href="#2-5-灭点" class="headerlink" title="2.5 灭点"></a>2.5 灭点</h3><ul>
+<li>指的是立体图形各条边的延伸线所产生的相交点。透视点的消失点。</li>
+<li>一点透视、二点透视、多点透视、成角透视</li>
+</ul>
+<h3 id="2-6-transform-style"><a href="#2-6-transform-style" class="headerlink" title="2.6 transform-style"></a>2.6 transform-style</h3><ul>
+<li>这个属性指定了子元素如何在空间中展示.</li>
+<li>只有两个属性值：flat（默认）和preserve-3d<ul>
+<li>flat 表示所有子元素在2D平面呈现；</li>
+<li>preserve-3d 表示所有子元素在3D平面呈现，</li>
+</ul>
+</li>
+<li>如果被扁平化，则子元素不会独立的存在于三维空间。<ul>
+<li>因为该属性不会被（自动）继承，所以必须为元素所有非叶后代节点设置该属性。<h3 id="backface-visibility"><a href="#backface-visibility" class="headerlink" title="backface-visibility"></a>backface-visibility</h3></li>
+</ul>
+</li>
+<li>backface-visibility属性用来设置，是否显示元素的背面，默认是显示的。<ul>
+<li>backface-visibility: keyword;</li>
+<li>keyword有两个值，hidden和visible，默认值是visible。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/变形/" rel="tag"><i class="fa fa-tag"></i> 变形</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/28/B-13-CSS3之动画/" rel="next" title="CSS3之动画">
+                <i class="fa fa-chevron-left"></i> CSS3之动画
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/28/B-15-CSS3之布局扩展/" rel="prev" title="B-15-CSS3之布局扩展">
+                B-15-CSS3之布局扩展 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="颖">
+            
+              <p class="site-author-name" itemprop="name">颖</p>
+              <p class="site-description motion-element" itemprop="description">业精于勤，荒于嬉；行成于思，毁于随。</p>
+          </div>
+           <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                查阅链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://geekying.github.io/" title="myblog" target="_blank">myblog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.mozilla.org/zh-CN/" title="MDN web文档" target="_blank">MDN web文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3school.com.cn/" title="w3c在线教程" target="_blank">w3c在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/v2/guide/" title="Vue.js在线教程" target="_blank">Vue.js在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://icomoon.io/" title="文字图标" target="_blank">文字图标</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.iciba.com/" title="爱词霸" target="_blank">爱词霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.whitcast.top/" title="JavaSE基础教程" target="_blank">JavaSE基础教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.jq22.com/" title="jquery插件库" target="_blank">jquery插件库</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.htmleaf.com/" title="jquery之家" target="_blank">jquery之家</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/coding-interviews" title="牛客网-剑指offer编程题" target="_blank">牛客网-剑指offer编程题</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/js-assessment" title="牛客网-js能力测评" target="_blank">牛客网-js能力测评</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://marxi.co/" title="markdown语法" target="_blank">markdown语法</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://getbootstrap.com" title="bootstrap" target="_blank">bootstrap</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://v3.bootcss.com/components/" title="bootstrap中文" target="_blank">bootstrap中文</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="git官网" target="_blank">git官网</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2d变形"><span class="nav-number">1.</span> <span class="nav-text">1. 2d变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-！旋转（rotate）"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 ！旋转（rotate）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-！平移（translate）"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 ！平移（translate）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3倾斜-斜切（skew）"><span class="nav-number">1.3.</span> <span class="nav-text">1.3倾斜/斜切（skew）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-缩放（scale）"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 缩放（scale）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-基点的变换"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 基点的变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-矩阵（matrix）（了解即可）"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 矩阵（matrix）（了解即可）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-！变换组合"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 ！变换组合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3d变形"><span class="nav-number">2.</span> <span class="nav-text">2. 3d变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3D旋转"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 3D旋转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3D平移"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 3D平移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3D缩放"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 3D缩放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4景深（perspective）"><span class="nav-number">2.4.</span> <span class="nav-text">2.4景深（perspective）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-灭点"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 灭点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-transform-style"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 transform-style</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backface-visibility"><span class="nav-number">2.7.</span> <span class="nav-text">backface-visibility</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">颖</span>
+  
+</div>
+<span id="busuanzi_container_site_pv">
+    本站总访问量:<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+   <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>
+
