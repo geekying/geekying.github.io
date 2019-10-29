@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. 2d变形 transform 属性允许你修改CSS视觉格式模型的坐标空间. transform 属性 , 只对 block 级元素(一般都是div)生效！ 变形与过渡一般一起使用。  1.1 ！旋转（rotate） transform:rotate(角度);    正值:顺时针旋转  rotate(360deg) 负值:逆时针旋转  rotate(-360deg) 只能设单值。正数表示顺时针">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-28T15:44:05.521Z">
+<meta property="og:updated_time" content="2019-10-29T01:50:41.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3之变形">
 <meta name="twitter:description" content="1. 2d变形 transform 属性允许你修改CSS视觉格式模型的坐标空间. transform 属性 , 只对 block 级元素(一般都是div)生效！ 变形与过渡一般一起使用。  1.1 ！旋转（rotate） transform:rotate(角度);    正值:顺时针旋转  rotate(360deg) 负值:逆时针旋转  rotate(-360deg) 只能设单值。正数表示顺时针">
@@ -541,6 +541,11 @@
 </li>
 <li>在浏览器中，X轴是从左到右，Y轴是从上到下，Z轴是从里到外。</li>
 <li>3d变形中有缩放、平移、旋转，没有倾斜/斜切（因为没有意义）。</li>
+<li>3d场景的两个要点：<ul>
+<li>近大远小：由景深实现。</li>
+<li>层次感：由transfrom-style实现。</li>
+</ul>
+</li>
 </ul>
 <h3 id="2-1-3D旋转"><a href="#2-1-3D旋转" class="headerlink" title="2.1 3D旋转"></a>2.1 3D旋转</h3><ul>
 <li>CSS3中的3D旋转主要包括四个功能函数<ul>
@@ -579,7 +584,7 @@
 </ul>
 </li>
 <li>景深的两种方式：<ul>
-<li><code>transform: perspective(depth);</code>这样写是作用于自身的，不是作用于后代。<ul>
+<li><code>transform: perspective(depth);</code>这样写是作用于自身的，不是作用于子元素。<ul>
 <li>transform里面有一个perspective(depth)函数。</li>
 <li>此时应该跟变换组合一起使用：<code>transform: perspective(depth) rotateX(度数);</code>）。</li>
 <li>使用perspective()函数，那么他必须被放置在transform属性的首位，如果放在其他函数之后，则会被忽略。</li>
@@ -606,8 +611,14 @@
 </li>
 <li>景深基点：perspective-origin<ul>
 <li>控制视角的位置，是由两个属性控制的。</li>
+<li>默认值：perspective-origin:50% 50%;</li>
 <li>这个属性来设置你在X, Y轴坐标确定的那个点来看这个元素，Z轴是被perspective属性设置的。</li>
 <li>同perspective属性，也是设置在父元素上，对后代元素起作用。  </li>
+</ul>
+</li>
+<li>景深叠加：<ul>
+<li>爷父子中，如果爷父都设置的有景深，作用到子身上以后不是父身上的景深了，而且不同的浏览器叠加计算的方式也不同。</li>
+<li><em>所以要尽量避免景深叠加！</em></li>
 </ul>
 </li>
 </ul>
@@ -616,18 +627,22 @@
 <li>一点透视、二点透视、多点透视、成角透视</li>
 </ul>
 <h3 id="2-6-transform-style"><a href="#2-6-transform-style" class="headerlink" title="2.6 transform-style"></a>2.6 transform-style</h3><ul>
-<li>这个属性指定了子元素如何在空间中展示.</li>
+<li>这个属性指定了子元素如何在空间中展示，可以营造有层级的3d舞台。</li>
 <li>只有两个属性值：flat（默认）和preserve-3d<ul>
 <li>flat 表示所有子元素在2D平面呈现；</li>
-<li>preserve-3d 表示所有子元素在3D平面呈现，</li>
+<li>preserve-3d 表示所有子元素在3D平面呈现。</li>
+<li>是一个不可继承属性，它作用于子元素。</li>
 </ul>
 </li>
 <li>如果被扁平化，则子元素不会独立的存在于三维空间。<ul>
-<li>因为该属性不会被（自动）继承，所以必须为元素所有非叶后代节点设置该属性。<h3 id="backface-visibility"><a href="#backface-visibility" class="headerlink" title="backface-visibility"></a>backface-visibility</h3></li>
+<li>因为该属性不会被（自动）继承，所以必须为元素所有非后代节点设置该属性。</li>
 </ul>
 </li>
-<li>backface-visibility属性用来设置，是否显示元素的背面，默认是显示的。<ul>
-<li>backface-visibility: keyword;</li>
+<li>景深负责近大远小的感觉，transform-style则负责层次感。</li>
+</ul>
+<h3 id="2-7-backface-visibility"><a href="#2-7-backface-visibility" class="headerlink" title="2.7 backface-visibility"></a>2.7 backface-visibility</h3><ul>
+<li>backface-visibility属性用来设置，是否显示元素的背面，默认是显示的。</li>
+<li>backface-visibility: keyword;<ul>
 <li>keyword有两个值，hidden和visible，默认值是visible。</li>
 </ul>
 </li>
@@ -752,7 +767,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">40</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -763,7 +778,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -774,7 +789,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">56</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -877,7 +892,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2d变形"><span class="nav-number">1.</span> <span class="nav-text">1. 2d变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-！旋转（rotate）"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 ！旋转（rotate）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-！平移（translate）"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 ！平移（translate）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3倾斜-斜切（skew）"><span class="nav-number">1.3.</span> <span class="nav-text">1.3倾斜/斜切（skew）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-缩放（scale）"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 缩放（scale）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-基点的变换"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 基点的变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-矩阵（matrix）（了解即可）"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 矩阵（matrix）（了解即可）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-！变换组合"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 ！变换组合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3d变形"><span class="nav-number">2.</span> <span class="nav-text">2. 3d变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3D旋转"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 3D旋转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3D平移"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 3D平移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3D缩放"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 3D缩放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4景深（perspective）"><span class="nav-number">2.4.</span> <span class="nav-text">2.4景深（perspective）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-灭点"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 灭点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-transform-style"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 transform-style</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#backface-visibility"><span class="nav-number">2.7.</span> <span class="nav-text">backface-visibility</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2d变形"><span class="nav-number">1.</span> <span class="nav-text">1. 2d变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-！旋转（rotate）"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 ！旋转（rotate）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-！平移（translate）"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 ！平移（translate）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3倾斜-斜切（skew）"><span class="nav-number">1.3.</span> <span class="nav-text">1.3倾斜/斜切（skew）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-缩放（scale）"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 缩放（scale）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-基点的变换"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 基点的变换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-矩阵（matrix）（了解即可）"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 矩阵（matrix）（了解即可）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-！变换组合"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 ！变换组合</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3d变形"><span class="nav-number">2.</span> <span class="nav-text">2. 3d变形</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3D旋转"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 3D旋转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-3D平移"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 3D平移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3D缩放"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 3D缩放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4景深（perspective）"><span class="nav-number">2.4.</span> <span class="nav-text">2.4景深（perspective）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-灭点"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 灭点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-transform-style"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 transform-style</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-backface-visibility"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 backface-visibility</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="预处理器,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.Less初识1.1 less介绍 less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。 LESS 既可以在 客户端 上运行 ，也可以借助Node.js在服务端运行。 less的中文官网：http://lesscss.cn/ bootstrap中less教程：http://www.bootcss.com/p">
+<meta name="keywords" content="预处理器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS预处理器之Less">
+<meta property="og:url" content="http://yoursite.com/2019/10/29/B-16-CSS预处理器之Less/index.html">
+<meta property="og:site_name" content="小颖子的hexo博客">
+<meta property="og:description" content="1.Less初识1.1 less介绍 less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。 LESS 既可以在 客户端 上运行 ，也可以借助Node.js在服务端运行。 less的中文官网：http://lesscss.cn/ bootstrap中less教程：http://www.bootcss.com/p">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-29T15:55:05.433Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS预处理器之Less">
+<meta name="twitter:description" content="1.Less初识1.1 less介绍 less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。 LESS 既可以在 客户端 上运行 ，也可以借助Node.js在服务端运行。 less的中文官网：http://lesscss.cn/ bootstrap中less教程：http://www.bootcss.com/p">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/10/29/B-16-CSS预处理器之Less/">
+
+
+
+
+
+  <title>CSS预处理器之Less | 小颖子的hexo博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+   <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小颖子的hexo博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">wcy's blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/29/B-16-CSS预处理器之Less/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">CSS预处理器之Less</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-29T16:56:09+08:00">
+                2019-10-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/CSS/CSS预处理器/" itemprop="url" rel="index">
+                    <span itemprop="name">CSS预处理器</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+        <div>
+    
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+        </div>
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-Less初识"><a href="#1-Less初识" class="headerlink" title="1.Less初识"></a>1.Less初识</h2><h3 id="1-1-less介绍"><a href="#1-1-less介绍" class="headerlink" title="1.1 less介绍"></a>1.1 less介绍</h3><ul>
+<li>less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。</li>
+<li>LESS 既可以在 客户端 上运行 ，也可以借助Node.js在服务端运行。</li>
+<li>less的中文官网：<a href="http://lesscss.cn/" target="_blank" rel="noopener">http://lesscss.cn/</a></li>
+<li>bootstrap中less教程：<a href="http://www.bootcss.com/p/lesscss/" target="_blank" rel="noopener">http://www.bootcss.com/p/lesscss/</a><h3 id="1-2-使用"><a href="#1-2-使用" class="headerlink" title="1.2 使用"></a>1.2 使用</h3></li>
+<li>第一种：运行时编译<ul>
+<li>在body标签后面引入less文件：<code>&lt;script src=&quot;less/less.min.js&quot;&gt;&lt;/script&gt;</code></li>
+<li>修改包裹less的style标签的类型：<code>&lt;style type=&quot;text/less&quot;&gt;less代码&lt;/style&gt;</code></li>
+<li>这种方法不好，我们一般希望的是预编译！</li>
+</ul>
+</li>
+<li>第二种：使用考拉编译less（koala 官网:<a href="http://www.koala-app.com）" target="_blank" rel="noopener">www.koala-app.com）</a><ul>
+<li>使用外部样式表引入css文件：<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/02.css&quot;/&gt;</code></li>
+<li>打开考拉，把css文件拖进去(拖文件的目录而不是文件)，然后点击刷新即可。</li>
+<li>这种方法是线下编译，运行与less没有关系。</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="2-Less语法"><a href="#2-Less语法" class="headerlink" title="2.Less语法"></a>2.Less语法</h2><h3 id="2-1-less中的注释"><a href="#2-1-less中的注释" class="headerlink" title="2.1 less中的注释"></a>2.1 less中的注释</h3><ul>
+<li>以//开头的注释，不会被编译到css文件中。</li>
+<li>以/**/包裹的注释会被编译到css文件中。</li>
+</ul>
+<h3 id="2-2-less中的变量"><a href="#2-2-less中的变量" class="headerlink" title="2.2 less中的变量"></a>2.2 less中的变量</h3><ul>
+<li>使用@来申明一个变量，例如：@pink：pink;<ul>
+<li>1.作为普通属性值只来使用：直接使用@pink</li>
+<li>2.作为选择器和属性名：<code>@{selector的值}</code>的形式</li>
+<li>3.作为URL：@{url}</li>
+</ul>
+</li>
+<li>变量的延迟加载：<ul>
+<li>less里面的变量都是块级作用域，一个大括号代表一个作用域。</li>
+<li>less中变量的延时加载：就是它会等作用域中所有的值都加载完毕，再去给变量赋值。</li>
+<li>例如：由于@var: 2和@var: 3是比three: @var优先加载的，所以最终@var的值是3，然后再赋值给three中的变量。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- less --&gt;</span><br><span class="line">@var: 0;</span><br><span class="line">.class &#123;</span><br><span class="line">@var: 1;</span><br><span class="line">    .brass &#123;</span><br><span class="line">    @var: 2;</span><br><span class="line">    three: @var;//3  </span><br><span class="line">    @var: 3;</span><br><span class="line">    &#125;</span><br><span class="line">one: @var;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;!-- less编译结果(css) --&gt;</span><br><span class="line">.class &#123;</span><br><span class="line">    one: 1;</span><br><span class="line">&#125;</span><br><span class="line">.class .brass &#123;</span><br><span class="line">    three: 3;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-less中的嵌套规则"><a href="#2-3-less中的嵌套规则" class="headerlink" title="2.3 less中的嵌套规则"></a>2.3 less中的嵌套规则</h3><ul>
+<li>基本嵌套规则(父子嵌套)：子在父内。</li>
+<li>&amp;的使用(平级嵌套)：例如要用伪类时，使用&amp;就不会有空格。</li>
+</ul>
+<h3 id="2-4-less中的混合-minxin"><a href="#2-4-less中的混合-minxin" class="headerlink" title="2.4 less中的混合(minxin)"></a>2.4 less中的混合(minxin)</h3><ul>
+<li><p>一般使用时会在css文件夹里放一个mixin文件夹，专门用来放混合。用<code>@import &quot;mixin/juzhong.less&quot;;</code></p>
+</li>
+<li><p>混合就是将一系列属性从一个规则集引入到另一个规则集的方式。</p>
+</li>
+<li><p>1.普通混合 </p>
+<ul>
+<li>定义混合：<code>.混合名{一些声明}</code>，定义一个混合以点开头。</li>
+<li>调用混合：<code>混合名;</code>。 </li>
+<li>缺点：会使原生的css文件变得很大。   </li>
+</ul>
+</li>
+<li><p>2.不带输出的混合</p>
+<ul>
+<li>定义混合：<code>.混合名(){一些声明}</code>，在混合名后面加上小括号，在css中就不会输出混合自己了。</li>
+<li><ul>
+<li>调用混合：<code>混合名;</code>。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>3.带参数的混合</p>
+<ul>
+<li>定义混合：<code>.混合名(形参1,形参2,...){一些包含变量的声明}</code></li>
+<li>调用混合：<code>混合名(实参1,实参2,...);</code>，带参混合调用时一定要传入实参，否则报错。</li>
+</ul>
+</li>
+<li><p>4.带参数并且有默认值的混合</p>
+<ul>
+<li>定义混合：<code>.混合名(形参1:默认值,形参2:默认值,...){一些包含变量的声明}</code></li>
+<li>调用混合：调用混合：<code>混合名()/混合名(实参1,实参2,...);</code>，可以传入实参(使用传入的实参)，也可以不传入(使用默认值)。</li>
+</ul>
+</li>
+<li><p>5.带多个参数的混合</p>
+<ul>
+<li>略。见4</li>
+</ul>
+</li>
+<li><p>6.命名参数</p>
+<ul>
+<li>调用混合时使用的：<code>混合名(形参n: 实参);</code>，给指定形参传入实参。</li>
+</ul>
+</li>
+<li><p>7.匹配模式(重点)</p>
+<ul>
+<li>自定义三角形。</li>
+<li><code>@import &quot;./triangle.less&quot;;</code>，导入</li>
+</ul>
+</li>
+<li><p>8.arguments变量</p>
+<ul>
+<li>arguments是一个实参列表，伪数组（具有length属性的对象）。</li>
+<li>代码示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.border(@w,@style,@c)&#123;</span><br><span class="line">    border: @arguments;</span><br><span class="line">&#125;</span><br><span class="line">#wrap .sjx&#123;</span><br><span class="line">    .border(1px,solid,black)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-less运算"><a href="#2-5-less运算" class="headerlink" title="2.5 less运算"></a>2.5 less运算</h3><ul>
+<li><p>在less中可以进行加减乘除的运算</p>
+</li>
+<li><p>在less里面计算的双方有一方带单位即可。</p>
+</li>
+<li><p>代码示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@rem:100rem;</span><br><span class="line">#wrap .sjx&#123;</span><br><span class="line">width:(100 + @rem)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-6-less避免编译"><a href="#2-6-less避免编译" class="headerlink" title="2.6 less避免编译"></a>2.6 less避免编译</h3><ul>
+<li><p>语法：<code>~&quot;不需要编译的代码&quot;</code>。</p>
+</li>
+<li><p>代码示例：</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">    margin: 100 *  10px;</span><br><span class="line">    padding: ~&quot;cacl(100px + 100)&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>这里cacl()是js中计算的。</li>
+</ul>
+</li>
+</ul>
+<p>###2.7 less继承</p>
+<ul>
+<li><p>语法1：</p>
+<ul>
+<li><code>#wrap{.inner{&amp;:extend(.juzhong all);}}</code>，这种方法推荐使用，all就是继承居中类的所有状态(包括hover等状态)。</li>
+<li><code>#wrap{.inner:extend(.juzhong)}</code>，这种方法不推荐使用。</li>
+</ul>
+</li>
+<li><p>引入外部css文件（引入混合）。</p>
+</li>
+<li><p>继承与混合的区别：</p>
+<ul>
+<li>继承可以做到混合做不到的功能（比如css选择器中的组合选择器[,]，因为混合的本质是复制粘贴）。</li>
+<li>继承的性能比混合高，灵活度比混合低。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/预处理器/" rel="tag"><i class="fa fa-tag"></i> 预处理器</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/28/B-15-CSS3之布局扩展/" rel="next" title="B-15-CSS3之布局扩展">
+                <i class="fa fa-chevron-left"></i> B-15-CSS3之布局扩展
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="颖">
+            
+              <p class="site-author-name" itemprop="name">颖</p>
+              <p class="site-description motion-element" itemprop="description">业精于勤，荒于嬉；行成于思，毁于随。</p>
+          </div>
+           <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                查阅链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://geekying.github.io/" title="myblog" target="_blank">myblog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.mozilla.org/zh-CN/" title="MDN web文档" target="_blank">MDN web文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3school.com.cn/" title="w3c在线教程" target="_blank">w3c在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/v2/guide/" title="Vue.js在线教程" target="_blank">Vue.js在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://icomoon.io/" title="文字图标" target="_blank">文字图标</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.iciba.com/" title="爱词霸" target="_blank">爱词霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.whitcast.top/" title="JavaSE基础教程" target="_blank">JavaSE基础教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.jq22.com/" title="jquery插件库" target="_blank">jquery插件库</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.htmleaf.com/" title="jquery之家" target="_blank">jquery之家</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/coding-interviews" title="牛客网-剑指offer编程题" target="_blank">牛客网-剑指offer编程题</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/js-assessment" title="牛客网-js能力测评" target="_blank">牛客网-js能力测评</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://marxi.co/" title="markdown语法" target="_blank">markdown语法</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://getbootstrap.com" title="bootstrap" target="_blank">bootstrap</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://v3.bootcss.com/components/" title="bootstrap中文" target="_blank">bootstrap中文</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="git官网" target="_blank">git官网</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Less初识"><span class="nav-number">1.</span> <span class="nav-text">1.Less初识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-less介绍"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 less介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-使用"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Less语法"><span class="nav-number">2.</span> <span class="nav-text">2.Less语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-less中的注释"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 less中的注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-less中的变量"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 less中的变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-less中的嵌套规则"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 less中的嵌套规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-less中的混合-minxin"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 less中的混合(minxin)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-less运算"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 less运算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-less避免编译"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 less避免编译</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">颖</span>
+  
+</div>
+<span id="busuanzi_container_site_pv">
+    本站总访问量:<span id="busuanzi_value_site_pv"></span>次
+</span>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+   <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>
+
