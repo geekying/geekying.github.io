@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Node.js开发准备]]></title>
+    <url>%2F2019%2F10%2F30%2FF-04-Node%E4%B9%8BNode-js%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87%2F</url>
+    <content type="text"><![CDATA[1. 环境准备1. 普通安装方式 官方网站：https://nodejs.org/en/ 中文官网：http://nodejs.cn/ 左边是稳定版本，右边是新特性的 2. 多版本安装方式 1.卸载已有的Node.js。 2.下载nvm（https://github.com/coreybutler/nvm-windows）。 3.在C盘创建目录dev： 在dev目录中创建两个子目录nvm和nodejs 将nvm包解压，解压文件放入nvm中并修改nvm的配置文件。 4.修改nvm的配置文件。 右键解压后的install.cmd —&gt; 以管理员身份运行出现一个黑窗口，直接按回车 —&gt; 将配置文件另存到nvm目录下。 进行如下修改： root: D:\AllDevelop\Dev\nvm(nvm的路径) path: D:\AllDevelop\Dev\nodejs(nodejs的路径) 5.配置nvm和nodejs的环境变量 输入sysdm.cpl，打开窗口 —&gt; 高级 —&gt; 环境变量 —&gt; 系统变量 在系统变量里添加加NVM_HOME变量，值为nvm的路径 再添加NVM_SYMLINK变量，值为nodejs的路径。 6.把配置好的两个环境变量加到PATH中 %NVM_HOME% %NVM_SYMLINK% 7.cmd打开命令窗口： nvm version：查看是否安装好（出现版本号则正确） nvm：查看nvm的命令 nvm常用命令： nvm list：查看当前安装了哪些nodejs版本。 nvm install node版本号 [操作系统(不加就默认自己这个操作系统)]：安装指定版本的nodejs。 nvm install latest：安装最新版本的nodejs。 nvm use 版本号：使用指定版本的node。 8.用nvm安装nodejs环境 原本位置的nodejs文件夹变成了一个快捷方式，目标指向你所使用的那个版本的node。 9.可以使用node命令了 node -v：查看当前使用的node版本。 2. node命令]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Node</category>
+      </categories>
+      <tags>
+        <tag>node.js开发环境</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Node之终端的基本使用]]></title>
+    <url>%2F2019%2F10%2F30%2FF-03-Node%E4%B9%8B%E7%BB%88%E7%AB%AF%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[1. 打开应用win + R —&gt; 弹出一个窗口，向里面输入下列内容。 cmd：打开DOS命令窗口 notepad：打开记事本 mspaint：打开画图 calc：打开计算机 write：打开写字板 sysdm.cpl：打开环境变量设置窗口 2. 常用命令win + R —&gt; 弹出一个窗口，向里面输入cmd —&gt; 到想去的目录里输入下列内容。 2.1 关于目录 md 目录名：创建目录 ls：查看当前目录下的内容 rmdir(rd)：删除目录，目录内没有文档 rd /s/q 目录名：删除目录及目录里的内容（/s代表子目录，/q代表安静的删除【删除时不给提示】） cd ..：返回上一级目录2.3 关于文件 echo on &gt; 文件名(a.text)：创建空文件 echo 要写入的内容 &gt; 文件名(a.text)：向文件中写入内容（覆盖之前的内容） echo 要写入的内容 &gt;&gt; 文件名(a.text)：向文件中追加内容 cat 文件名：查看文件内容 cat &gt; 文件名 ---&gt; 会出现一个提示符让你输入内容 ---&gt; 按ctrl + c退出：向文件中写入内容（覆盖之前的内容） cat &gt; 文件名 ---&gt; 会出现一个提示符让你输入内容 ---&gt; 按ctrl + c退出：向文件中追加内容 rm 文件名：删除文件 del 文件名：删除文件]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CSS预处理器之Less]]></title>
     <url>%2F2019%2F10%2F29%2FB-16-CSS%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8%E4%B9%8BLess%2F</url>
     <content type="text"><![CDATA[1.Less初识1.1 less介绍 less是一种动态样式语言，属于css预处理器的范畴，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。 LESS 既可以在 客户端 上运行 ，也可以借助Node.js在服务端运行。 less的中文官网：http://lesscss.cn/ bootstrap中less教程：http://www.bootcss.com/p/lesscss/1.2 使用 第一种：运行时编译 在body标签后面引入less文件：&lt;script src=&quot;less/less.min.js&quot;&gt;&lt;/script&gt; 修改包裹less的style标签的类型：&lt;style type=&quot;text/less&quot;&gt;less代码&lt;/style&gt; 这种方法不好，我们一般希望的是预编译！ 第二种：使用考拉编译less（koala 官网:www.koala-app.com） 使用外部样式表引入css文件：&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/02.css&quot;/&gt; 打开考拉，把css文件拖进去(拖文件的目录而不是文件)，然后点击刷新即可。 这种方法是线下编译，运行与less没有关系。 2.Less语法2.1 less中的注释 以//开头的注释，不会被编译到css文件中。 以/**/包裹的注释会被编译到css文件中。 2.2 less中的变量 使用@来申明一个变量，例如：@pink：pink; 1.作为普通属性值只来使用：直接使用@pink 2.作为选择器和属性名：@{selector的值}的形式 3.作为URL：@{url} 变量的延迟加载： less里面的变量都是块级作用域，一个大括号代表一个作用域。 less中变量的延时加载：就是它会等作用域中所有的值都加载完毕，再去给变量赋值。 例如：由于@var: 2和@var: 3是比three: @var优先加载的，所以最终@var的值是3，然后再赋值给three中的变量。12345678910111213141516171819&lt;!-- less --&gt;@var: 0;.class &#123;@var: 1; .brass &#123; @var: 2; three: @var;//3 @var: 3; &#125;one: @var; &#125;&lt;!-- less编译结果(css) --&gt;.class &#123; one: 1;&#125;.class .brass &#123; three: 3;&#125; 2.3 less中的嵌套规则 基本嵌套规则(父子嵌套)：子在父内。 &amp;的使用(平级嵌套)：例如要用伪类时，使用&amp;就不会有空格。 2.4 less中的混合(minxin) 一般使用时会在css文件夹里放一个mixin文件夹，专门用来放混合。用@import &quot;mixin/juzhong.less&quot;; 混合就是将一系列属性从一个规则集引入到另一个规则集的方式。 1.普通混合 定义混合：.混合名{一些声明}，定义一个混合以点开头。 调用混合：混合名;。 缺点：会使原生的css文件变得很大。 2.不带输出的混合 定义混合：.混合名(){一些声明}，在混合名后面加上小括号，在css中就不会输出混合自己了。 调用混合：混合名;。 3.带参数的混合 定义混合：.混合名(形参1,形参2,...){一些包含变量的声明} 调用混合：混合名(实参1,实参2,...);，带参混合调用时一定要传入实参，否则报错。 4.带参数并且有默认值的混合 定义混合：.混合名(形参1:默认值,形参2:默认值,...){一些包含变量的声明} 调用混合：调用混合：混合名()/混合名(实参1,实参2,...);，可以传入实参(使用传入的实参)，也可以不传入(使用默认值)。 5.带多个参数的混合 略。见4 6.命名参数 调用混合时使用的：混合名(形参n: 实参);，给指定形参传入实参。 7.匹配模式(重点) 自定义三角形。 @import &quot;./triangle.less&quot;;，导入 8.arguments变量 arguments是一个实参列表，伪数组（具有length属性的对象）。 代码示例：123456.border(@w,@style,@c)&#123; border: @arguments;&#125;#wrap .sjx&#123; .border(1px,solid,black)&#125; 2.5 less运算 在less中可以进行加减乘除的运算 在less里面计算的双方有一方带单位即可。 代码示例： 1234@rem:100rem;#wrap .sjx&#123;width:(100 + @rem)&#125; 2.6 less避免编译 语法：~&quot;不需要编译的代码&quot;。 代码示例： 1234*&#123; margin: 100 * 10px; padding: ~&quot;cacl(100px + 100)&quot;;&#125; 这里cacl()是js中计算的。 ###2.7 less继承 语法1： #wrap{.inner{&amp;:extend(.juzhong all);}}，这种方法推荐使用，all就是继承居中类的所有状态(包括hover等状态)。 #wrap{.inner:extend(.juzhong)}，这种方法不推荐使用。 引入外部css文件（引入混合）。 继承与混合的区别： 继承可以做到混合做不到的功能（比如css选择器中的组合选择器[,]，因为混合的本质是复制粘贴）。 继承的性能比混合高，灵活度比混合低。]]></content>
@@ -58,12 +82,12 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Node.js之Node基础]]></title>
+    <title><![CDATA[Node之Node.js基础]]></title>
     <url>%2F2019%2F10%2F25%2FF-02-Node-js%E4%B9%8BNode%E5%9F%BA%E7%A1%80%2F</url>
     <content type="text"><![CDATA[1. node 简介1.1 介绍 Node.js是一个能够在服务器端运行JavaScript的开放源代码、 跨平台JavaScript运行环境。 Node采用Google开发的V8引擎运行js代码，使用事件驱动、非阻塞和异步I/O模型等技术来提高性能，可优化应用程序的传输量和规模。 Node大部分基本模块都用JavaScript编写。 Node主要用于编写像Web服务器一样的网络应用，这和 PHP 和 Python 是类似的。 Node.js允许通过JS和一系列模块来编写服务器端应用和网络相关的应用。 核心模块包括文件系统I/O、网络（HTTP、TCP、UDP、DNS、 TLS/SSL等）、二进制数据流、加密算法、数据流等等。Node模块的API形式简单，降低了编程的复杂度。 使用框架可以加速开发。常用的框架有Express.js、Socket.IO 和Connect等。Node.js的程序可以在Microsoft Windows、 Linux、Unix、Mac OS X等服务器上运行。 Node.js也可以使用CoffeeScript、TypeScript、Dart语言，以及其他能够编译成JavaScript的语言编程。 1.2 用途 Web服务API，比如REST 实时多人游戏 后端的Web服务，例如跨域、服务器端的请求 基于Web的应用 多客户端的通信，如即时通信1.2 下载 中文官网：http://nodejs.cn/ 2. COMMONJS规范2.1 出现环境 ECMAScript标准的缺陷 没有模块系统 标准库较少 没有标准接口 ！缺乏管理系统 模块化 如果程序设计的规模达到了一定程度，则必须对其进行模块化。 模块化可以有多种形式，但至少应该提供能够将代码分割为多个源文件的机制。 CommonJS 的模块功能可以帮我们解决该问题。 CommonJS规范 CommonJS规范的提出，主要是为了弥补当前JavaScript没有模块化标准的缺陷。 CommonJS规范为JS指定了一个美好的愿景，希望JS能够在任何地方运行。 CommonJS对模块的定义十分简单： 模块引用 、模块定义 、模块标识2.2 模块 模块引用 require()方法：这个方法接受模块标识，以此将一个模块引入到当前运行环境中。 模块引用的示例代码： var math = require(&#39;math&#39;); 模块定义 exports对象用于导出当前模块的方法或者变量，并且它是唯一的导出的出口。 在模块中还存在一个module对象，它代表模块自身，而exports是module的属性。 在Node中一个文件就是一个模块。 模块标识 模块标识其实就是模块的名字，也就是传 递给require()方法的参数，它必须是符合 驼峰命名法的字符串，或者是以.、..开头的 相对路径、或者绝对路径。 模块的定义十分简单，接口也十分简洁。每个模块具有独立的空间，它们互不干扰，在引用时也干净利落。 Node的模块实现 Node中虽然使用的是CommonJS规范，但是其自身也对规范做了一些取舍。 在Node中引入模块，需要经历如下3个步骤：路径分析 —&gt; 文件定位 —&gt; 编译执行 在Node中，模块分为三类：一类是底层由 C++编写的内建模块；一类是Node提供的核心模块；还有一类是用户编写的模块，称为文件模块。2.3 包（package） 将多个模块组合为一个完整的功能，就是一个包。包实际上就是一个压缩文件，解压以后还原为目录。 CommonJS的包规范允许我们将一组相关的模块组合到一起，形成一组完整的工具。 CommonJS的包规范由 包结构 和 包描述文件 两个部分组成。 包结构(符合规范的目录，应该包含如下文件： )： bin- 二进制的可执行文件，一般都是一些工具包中才有 lib- js文件 doc- 文档 test- 测试代码 package.json- 包的描述文件 包描述文件用于表达非代码相关的信息， 它是一个JSON格式的文件(package.json)，位于包的根目录下，是包的重要组成部分。 package.json：它是一个json格式的文件，在它里面保存了包各种相关的信息。 package.json中的一些字段：name(包名)、version(版本)、dependencies(依赖)、main(包的主要的文件)、bin(运行的代码)2.4 npm（Node Package Manager node的包管理器） CommonJS包规范是理论，NPM是其中一种实践。 对于Node而言，NPM帮助其完成了第三 方模块的发布、安装和依赖等。借助NPM， Node与第三方模块之间形成了很好的一个生态系统。 通过npm可以对node中的包进行上传、下载、搜索等操作。 npm会在安装完node以后，自动安装。 npm命令 npm -v 查看npm的版本 npm 帮助说明 npm search 包名 搜索模块包 npm install 包名 在当前目录安装指定的包 npm install 包名 -g 全局安装模式安装包（一般都是一些工具） npm r/remove 包名 删除一个包 npm install 文件路径 从本地安装 npm install 包名 –registry=地址 从镜像源安装 npm config set registry 地址 设置镜像源 npm的常用指令 npm -v 查看npm的版本 npm version 查看所有模块的版本 npm init 初始化项目（创建package.json） npm i 包名 安装指定的包 npm i 包名 --save 安装指定的包并添加依赖 npm i 包名 -g 全局安装 （一般都是一些工具） npm i 安装当前项目所依赖的包 npm s 包名 搜索包 npm r 包名 删除一个包 2.5 Buffer Buffer(缓冲区) 从结构上看Buffer非常像一个数组，Buffer是用来存储二进制数据的,它的元素(显示)为16进制的两位数。 实际上一个元素就表示内存中的一个字节。 实际上Buffer中的内存不是通过JavaScript分配的，而是在底层通过C++申请的。 也就是我们可以直接通过Buffer来创建内存中的空间。 Buffer的操作 使用Buffer保存字符串 let str = &quot;你好 wcy&quot;; let buf = Buffer.from(str , &quot;utf-8&quot;); 创建指定大小的Buffer对象 let buf = Buffer.alloc(1024*8); Buffer的方法： Buffer.from(字符串)：将一个字符串中内容保存到一个buffer中 buf.toString()： 将buffer转换为一个字符串 Buffer.alloc(size)：创建一个指定大小的buffer对象 Buffer.allocUnsafe(size)：创建一个指定大小的buffer对象，可以包含敏感数据 buf.write()； 向缓冲区中写入字符串 buf.fill()：将指定值填入到缓冲区的指定位置 buf.copy()：复制缓冲区 buf.slice()： 对缓冲区切片 Buffer.concat()：拼接缓冲区 2.6 文件系统（File System） fs模块： 在Node中，与文件系统的交互是非常重要的，服务器的本质就将本地的文件发送给远程的客户端。 在Node通过fs模块来对系统中的文件进行操作，fs模块是node中已经继承好了，不需要在使用npm下载，直接引入即可 引入fs：var fs = require(&quot;fs&quot;); 同步和异步调用： fs模块中的大部分操作都提供了两种方法，同步方法和异步方法。(同步方法带sync，异步方法没有sync，都需要回调函数) 同步文件系统会阻塞程序的执行，也就是除非操作完毕，否则不会向下执行代码。 异步文件系统不会阻塞程序的执行，而是在操作完成时，通过回调函数将结果返回。 打开和关闭文件： 打开文件 fs.open(path, flags[, mode], callback) fs.openSync(path, flags[, mode]) 关闭文件 `fs.close(fd,callback)` `fs.closeSync(fd);` 打开状态 – r：读取文件, 文件不存在则出现异常 – r+：读写文件, 文件不存在则出现异常 – rs：在同步模式下打开文件用于读取 – rs+：在同步模式下打开文件用于读写 – w：打开文件用于写操作 , 如果不存在则创建，如果存在则截断 – wx：打开文件用于写操作 , 如果 存在 则打开失败 – w+：打开文件用于读写 ,如果不存在则创建 ,如果存在则截断 – wx+：打开文件用于读写 , 如果 存在 则打开失败 – a：打开文件用于追加 , 如果不存在则创建 – ax：打开文件用于追加 , 如果路径存在则失败 – a+：打开文件进行读取和追加 , 如果不存在则创建该文件 – ax+：打开文件进行读取和追加 , 如果路径存在则失败 写入文件(同步写入、异步写入、简单写入、流式写入)。 读取文件(同步读取、异步读取、简单读取、流式读取)。 方法 打开文件 fs.open(path, flags[, mode], callback) fs.openSync(path, flags[, mode]) 读写文件 fs.write(fd, string[, position[, encoding]], callback) fs.writeSync(fd, string[, position[, encoding]]) fs.read(fd, buffer, offset, length, position, callback) fs.readSync(fd, buffer, offset, length, position) 关闭文件 fs.close(fd,callback) fs.closeSync(fd); 简单文件读取和写入 fs.writeFile(file, data[, options], callback) fs.writeFileSync(file, data[, options]) fs.readFile(path[, options], callback) fs.readFileSync(path[, options]) - 流式文件读取和写入 - 流式读取和写入适用于一些比较大的文件 `fs.createWriteStream(path[, options])` `fs.createReadStream(path[, options])`​​​​​​​​​​​]]></content>
       <categories>
         <category>前端</category>
-        <category>Node.js</category>
+        <category>Node</category>
       </categories>
       <tags>
         <tag>node</tag>
@@ -502,9 +526,9 @@
       <tags>
         <tag>Path环境变量</tag>
         <tag>java基础语法</tag>
-        <tag>流程控制语句</tag>
         <tag>运算符</tag>
         <tag>数据输入</tag>
+        <tag>流程控制语句</tag>
       </tags>
   </entry>
   <entry>
