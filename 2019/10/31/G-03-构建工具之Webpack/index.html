@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="webpack,">
 
 
 
@@ -84,13 +84,14 @@
 
 
 <meta name="description" content="1.webpack31.1了解Webpack相关 什么是webpack Webpack是一个模块打包器(bundler)。 在Webpack看来, 前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理 它将根据模块的依赖关系进行静态分析，生成对应的静态资源   理解Loader Webpack 本身只能加载JS/JSON模块，如果要加载其他类型的文件(模块)，就需要使">
+<meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建工具之Webpack">
 <meta property="og:url" content="http://yoursite.com/2019/10/31/G-03-构建工具之Webpack/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1.webpack31.1了解Webpack相关 什么是webpack Webpack是一个模块打包器(bundler)。 在Webpack看来, 前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理 它将根据模块的依赖关系进行静态分析，生成对应的静态资源   理解Loader Webpack 本身只能加载JS/JSON模块，如果要加载其他类型的文件(模块)，就需要使">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-31T10:58:59.222Z">
+<meta property="og:updated_time" content="2019-11-28T14:50:14.074Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具之Webpack">
 <meta name="twitter:description" content="1.webpack31.1了解Webpack相关 什么是webpack Webpack是一个模块打包器(bundler)。 在Webpack看来, 前端的所有资源文件(js/json/css/img/less/…)都会作为模块处理 它将根据模块的依赖关系进行静态分析，生成对应的静态资源   理解Loader Webpack 本身只能加载JS/JSON模块，如果要加载其他类型的文件(模块)，就需要使">
@@ -535,9 +536,11 @@
 <li><p>解决办法：</p>
 <ul>
 <li>使用publicPath : ‘dist/js/‘ //设置为index.html提供资源的路径,设置完后找所有的资源都会去当前目录下找。</li>
-<li>将index.html放在dist/js/也可以解决。<h3 id="1-8-自动编译打包"><a href="#1-8-自动编译打包" class="headerlink" title="1.8 自动编译打包"></a>1.8 自动编译打包</h3></li>
+<li>将index.html放在dist/js/也可以解决。</li>
 </ul>
 </li>
+</ul>
+<h3 id="1-8-自动编译打包"><a href="#1-8-自动编译打包" class="headerlink" title="1.8 自动编译打包"></a>1.8 自动编译打包</h3><ul>
 <li><p>利用webpack开发服务器工具</p>
 <p>  <code>webpack-dev-server</code></p>
 </li>
@@ -552,7 +555,9 @@
 </li>
 <li><p>编译打包应用并运行</p>
 <p>  <code>- npm start</code></p>
-<h3 id="1-9使用webpack插件"><a href="#1-9使用webpack插件" class="headerlink" title="1.9使用webpack插件"></a>1.9使用webpack插件</h3></li>
+</li>
+</ul>
+<h3 id="1-9使用webpack插件"><a href="#1-9使用webpack插件" class="headerlink" title="1.9使用webpack插件"></a>1.9使用webpack插件</h3><ul>
 <li><p>常用的插件</p>
 <ul>
 <li>使用html-webpack-plugin根据模板html生成引入script的页面</li>
@@ -588,6 +593,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/webpack/" rel="tag"><i class="fa fa-tag"></i> webpack</a>
+          
+        </div>
       
 
       
@@ -688,7 +699,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -710,7 +721,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

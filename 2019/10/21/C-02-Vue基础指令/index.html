@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. Vue基本代码和MVVM之间对应 Vue实例所控制的这个元素区域，就是MVVM中的 V。 new 出来的vm对象，就是MVVM中的 VM调度者。 Vue实例中的 data 就是MVVM中的 M。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-23T02:56:55.896Z">
+<meta property="og:updated_time" content="2019-11-28T14:35:05.811Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue.js之vue基础指令">
 <meta name="twitter:description" content="1. Vue基本代码和MVVM之间对应 Vue实例所控制的这个元素区域，就是MVVM中的 V。 new 出来的vm对象，就是MVVM中的 VM调度者。 Vue实例中的 data 就是MVVM中的 M。">
@@ -419,7 +419,8 @@
 
 <ul>
 <li><p>代码示例及详细解析如下：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!-- 后面new 的Vue实例，会控制这个元素中的所有内容。*Vue实例所控制的这个元素区域，就是MVVM中的 V* --&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;&lt;p&gt;&#123;&#123; msg &#125;&#125;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- js代码 --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 1.导入vue包 ，导入包之后，在浏览器内存中就多了一个Vue构造函数 --&gt;</span><br><span class="line">    &lt;script src=&quot;./lib/vue-2.4.0.js&quot;&gt;&lt;/scrit&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    &lt;!-- 2.创建一个vue实例 --&gt;</span><br><span class="line">    &lt;!-- *这里new出来的vm对象，就是MVVM中的 VM调度者* --&gt;</span><br><span class="line">        var vm = new Vue(&#123;</span><br><span class="line">            el: &apos;#app&apos;,  // 表示当前new的这个Vue实例，要控制页面上的哪个区域</span><br><span class="line">            &lt;!-- *这里 data 就是MVVM中的 M*。 --&gt;</span><br><span class="line">            data: &#123;      // data属性中，存放的是el中要用到的数据</span><br><span class="line">                msg: &apos;欢迎学习Vue！&apos;   // 通过vue提供的指令，很方便就能把数据渲染到页面上(前端的Vue之类的框架，不提倡手动操作DOM元素)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/scrit&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;!-- 后面new 的Vue实例，会控制这个元素中的所有内容。Vue实例所控制的这个元素区域，就是MVVM中的 V --&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;&lt;p&gt;&#123;&#123; msg &#125;&#125;&lt;/p&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- js代码 --&gt;</span><br><span class="line"></span><br><span class="line">    &lt;!-- 1.导入vue包 ，导入包之后，在浏览器内存中就多了一个Vue构造函数 --&gt;</span><br><span class="line">    &lt;script src=&quot;./lib/vue-2.4.0.js&quot;&gt;&lt;/scrit&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    &lt;!-- 2.创建一个vue实例 --&gt;</span><br><span class="line">    &lt;!-- 这里new出来的vm对象，就是MVVM中的 VM调度者 --&gt;</span><br><span class="line">        var vm = new Vue(&#123;</span><br><span class="line">            el: &apos;#app&apos;,  // 表示当前new的这个Vue实例，要控制页面上的哪个区域</span><br><span class="line">            &lt;!-- *这里 data 就是MVVM中的 M*。 --&gt;</span><br><span class="line">            data: &#123;      // data属性中，存放的是el中要用到的数据</span><br><span class="line">                msg: &apos;欢迎学习Vue！&apos;   // 通过vue提供的指令，很方便就能把数据渲染到页面上(前端的Vue之类的框架，不提倡手动操作DOM元素)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/scrit&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
 
 </li>
 </ul>
@@ -616,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -638,7 +639,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

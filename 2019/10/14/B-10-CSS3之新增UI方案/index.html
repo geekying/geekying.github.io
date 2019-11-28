@@ -86,14 +86,14 @@
 <meta name="description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta name="keywords" content="css新增UI方案">
 <meta property="og:type" content="article">
-<meta property="og:title" content="B-10-CSS3之新增UI方案">
+<meta property="og:title" content="CSS3之新增UI方案">
 <meta property="og:url" content="http://yoursite.com/2019/10/14/B-10-CSS3之新增UI方案/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-28T06:29:32.581Z">
+<meta property="og:updated_time" content="2019-11-28T13:48:18.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="B-10-CSS3之新增UI方案">
+<meta name="twitter:title" content="CSS3之新增UI方案">
 <meta name="twitter:description" content="1. 文本新增属性1.1 opacity opacity属性指定了一个元素的透明度。 默认值：1.0    不可继承 可以简写为.1~.9，1.0是不透明，0是完全透明，值越小透明度越高。  1.2 rgba rgba(0,0,0,.8); 应用场景：背景透明文字不透明">
 
 
@@ -130,7 +130,7 @@
 
 
 
-  <title>B-10-CSS3之新增UI方案 | 小颖子的hexo博客</title>
+  <title>CSS3之新增UI方案 | 小颖子的hexo博客</title>
   
 
 
@@ -316,7 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">B-10-CSS3之新增UI方案</h1>
+          <h1 class="post-title" itemprop="name headline">CSS3之新增UI方案</h1>
         
 
         <div class="post-meta">
@@ -428,11 +428,15 @@
 </li>
 <li><p>值：</p>
 <p>– &lt;color&gt;可选。可以在偏移量之前或之后指定。如果没有指定颜色，则使用UA（用户代理）选择的颜色。</p>
-<p>– &lt;offset-x&gt; &lt;offset-y&gt;必选。这些长度值指定阴影相对文字的偏移量。</p>
-<p>  ！ &lt;offset-x&gt; 指定水平偏移量，若是负值则阴影位于文字左边。<br>  ！ &lt;offset-y&gt; 指定垂直偏移量，若是负值则阴影位于文字上面。</p>
-<p>  ！ 如果两者均为0，则阴影位于文字正后方(如果设置了&lt;blur-  radius&gt; 则会产生模糊效果)。</p>
-<p>– &lt;blur-radius&gt;可选。这是 &lt;length&gt; 值。如果没有指定，则默认为0。值越大，模糊半径越大，阴影也就越大越淡。</p>
 </li>
+</ul>
+<p>  – &lt;offset-x&gt; &lt;offset-y&gt;必选。这些长度值指定阴影相对文字的偏移量。</p>
+<pre><code>！ \&lt;offset-x&gt; 指定水平偏移量，若是负值则阴影位于文字左边。 
+
+！ \&lt;offset-y&gt; 指定垂直偏移量，若是负值则阴影位于文字上面。
+
+！ 如果两者均为0，则阴影位于文字正后方(如果设置了\&lt;blur-  radius&gt; 则会产生模糊效果)。</code></pre><p>  – &lt;blur-radius&gt;可选。这是 &lt;length&gt; 值。如果没有指定，则默认为0。值越大，模糊半径越大，阴影也就越大越淡。</p>
+<ul>
 <li><p>应用场景：</p>
 <p>– 浮雕文字</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">h1&#123;</span><br><span class="line">    text-align: center;</span><br><span class="line">    font: 100px/200px &quot;微软雅黑&quot;;</span><br><span class="line">    color: white;</span><br><span class="line">    text-shadow: black 1px 1px 100px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -462,7 +466,7 @@
 <p>– text-overflow: ellipsis;</p>
 <p>– 包裹区域必须不能让子元素撑开。</p>
 <p>– 设置<code>text-overflow: ellipsis;</code>时，div的文字外面不能包裹p标签，否则文字只会溢出隐藏并不会显示省略号。（我自己加的）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!-- css代码 --&gt;</span><br><span class="line">div&#123;</span><br><span class="line">	width: 200px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	border: 1px solid;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	white-space: nowrap;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  &lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div&gt;尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷尚硅谷&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!-- css代码 --&gt;</span><br><span class="line">div&#123;</span><br><span class="line">	width: 200px;</span><br><span class="line">	height: 200px;</span><br><span class="line">	border: 1px solid;</span><br><span class="line">	margin: 0 auto;</span><br><span class="line">	white-space: nowrap;</span><br><span class="line">	overflow: hidden;</span><br><span class="line">	text-overflow: ellipsis;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  &lt;!-- html代码 --&gt;</span><br><span class="line"></span><br><span class="line">  &lt;div&gt;wcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcywcy&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -476,10 +480,11 @@
 <li><p>值：</p>
 <p>– inset：默认阴影在边框外。使用inset后，阴影在边框内。</p>
 <p>– &lt;offset-x&gt; &lt;offset-y&gt;：这是头两个 &lt;length&gt; 值，用来设置阴影偏移量。</p>
-<p>  ! &lt;offset-x&gt; 设置水平偏移量，如果是负值则阴影位于元素左边。</p>
-<p>  ! &lt;offset-y&gt; 设置垂直偏移量，如果是负值则阴影位于元素上面。</p>
-<p>  ! 如果两者都是0，那么阴影位于元素后面。这时如果设置&lt;blur-radius&gt; 或&lt;spread-radius&gt; 则有模糊效果。</p>
-<p>– &lt;blur-radius&gt;：这是第三个 &lt;length&gt; 值。值越大，模糊面积越大，阴影就越大越淡。 不能为负值。默认为0，此时阴影边缘锐利。</p>
+<pre><code>! \&lt;offset-x&gt; 设置水平偏移量，如果是负值则阴影位于元素左边。
+
+! \&lt;offset-y&gt; 设置垂直偏移量，如果是负值则阴影位于元素上面。
+
+! 如果两者都是0，那么阴影位于元素后面。这时如果设置\&lt;blur-radius&gt; 或\&lt;spread-radius&gt; 则有模糊效果。</code></pre><p>– &lt;blur-radius&gt;：这是第三个 &lt;length&gt; 值。值越大，模糊面积越大，阴影就越大越淡。 不能为负值。默认为0，此时阴影边缘锐利。</p>
 <p>– &lt;spread-radius&gt;：这是第四个 &lt;length&gt; 值。取正值时，阴影扩大（阴影覆盖到元素上的距离）；取负值时，阴影收缩（阴影藏在元素下面的距离）。默认为0，此时阴影与元素同样大。</p>
 <p>– &lt;color&gt;：阴影颜色，如果没有指定，则由浏览器决定。</p>
 </li>
@@ -502,18 +507,18 @@
 </li>
 <li><p>值：</p>
 <p>– none：元素不能被用户缩放。</p>
+<p>– both：允许用户在水平和垂直方向上调整元素的大小。</p>
+<p>– horizontal：允许用户在水平方向上调整元素的大小。</p>
+<p>– vertical：允许用户在垂直方向上调整元素的大小。</p>
 </li>
 </ul>
-<p>  – both：允许用户在水平和垂直方向上调整元素的大小。</p>
-<p>  – horizontal：允许用户在水平方向上调整元素的大小。</p>
-<p>  – vertical：允许用户在垂直方向上调整元素的大小。</p>
 <h3 id="2-4-box-sizing-怪异盒模型"><a href="#2-4-box-sizing-怪异盒模型" class="headerlink" title="2.4 box-sizing(怪异盒模型)"></a>2.4 box-sizing(怪异盒模型)</h3><ul>
 <li><p>box-sizing属性定义了用户代理应该如何计算一个元素的总宽度和总高度。</p>
 </li>
 <li><p>可取值：</p>
 <ul>
-<li><code>box-sizing: content-box;</code> border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。注意: <code>border-box</code>不包含<code>margin</code>。</li>
-<li><code>box-sizing: border-box;</code> 默认值，标准盒子模型。width 与 height只包括内容的宽和高， 不包括边框（border），内边距（padding），外边距（margin）。注意: 内边距、边框和外边距都在这个盒子的外部。</li>
+<li><code>box-sizing: border-box;</code> border-box 告诉浏览器：你想要设置的边框和内边距的值是包含在width内的。注意: <code>border-box</code>不包含<code>margin</code>。</li>
+<li><code>box-sizing: content-box;</code> 默认值，标准盒子模型。width 与 height只包括内容的宽和高， 不包括边框（border），内边距（padding），外边距（margin）。注意: 内边距、边框和外边距都在这个盒子的外部。</li>
 </ul>
 </li>
 <li><p>box-sizing 属性用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型。可以使用此属性来模拟不正确支持CSS盒子模型规范的浏览器的行为。</p>
@@ -525,11 +530,16 @@
 <li><p>传统的圆角生成方案，必须使用多张图片作为背景图案。</p>
 </li>
 <li><p>CSS3圆角的出现，使得我们再也不必浪费时间去制作这些图片了，而且还有其他多个优点：</p>
-<p>– 减少维护的工作量。图片文件的生成、更新、编写网页代码，这些工作都不再需要了。</p>
-<p>– 提高网页性能。由于不必再发出多余的HTTP请求，网页的载入速度将变快。</p>
-<p>– 增加视觉可靠性。某些情况下（网络拥堵、服务器出错、网速过慢等等），背景图片会下载失败，导致视觉效果不佳。CSS3就不会发生这种情况。</p>
+<ul>
+<li><p>减少维护的工作量。图片文件的生成、更新、编写网页代码，这些工作都不再需要了。</p>
 </li>
-<li><p>border-radius：用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个(椭)圆与边框的交集形成圆角效果。</p>
+<li><p>提高网页性能。由于不必再发出多余的HTTP请求，网页的载入速度将变快。</p>
+</li>
+<li><p>增加视觉可靠性。某些情况下（网络拥堵、服务器出错、网速过慢等等），背景图片会下载失败，导致视觉效果不佳。CSS3就不会发生这种情况。</p>
+</li>
+</ul>
+</li>
+<li><p><code>border-radius</code>：用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个(椭)圆与边框的交集形成圆角效果。</p>
 </li>
 <li><p>默认值  :  0   不可继承</p>
 </li>
@@ -685,7 +695,7 @@
 <li><p>值：</p>
 <p>– 百分比：  指定背景图片相对背景区（background positioning area）的百分比。</p>
 <p>– 背景区由background-origin设置，默认为盒模型的内容区与内边距。</p>
-<p>– auto：  以背景图片的比例缩放背景图片。</p>
+<p>– auto：以背景图片的比例缩放背景图片。</p>
 </li>
 <li><p>注意：</p>
 <p>！单值时，这个值指定图片的宽度，图片的高度隐式的为auto。</p>
@@ -699,7 +709,7 @@
 </li>
 <li><p>background 可以用来设置一个或多个属性:background-color, background-image, background-position, background-repeat, background-size, background-attachment。 </p>
 </li>
-<li><p>默认值：    不可继承</p>
+<li><p>默认值：不可继承</p>
 <p>– background-image: none</p>
 <p>– background-position: 0% 0%</p>
 <p>– background-size: auto auto</p>
@@ -882,7 +892,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -904,7 +914,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

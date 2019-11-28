@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. 字符串相关扩展 几个常用的API 1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false）  可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配）  一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：cons">
+<meta name="description" content="1. 字符串相关扩展 几个常用的API  1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false） 可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配） 一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：conso">
 <meta name="keywords" content="ES6扩展">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6之扩展">
 <meta property="og:url" content="http://yoursite.com/2019/10/30/E-02-ES6之扩展/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. 字符串相关扩展 几个常用的API 1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false）  可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配）  一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：cons">
+<meta property="og:description" content="1. 字符串相关扩展 几个常用的API  1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false） 可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配） 一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：conso">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-30T10:30:54.378Z">
+<meta property="og:updated_time" content="2019-11-28T14:41:29.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6之扩展">
-<meta name="twitter:description" content="1. 字符串相关扩展 几个常用的API 1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false）  可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配）  一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：cons">
+<meta name="twitter:description" content="1. 字符串相关扩展 几个常用的API  1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false） 可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配） 一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：conso">
 
 
 
@@ -411,16 +411,17 @@
 
       
         <h2 id="1-字符串相关扩展"><a href="#1-字符串相关扩展" class="headerlink" title="1. 字符串相关扩展"></a>1. 字符串相关扩展</h2><ul>
-<li><p>几个常用的API</p>
-<h3 id="1-1-includes"><a href="#1-1-includes" class="headerlink" title="1.1 includes();"></a>1.1 includes();</h3></li>
-<li><p>判断字符串中是否包含指定的定的字串（有的话返回true，否则false）</p>
-</li>
-<li><p>可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配）</p>
-<ul>
+<li>几个常用的API</li>
+</ul>
+<h3 id="1-1-includes"><a href="#1-1-includes" class="headerlink" title="1.1 includes();"></a>1.1 includes();</h3><ul>
+<li>判断字符串中是否包含指定的定的字串（有的话返回true，否则false）</li>
+<li>可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配）<ul>
 <li>一个参数：<code>console.log(&#39;hello world&#39;.includes(&#39;world&#39;))</code> —-&gt; true</li>
-<li>两个参数：<code>console.log(&#39;hello world&#39;.includes(&#39;world&#39;,7))</code> —-&gt; false<h3 id="1-2-startswith"><a href="#1-2-startswith" class="headerlink" title="1.2 startswith();"></a>1.2 startswith();</h3></li>
+<li>两个参数：<code>console.log(&#39;hello world&#39;.includes(&#39;world&#39;,7))</code> —-&gt; false</li>
 </ul>
 </li>
+</ul>
+<h3 id="1-2-startswith"><a href="#1-2-startswith" class="headerlink" title="1.2 startswith();"></a>1.2 startswith();</h3><ul>
 <li><p>判断字符串是否以特定的子串开始</p>
 </li>
 <li><p>示例：</p>
@@ -446,7 +447,9 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo(param) &#123;</span><br><span class="line">    let p = param || &apos;hello&apos;;</span><br><span class="line">    console.log(p)</span><br><span class="line">&#125;</span><br><span class="line">foo(&apos;hi&apos;);</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>es6中给参数默认值：<code>function foo(param = &#39;hello&#39;) { console.log(p)}</code></p>
-<h3 id="2-2-参数解构赋值"><a href="#2-2-参数解构赋值" class="headerlink" title="2.2 参数解构赋值"></a>2.2 参数解构赋值</h3></li>
+</li>
+</ul>
+<h3 id="2-2-参数解构赋值"><a href="#2-2-参数解构赋值" class="headerlink" title="2.2 参数解构赋值"></a>2.2 参数解构赋值</h3><ul>
 <li><p>示例：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//此处传了一个默认值</span><br><span class="line">  function foo(&#123;username=&apos;lisi&apos;,age=&apos;13&apos;&#125;=&#123;&#125;) &#123;</span><br><span class="line">     console.log(username,age);</span><br><span class="line">  &#125;</span><br><span class="line">  foo(&#123;username=&apos;zasa&apos;,age=&apos;15&apos;&#125;);</span><br></pre></td></tr></table></figure>
 
@@ -545,8 +548,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/30/E-03-ES6之类与继承/" rel="prev" title="E-03-ES6之类与继承">
-                E-03-ES6之类与继承 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/30/E-03-ES6之类与继承/" rel="prev" title="ES6之类与继承">
+                ES6之类与继承 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -625,7 +628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -647,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

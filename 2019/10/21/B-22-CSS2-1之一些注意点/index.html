@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. 定位参照于谁来定位 没有定位: 包含块 相对定位: 元素本来的位置 固定定位: 视口 绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。 包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-22T06:03:18.252Z">
+<meta property="og:updated_time" content="2019-11-28T14:26:20.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS2.1之一些小点">
 <meta name="twitter:description" content="1. 定位参照于谁来定位 没有定位: 包含块 相对定位: 元素本来的位置 固定定位: 视口 绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。 初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。 包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。">
@@ -415,10 +415,8 @@
 <li>相对定位: 元素本来的位置</li>
 <li>固定定位: 视口</li>
 <li>绝对定位：相对于包含块进行定位(没有开启定位的父元素，就相对于初始包含块进行定位；有开启定位的祖先元素，就相对于包含块进行定位)。<ul>
-<li>初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。<ul>
+<li>初始包含块是一个大小位置与视口相同的矩形，但并不等于视口，绝对定位也不是相对于浏览器视口进行定位的。</li>
 <li>包含块：开启定位的祖先元素从内边距开始（内边距+内容去）的矩形区域。</li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -471,7 +469,7 @@
 <ul>
 <li>页面内元素高度过高，自动出现系统滚动条（浏览器的滚动条）。</li>
 <li>给html标签或者body标签中的其中一个加上overflow: scroll; ，滚动条出现在系统上（出现的是浏览器的滚动条）。</li>
-<li>同时给html标签和body标签加上overflow: scroll; ，滚动条不仅出现在系统上（出现的是浏览器的滚动条），body上也出现滚动条。</li>
+<li>同时给html标签和body标签加上<code>overflow: scroll;</code> ，滚动条不仅出现在系统上（出现的是浏览器的滚动条），body上也出现滚动条。</li>
 <li>移动端开发时一般都会静止系统的默认滚动条，使用自定义的body身上的滚动条。</li>
 </ul>
 </li>
@@ -529,8 +527,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/22/B-23-CSS2-1之清除浮动/" rel="prev" title="CSS2.1之清除浮动">
-                CSS2.1之清除浮动 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/22/B-24-CSS2-1之垂直水平居中/" rel="prev" title="CSS2.1之垂直水平居中">
+                CSS2.1之垂直水平居中 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -609,7 +607,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -631,7 +629,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

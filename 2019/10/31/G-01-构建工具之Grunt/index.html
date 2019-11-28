@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Grunt,">
 
 
 
@@ -83,17 +83,18 @@
 
 
 
-<meta name="description" content="1.项目构建1. 对项目构建的理解 什么是项目构建? 编译项目中的js, sass, less 合并js/css等资源文件 压缩js/css/html等资源文件 JS语法的检查 ……   构建工具的作用? 简化项目构建, 自动化完成构建。1.2 构建工具   Grunt Gulp Webpack">
+<meta name="description" content="1.项目构建1. 对项目构建的理解 什么是项目构建? 编译项目中的js, sass, less 合并js/css等资源文件 压缩js/css/html等资源文件 JS语法的检查 ……   构建工具的作用? 简化项目构建, 自动化完成构建。    1.2 构建工具 Grunt Gulp Webpack">
+<meta name="keywords" content="Grunt">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建工具之Grunt">
 <meta property="og:url" content="http://yoursite.com/2019/10/31/G-01-构建工具之Grunt/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1.项目构建1. 对项目构建的理解 什么是项目构建? 编译项目中的js, sass, less 合并js/css等资源文件 压缩js/css/html等资源文件 JS语法的检查 ……   构建工具的作用? 简化项目构建, 自动化完成构建。1.2 构建工具   Grunt Gulp Webpack">
+<meta property="og:description" content="1.项目构建1. 对项目构建的理解 什么是项目构建? 编译项目中的js, sass, less 合并js/css等资源文件 压缩js/css/html等资源文件 JS语法的检查 ……   构建工具的作用? 简化项目构建, 自动化完成构建。    1.2 构建工具 Grunt Gulp Webpack">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-31T06:07:40.473Z">
+<meta property="og:updated_time" content="2019-11-28T14:53:44.676Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具之Grunt">
-<meta name="twitter:description" content="1.项目构建1. 对项目构建的理解 什么是项目构建? 编译项目中的js, sass, less 合并js/css等资源文件 压缩js/css/html等资源文件 JS语法的检查 ……   构建工具的作用? 简化项目构建, 自动化完成构建。1.2 构建工具   Grunt Gulp Webpack">
+<meta name="twitter:description" content="1.项目构建1. 对项目构建的理解 什么是项目构建? 编译项目中的js, sass, less 合并js/css等资源文件 压缩js/css/html等资源文件 JS语法的检查 ……   构建工具的作用? 简化项目构建, 自动化完成构建。    1.2 构建工具 Grunt Gulp Webpack">
 
 
 
@@ -419,9 +420,11 @@
 </ul>
 </li>
 <li>构建工具的作用?<ul>
-<li>简化项目构建, 自动化完成构建。<h3 id="1-2-构建工具"><a href="#1-2-构建工具" class="headerlink" title="1.2 构建工具"></a>1.2 构建工具</h3></li>
+<li>简化项目构建, 自动化完成构建。</li>
 </ul>
 </li>
+</ul>
+<h3 id="1-2-构建工具"><a href="#1-2-构建工具" class="headerlink" title="1.2 构建工具"></a>1.2 构建工具</h3><ul>
 <li>Grunt</li>
 <li>Gulp</li>
 <li>Webpack</li>
@@ -437,14 +440,14 @@
 <li><strong>压缩文件</strong>(js/css)</li>
 <li><strong>语法检查</strong>(js)</li>
 <li><strong>less/sass预编译处理</strong> </li>
-<li>其它…<h3 id="2-2-安装Grunt"><a href="#2-2-安装Grunt" class="headerlink" title="2.2 安装Grunt"></a>2.2 安装Grunt</h3></li>
-<li>安装nodejs, 查看版本<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>其它…</li>
 </ul>
 </li>
 </ul>
-<ul>
+<h3 id="2-2-安装Grunt"><a href="#2-2-安装Grunt" class="headerlink" title="2.2 安装Grunt"></a>2.2 安装Grunt</h3><ul>
+<li><p>安装nodejs, 查看版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+</li>
 <li><p>创建一个简单的应用grunt_test</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">  |- build----------构建生成的文件所在的文件夹</span><br><span class="line">  |- src------------源码文件夹   </span><br><span class="line">      |- js---------------js源文件夹</span><br><span class="line">      |- css--------------css源文件夹</span><br><span class="line">  |- index.html-----页面文件</span><br><span class="line">  |- Gruntfile.js---grunt配置文件(注意首字母大写)</span><br><span class="line">  |- package.json---项目包配置文件</span><br><span class="line">      &#123;</span><br><span class="line">        &quot;name&quot;: &quot;grunt_test&quot;,</span><br><span class="line">        &quot;version&quot;: &quot;1.0.0&quot;   </span><br><span class="line">      &#125;</span><br><span class="line">  ```  </span><br><span class="line">* 全局安装 grunt-cli</span><br></pre></td></tr></table></figure>
 
@@ -455,7 +458,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 运行构建项目命令</span><br></pre></td></tr></table></figure>
 
 <p>grunt  //提示 Warning: Task “default” not found</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">### 2.3 配置文件</span><br><span class="line">* 配置文件: Gruntfile.js</span><br><span class="line">  * 此配置文件本质就是一个node函数类型模块</span><br><span class="line">  * 配置编码包含3步:</span><br><span class="line">    1. 初始化插件配置</span><br><span class="line">    2. 加载插件任务</span><br><span class="line">    3. 注册构建任务</span><br><span class="line">  * 基本编码:</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.3 配置文件</span><br><span class="line"></span><br><span class="line">* 配置文件: Gruntfile.js</span><br><span class="line">  * 此配置文件本质就是一个node函数类型模块</span><br><span class="line">  * 配置编码包含3步:</span><br><span class="line">    1. 初始化插件配置</span><br><span class="line">    2. 加载插件任务</span><br><span class="line">    3. 注册构建任务</span><br><span class="line">  * 基本编码:</span><br></pre></td></tr></table></figure>
 
 <p>  module.exports = function(grunt){</p>
 <pre><code>// 1. 初始化插件配置
@@ -466,7 +469,7 @@ grunt.initConfig({
 // grunt.loadNpmTasks(&apos;grunt-contrib-concat&apos;);
 // 3. 注册构建任务
 grunt.registerTask(&apos;default&apos;, []);</code></pre><p>  };</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  * 命令: grunt  //提示成功, 但没有任何效果(还没有使用插件定义任务)</span><br><span class="line">### 2.4 Grunt插件介绍</span><br><span class="line">  * grunt官网的插件列表页面 http://www.gruntjs.net/plugins </span><br><span class="line">  * 插件分类:</span><br><span class="line">    * grunt团队贡献的插件 : 插件名大都以contrib-开头</span><br><span class="line">    * 第三方提供的插件 : 大都不以contrib-开头</span><br><span class="line">  * 常用的插件:</span><br><span class="line">    * grunt-contrib-clean——清除文件(打包处理生成的)</span><br><span class="line">    * grunt-contrib-concat——合并多个文件的代码到一个文件中</span><br><span class="line">    * grunt-contrib-uglify——压缩js文件</span><br><span class="line">    * grunt-contrib-jshint——javascript语法错误检查；</span><br><span class="line">    * grunt-contrib-cssmin——压缩/合并css文件</span><br><span class="line">    * grunt-contrib-htmlmin——压缩html文件</span><br><span class="line">    * grunt-contrib-imagemin——压缩图片文件(无损)</span><br><span class="line">    * grunt-contrib-copy——复制文件、文件夹</span><br><span class="line">    * grunt-contrib-watch——实时监控文件变化、调用相应的任务重新执行</span><br><span class="line">### 2.5 合并js</span><br><span class="line">* 使用concat插件</span><br><span class="line">* 命令:下载插件</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  * 命令: grunt  //提示成功, 但没有任何效果(还没有使用插件定义任务)</span><br><span class="line"></span><br><span class="line">### 2.4 Grunt插件介绍</span><br><span class="line"></span><br><span class="line">  * grunt官网的插件列表页面 http://www.gruntjs.net/plugins </span><br><span class="line">  * 插件分类:</span><br><span class="line">    * grunt团队贡献的插件 : 插件名大都以contrib-开头</span><br><span class="line">    * 第三方提供的插件 : 大都不以contrib-开头</span><br><span class="line">  * 常用的插件:</span><br><span class="line">    * grunt-contrib-clean——清除文件(打包处理生成的)</span><br><span class="line">    * grunt-contrib-concat——合并多个文件的代码到一个文件中</span><br><span class="line">    * grunt-contrib-uglify——压缩js文件</span><br><span class="line">    * grunt-contrib-jshint——javascript语法错误检查；</span><br><span class="line">    * grunt-contrib-cssmin——压缩/合并css文件</span><br><span class="line">    * grunt-contrib-htmlmin——压缩html文件</span><br><span class="line">    * grunt-contrib-imagemin——压缩图片文件(无损)</span><br><span class="line">    * grunt-contrib-copy——复制文件、文件夹</span><br><span class="line">    * grunt-contrib-watch——实时监控文件变化、调用相应的任务重新执行</span><br><span class="line"></span><br><span class="line">### 2.5 合并js</span><br><span class="line"></span><br><span class="line">* 使用concat插件</span><br><span class="line">* 命令:下载插件</span><br></pre></td></tr></table></figure>
 
 <p>  npm install grunt-contrib-concat –save-dev</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 编码:</span><br><span class="line">    * src/js/test1.js</span><br></pre></td></tr></table></figure>
@@ -502,7 +505,7 @@ dest: &quot;build/js/built.js&quot; //输出的js文件
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 命令:</span><br></pre></td></tr></table></figure>
 
 <p>  grunt   //会在build下生成一个built.js</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 2.6 压缩js</span><br><span class="line">* 使用uglify插件</span><br><span class="line">* 下载</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.6 压缩js</span><br><span class="line"></span><br><span class="line">* 使用uglify插件</span><br><span class="line">* 下载</span><br></pre></td></tr></table></figure>
 
 <p>  npm install grunt-contrib-uglify –save-dev</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 配置: Gruntfile.js</span><br><span class="line">* 配置任务:</span><br></pre></td></tr></table></figure>
@@ -522,7 +525,7 @@ dest: &quot;build/js/built.js&quot; //输出的js文件
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 命令:</span><br></pre></td></tr></table></figure>
 
 <p>  grunt   //会在build下生成一个压缩的js文件</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">### 2.7 js语法检查</span><br><span class="line">* 使用jshint插件</span><br><span class="line">* 命令:</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.7 js语法检查</span><br><span class="line"></span><br><span class="line">* 使用jshint插件</span><br><span class="line">* 命令:</span><br></pre></td></tr></table></figure>
 
 <p>  npm install grunt-contrib-jshint –save-dev</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 编码: .jshintrc</span><br></pre></td></tr></table></figure>
@@ -550,7 +553,7 @@ console.log(add(10, 20));</code></pre><p>  })();</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 命令:</span><br></pre></td></tr></table></figure>
 
 <p>  grunt   //提示变量未定义和语句后未加分号 –&gt;修改后重新编译</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### 2.8 使用cssmin插件</span><br><span class="line">* 安装:</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.8 使用cssmin插件</span><br><span class="line"></span><br><span class="line">* 安装:</span><br></pre></td></tr></table></figure>
 
 <p>  npm install grunt-contrib-cssmin –save-dev</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* 编码: </span><br><span class="line">* test1.css</span><br></pre></td></tr></table></figure>
@@ -581,7 +584,7 @@ roundingPrecision: -1</code></pre><p>  },<br>  build: {</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* 命令:</span><br></pre></td></tr></table></figure>
 
 <p>  grunt    //在build/css/下生成output.min.css</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">### 2.9 使用watch插件（真正实现自动化） </span><br><span class="line">* 命令: npm install grunt-contrib-watch --save-dev</span><br><span class="line">* 配置 : Gruntfile.js</span><br><span class="line"></span><br><span class="line">* 配置任务:</span><br></pre></td></tr></table></figure>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 2.9 使用watch插件（真正实现自动化） </span><br><span class="line"></span><br><span class="line">* 命令: npm install grunt-contrib-watch --save-dev</span><br><span class="line">* 配置 : Gruntfile.js</span><br><span class="line">* 配置任务:</span><br></pre></td></tr></table></figure>
 
 <p>  watch : {<br>  scripts : {</p>
 <pre><code>files : [&apos;src/js/*.js&apos;, &apos;src/css/*.css&apos;],
@@ -613,6 +616,12 @@ options : {spawn : false}  </code></pre><p>  }<br>  }</p>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Grunt/" rel="tag"><i class="fa fa-tag"></i> Grunt</a>
+          
+        </div>
+      
 
       
       
@@ -622,8 +631,8 @@ options : {spawn : false}  </code></pre><p>  }<br>  }</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/30/E-03-ES6之类与继承/" rel="next" title="E-03-ES6之类与继承">
-                <i class="fa fa-chevron-left"></i> E-03-ES6之类与继承
+              <a href="/2019/10/30/E-03-ES6之类与继承/" rel="next" title="ES6之类与继承">
+                <i class="fa fa-chevron-left"></i> ES6之类与继承
               </a>
             
           </div>
@@ -712,7 +721,7 @@ options : {spawn : false}  </code></pre><p>  }<br>  }</p>
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">51</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -734,7 +743,7 @@ options : {spawn : false}  </code></pre><p>  }<br>  }</p>
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">63</span>
+                  <span class="site-state-item-count">64</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
