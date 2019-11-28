@@ -618,11 +618,11 @@
         <category>java</category>
       </categories>
       <tags>
+        <tag>Path环境变量</tag>
+        <tag>java基础语法</tag>
         <tag>运算符</tag>
         <tag>数据输入</tag>
         <tag>流程控制语句</tag>
-        <tag>Path环境变量</tag>
-        <tag>java基础语法</tag>
       </tags>
   </entry>
   <entry>
@@ -633,11 +633,11 @@
         <category>java</category>
       </categories>
       <tags>
-        <tag>Path环境变量</tag>
-        <tag>java基础语法</tag>
         <tag>java发展</tag>
         <tag>JRE和JDK</tag>
         <tag>DOS命令</tag>
+        <tag>Path环境变量</tag>
+        <tag>java基础语法</tag>
       </tags>
   </entry>
   <entry>
