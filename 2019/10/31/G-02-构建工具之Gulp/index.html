@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. Gulp须知 任务化 基于流 有自己的内存（从内存里输出流到本地） 输入流：从本地读数据到Gulp的内存 输出流：在内部处理完之后，从Gulp的内存六道本地   执行任务是异步（return是关键）的，也可以同步。要确保先后用依赖！  2. Gulp介绍 中文主页: http://www.gulpjs.com.cn/ gulp是与grunt功能类似的前端项目构建工具, 也是基于Nodejs的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-28T14:53:57.621Z">
+<meta property="og:updated_time" content="2019-11-28T14:59:09.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="构建工具之Gulp">
 <meta name="twitter:description" content="1. Gulp须知 任务化 基于流 有自己的内存（从内存里输出流到本地） 输入流：从本地读数据到Gulp的内存 输出流：在内部处理完之后，从Gulp的内存六道本地   执行任务是异步（return是关键）的，也可以同步。要确保先后用依赖！  2. Gulp介绍 中文主页: http://www.gulpjs.com.cn/ gulp是与grunt功能类似的前端项目构建工具, 也是基于Nodejs的">
@@ -460,16 +460,27 @@
 </ul>
 </li>
 </ul>
-<h2 id="5-重要API"><a href="#5-重要API" class="headerlink" title="5.重要API"></a>5.重要API</h2><pre><code>* gulp.src(filePath/pathArr) : 
-  * 指向指定路径的所有文件, 返回文件流对象
-  * 用于读取文件
-* gulp.dest(dirPath/pathArr)
-  * 指向指定的所有文件夹
-  * 用于向文件夹中输出文件
-* gulp.task(name, [deps], fn) 
-  * 定义一个任务
-* gulp.watch() 
-  * 监视文件的变化</code></pre><h2 id="6-处理js"><a href="#6-处理js" class="headerlink" title="6.处理js"></a>6.处理js</h2><ul>
+<h2 id="5-重要API"><a href="#5-重要API" class="headerlink" title="5.重要API"></a>5.重要API</h2><ul>
+<li>gulp.src(filePath/pathArr) : <ul>
+<li>指向指定路径的所有文件, 返回文件流对象</li>
+<li>用于读取文件</li>
+</ul>
+</li>
+<li>gulp.dest(dirPath/pathArr)<ul>
+<li>指向指定的所有文件夹</li>
+<li>用于向文件夹中输出文件</li>
+</ul>
+</li>
+<li>gulp.task(name, [deps], fn) <ul>
+<li>定义一个任务</li>
+</ul>
+</li>
+<li>gulp.watch() <ul>
+<li>监视文件的变化</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-处理js"><a href="#6-处理js" class="headerlink" title="6.处理js"></a>6.处理js</h2><ul>
 <li><p>创建js文件</p>
 <ul>
 <li><p>src/js/test1.js</p>
