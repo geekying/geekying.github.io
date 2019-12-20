@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="小颖子的hexo博客">
 <meta property="og:description" content="1. 字符串相关扩展 几个常用的API  1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false） 可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配） 一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：conso">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-28T14:41:29.649Z">
+<meta property="og:updated_time" content="2019-12-14T05:37:08.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6之扩展">
 <meta name="twitter:description" content="1. 字符串相关扩展 几个常用的API  1.1 includes(); 判断字符串中是否包含指定的定的字串（有的话返回true，否则false） 可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配） 一个参数：console.log(&amp;#39;hello world&amp;#39;.includes(&amp;#39;world&amp;#39;)) —-&amp;gt; true 两个参数：conso">
@@ -436,7 +436,7 @@
 <li>示例：<code>console.log(url.endswith(&#39;php&#39;)</code>—-&gt; true</li>
 </ul>
 <h3 id="1-4-模板字符串-！重要"><a href="#1-4-模板字符串-！重要" class="headerlink" title="1.4 !模板字符串(！重要)"></a>1.4 !模板字符串(！重要)</h3><ul>
-<li>反引号表示模板，模板中的内容可以有格式，通过<code>${}</code>方式填充数据。</li>
+<li><strong>反引号</strong>表示模板，模板中的内容可以有格式，通过<code>${}</code>方式填充数据。</li>
 <li><code>${}</code>里面也支持一些简单的表达式运算/函数调用</li>
 <li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 声明一个对象</span><br><span class="line">let obj = &#123;</span><br><span class="line">    username : &apos;lisi&apos;,</span><br><span class="line">    age : &apos;12&apos;,</span><br><span class="line">    gender : &apos;male&apos;</span><br><span class="line">&#125;</span><br><span class="line">// 声明一个模板</span><br><span class="line">let tpl = `</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span&gt;S&#123;obj.username&#125;&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;S&#123;obj.age&#125;&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;S&#123;obj.gender&#125;&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
 
@@ -446,7 +446,7 @@
 <li><p>普通给参数默认值</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function foo(param) &#123;</span><br><span class="line">    let p = param || &apos;hello&apos;;</span><br><span class="line">    console.log(p)</span><br><span class="line">&#125;</span><br><span class="line">foo(&apos;hi&apos;);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>es6中给参数默认值：<code>function foo(param = &#39;hello&#39;) { console.log(p)}</code></p>
+<li><p>es6中给参数默认值：<code>function foo(p = &#39;hello&#39;) { console.log(p)}</code></p>
 </li>
 </ul>
 <h3 id="2-2-参数解构赋值"><a href="#2-2-参数解构赋值" class="headerlink" title="2.2 参数解构赋值"></a>2.2 参数解构赋值</h3><ul>
@@ -468,12 +468,12 @@
 </li>
 <li><p>具体应用：合并数组(arr3 = [1,2,3,4,5,6])</p>
 <p><code>let arr1 = [1,2,3];</code></p>
-<p><code>let arr2 = [456];</code></p>
+<p><code>let arr2 = [4,5,6];</code></p>
 <p><code>let arr3 = [...arr1,...arr2];</code></p>
 </li>
 </ul>
-<h2 id="2-5-箭头函数"><a href="#2-5-箭头函数" class="headerlink" title="2.5 箭头函数"></a>2.5 箭头函数</h2><ul>
-<li><p>用法示例：<code>let foo = () =&gt; {代码}</code> —&gt; 调用：foo()</p>
+<h3 id="2-5-箭头函数"><a href="#2-5-箭头函数" class="headerlink" title="2.5 箭头函数"></a>2.5 箭头函数</h3><ul>
+<li><p>用法示例：<code>let foo = (形参) =&gt; {代码}</code> —&gt; 调用：foo(实参)</p>
 </li>
 <li><p>多个参数小括号不能省略，多行代码大括号不能省略</p>
 <ul>
@@ -488,7 +488,7 @@
 <li>函数体如果有多个语句, 需要用<code>{}</code>包围，若有需要返回的内容，需要<code>手动返回</code>。</li>
 </ul>
 </li>
-<li><p>匿名函数（遍历示例）：</p>
+<li><p>匿名函数（遍历示例）：forEach()的第一个参数表示值，第二个参数表示索引。</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> let arr = [12,34,56]</span><br><span class="line">//常规遍历</span><br><span class="line">arr.forEach(function(element,index)&#123;</span><br><span class="line">    console.log(element,index);</span><br><span class="line">&#125;)</span><br><span class="line">// 箭头函数</span><br><span class="line">arr.forEach((element,index)=&gt;&#123;</span><br><span class="line">    console.log(element,index);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>箭头函数注意事项1：</p>
@@ -628,7 +628,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -639,7 +639,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -650,7 +650,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -753,7 +753,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-字符串相关扩展"><span class="nav-number">1.</span> <span class="nav-text">1. 字符串相关扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-includes"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 includes();</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-startswith"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 startswith();</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-endswith"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 endswith();</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-模板字符串-！重要"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 !模板字符串(！重要)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-函数的相关扩展"><span class="nav-number">2.</span> <span class="nav-text">2. 函数的相关扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-参数默认值"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 参数默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-参数解构赋值"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 参数解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-rest-剩余-参数"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 rest(剩余)参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-…扩展运算符"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 …扩展运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-箭头函数"><span class="nav-number">3.</span> <span class="nav-text">2.5 箭头函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-字符串相关扩展"><span class="nav-number">1.</span> <span class="nav-text">1. 字符串相关扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-includes"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 includes();</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-startswith"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 startswith();</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-endswith"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 endswith();</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-模板字符串-！重要"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 !模板字符串(！重要)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-函数的相关扩展"><span class="nav-number">2.</span> <span class="nav-text">2. 函数的相关扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-参数默认值"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 参数默认值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-参数解构赋值"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 参数解构赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-rest-剩余-参数"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 rest(剩余)参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-…扩展运算符"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 …扩展运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-箭头函数"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 箭头函数</span></a></li></ol></li></ol></div>
             
 
           </div>

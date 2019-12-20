@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="移动端,web,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. 基础知识1.1 屏幕 移动设备与PC设备最大的差异在于屏幕，这主要体现在屏幕尺寸和屏幕分辨率两个方面。  1.1.1 屏幕尺寸 通常所指的屏幕尺寸，实际上指的是屏幕对角线的长度（一般用英寸来度量）。  1.1.2 屏幕分辨率 分辨率则一般用像素来度量 px，表示屏幕水平和垂直方向的像素数。 例如1920*1080指的是屏幕垂直方向和水平方向分别有1920和1080个像素点而构成    1.2">
+<meta name="keywords" content="移动端,web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H-07-移动web之基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/12/13/H-07-移动web之基础知识/index.html">
+<meta property="og:site_name" content="小颖子的hexo博客">
+<meta property="og:description" content="1. 基础知识1.1 屏幕 移动设备与PC设备最大的差异在于屏幕，这主要体现在屏幕尺寸和屏幕分辨率两个方面。  1.1.1 屏幕尺寸 通常所指的屏幕尺寸，实际上指的是屏幕对角线的长度（一般用英寸来度量）。  1.1.2 屏幕分辨率 分辨率则一般用像素来度量 px，表示屏幕水平和垂直方向的像素数。 例如1920*1080指的是屏幕垂直方向和水平方向分别有1920和1080个像素点而构成    1.2">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-13T06:21:50.493Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H-07-移动web之基础知识">
+<meta name="twitter:description" content="1. 基础知识1.1 屏幕 移动设备与PC设备最大的差异在于屏幕，这主要体现在屏幕尺寸和屏幕分辨率两个方面。  1.1.1 屏幕尺寸 通常所指的屏幕尺寸，实际上指的是屏幕对角线的长度（一般用英寸来度量）。  1.1.2 屏幕分辨率 分辨率则一般用像素来度量 px，表示屏幕水平和垂直方向的像素数。 例如1920*1080指的是屏幕垂直方向和水平方向分别有1920和1080个像素点而构成    1.2">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/12/13/H-07-移动web之基础知识/">
+
+
+
+
+
+  <title>H-07-移动web之基础知识 | 小颖子的hexo博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+   <div class="headband"></div>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小颖子的hexo博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">wcy's blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/H-07-移动web之基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">H-07-移动web之基础知识</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T07:47:59+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h1><h2 id="1-1-屏幕"><a href="#1-1-屏幕" class="headerlink" title="1.1 屏幕"></a>1.1 屏幕</h2><ul>
+<li>移动设备与PC设备最大的差异在于屏幕，这主要体现在<strong>屏幕尺寸</strong>和<strong>屏幕分辨率</strong>两个方面。</li>
+</ul>
+<h3 id="1-1-1-屏幕尺寸"><a href="#1-1-1-屏幕尺寸" class="headerlink" title="1.1.1 屏幕尺寸"></a>1.1.1 屏幕尺寸</h3><ul>
+<li>通常所指的屏幕尺寸，实际上指的是屏幕对角线的长度（一般用英寸来度量）。</li>
+</ul>
+<h3 id="1-1-2-屏幕分辨率"><a href="#1-1-2-屏幕分辨率" class="headerlink" title="1.1.2 屏幕分辨率"></a>1.1.2 屏幕分辨率</h3><ul>
+<li>分辨率则一般用像素来度量 px，表示屏幕水平和垂直方向的像素数。<ul>
+<li>例如1920*1080指的是屏幕垂直方向和水平方向分别有1920和1080个像素点而构成</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-长度单位"><a href="#1-2-长度单位" class="headerlink" title="1.2 长度单位"></a>1.2 长度单位</h2><ul>
+<li>在Web开发中可以使用px（像素）、em、pt（点）、in（英寸）、cm（厘米）做为长度单位，最常用px（像素）做为长度单位。</li>
+<li>可以将上述的几种长度单位划分成<strong>相对长度单位</strong>和<strong>绝对长度单位</strong>。<ul>
+<li>其<em>中像素是一个相对长度单位（像素并没有固定的长度）</em>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-像素密度"><a href="#1-3-像素密度" class="headerlink" title="1.3 像素密度"></a>1.3 像素密度</h2><ul>
+<li>用PPI（Pixels Per Inch）值来表示屏幕每英寸的像素数量，我们将PPI、DPI都称为像素密度，但PPI应用更广泛，DPI在Android设备比较常见。</li>
+<li>PPI值的越大说明单位尺寸里所能容纳的像素数量就越多，所能展现画面的品质也就越精细，反之就越粗糙。(利用勾股定理可以计算得出PPI)</li>
+<li>屏幕尺寸固定时，当PPI 越大，像素的实际大小就会越小，当PPI越小，像素实际大小就越大。</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="1-4-设备独立像素"><a href="#1-4-设备独立像素" class="headerlink" title="1.4 设备独立像素"></a>1.4 设备独立像素</h2><h3 id="1-4-1-起因"><a href="#1-4-1-起因" class="headerlink" title="1.4.1 起因"></a>1.4.1 起因</h3><ul>
+<li>随着技术发展，设备不断更新，出现了不同PPI的屏幕共存的状态（如iPhone3G/S为163PPI，iPhone4/S为326PPI），像素不再是统一的度量单位，这会造成同样尺寸的图像在不同PPI设备上的显示大小不一样。</li>
+<li>为了不影响用户的体验，需要一个新的单位，这个新的单位能够保证图像内容在不同的PPI设备看上去大小应该差不多。这就是<strong>独立像素</strong>，在IOS设备上叫PT(Point)，Android设备上叫DIP(Device independent Pixel)或DP。</li>
+</ul>
+<h3 id="1-4-2-设备独立像素"><a href="#1-4-2-设备独立像素" class="headerlink" title="1.4.2 设备独立像素"></a>1.4.2 设备独立像素</h3><ul>
+<li>dp同px是有一个对应（比例）关系的，这个对应（比例）关系是操作系统确定并处理，目的是确保不同PPI屏幕所能显示的图像大小是一致的，通过window.devicePixelRatio可以获得该比例值。</li>
+<li>dp（或pt）和px并不总是绝对的倍数关系（并不总能保证能够整除），而是window.devicePixelRatio ~= 物理像素/独立像素。</li>
+</ul>
+<h2 id="1-5-像素"><a href="#1-5-像素" class="headerlink" title="1.5. 像素"></a>1.5. 像素</h2><h3 id="1-5-1-物理像素"><a href="#1-5-1-物理像素" class="headerlink" title="1.5.1 物理像素"></a>1.5.1 物理像素</h3><ul>
+<li>物理像素指的是屏幕渲染图像的最小单位，属于屏幕的物理属性，不可人为进行改变，其值大小决定了屏幕渲染图像的品质，我们以上所讨论的都指的是物理像素。</li>
+<li>如何获取？<ul>
+<li>window.screen.width</li>
+<li>window.screen.height<h3 id="1-5-2-CSS像素"><a href="#1-5-2-CSS像素" class="headerlink" title="1.5.2 CSS像素"></a>1.5.2 CSS像素</h3></li>
+</ul>
+</li>
+<li>CSS像素，与设备无关像素，指的是通过CSS进行网页布局时用到的单位，其默认值(PC端)是和物理像素保持一致的（1个单位的CSS像素等于1个单位的物理像素），但是可以通过缩放来改变其大小。</li>
+<li>物理像素和CSS像素的关系：<ul>
+<li>1个物理像素并不总是等于一个CSS像素，通过调整浏览器缩放比例，可以有大于、等于、小于这3种情况。</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-远程调试"><a href="#2-远程调试" class="headerlink" title="2. 远程调试"></a>2. 远程调试</h1><h2 id="2-1-模拟调试"><a href="#2-1-模拟调试" class="headerlink" title="2.1 模拟调试"></a>2.1 模拟调试</h2><ul>
+<li>在浏览器中进行模拟调试。</li>
+<li>模拟调试可以满足大部分的开发调试任务，但是由于移动设备种类繁多，环境也十分复杂，模拟调试容易出现差错。</li>
+</ul>
+<h2 id="2-2-真机调试"><a href="#2-2-真机调试" class="headerlink" title="2.2 真机调试"></a>2.2 真机调试</h2><ul>
+<li>两种方法：<ul>
+<li>！将做好的网页上传至服务器或者本地搭建服务器，然后移动设备通过网络来访问。</li>
+<li>借助第三方的调试工具，如weinre、debuggap、ghostlab等。<br>真机调试必须保证移动设备同服务器间的网络是相通的。</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-视口"><a href="#3-视口" class="headerlink" title="3. 视口"></a>3. 视口</h1><p><em>视口（viewport）是用来约束网站中最顶级块元素&lt;html&gt;的，即它决定了&lt;html&gt;的大小。</em></p>
+<ul>
+<li><p>1.viewport的概念:移动设备上,用来显示网页的区域.</p>
+<ul>
+<li>a) 如果把移动设备的浏览器(也有可能是app中的webview) ,当做相框的话</li>
+<li>b) viewport就相当于相框中的画,可能会比相框小,可能会比相框大,如果刚好一样大,那就皆大欢喜.</li>
+</ul>
+</li>
+<li><p>2.修改viewport:我们可以通过meta标签去修改viewport的值 ,防止滚动条出现,提升用户体验</p>
+<ul>
+<li>a) 移动web常见设置：<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;</code></li>
+<li>b) 该属性最早是苹果公司在Safari中推出用来解决移动设备的viewport问题的。后来被各大安卓以及浏览器厂商效仿,所以说这个属性真的是非常有用的。</li>
+</ul>
+</li>
+<li><p>3.可选值</p>
+<ul>
+<li>a) width：设置layout viewport 的宽度，为一个正整数，或字符串” device- width”</li>
+<li>b) initial-scale：设置页面的初始缩放值，为一个数字，可以带小数</li>
+<li>c) minimum-scale：允许用户的最小缩放值，为一个数字，可以带小数</li>
+<li>d) maximum-scale：允许用户的最大缩放值，为一个数字，可以带小数</li>
+<li>e) height：设置layout viewport 的高度，这个属性对我们并不重要，很少使用</li>
+<li>f) user-scalable：是否允许用户进行缩放，值为”no”或”yes”, no 代表不允许，yes代表允许</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1-PC设备"><a href="#3-1-PC设备" class="headerlink" title="3.1 PC设备"></a>3.1 PC设备</h2><ul>
+<li>在PC设备上viewport的大小取决于浏览器窗口的大小，以CSS像素做为度量单位。</li>
+<li>viewport间接的决定并影响了我们网页的布局(&lt;html&gt;的大小是会影响到我们的网页布局的，viewport又决定了&lt;html&gt;的大小)。</li>
+<li>获取viewport的大小<ul>
+<li>document.documentElement.clientWidth</li>
+<li>document.documentElement.clientHeight</li>
+</ul>
+</li>
+<li>在PC端，通过调整浏览器窗口可以改变viewport的大小，为了保证网页布局不发生错乱，需要给元素设定较大固定宽度。</li>
+</ul>
+<h2 id="3-2-移动设备"><a href="#3-2-移动设备" class="headerlink" title="3.2 移动设备"></a>3.2 移动设备</h2><ul>
+<li>在移动设备上viewport不再受限于浏览器的窗口，而是允许开发人员自由设置viewport的大小，通常浏览器会设置一个默认大小的viewport，为了能够正常显示那些专为PC设计的网页，一般这个值的大小会大于屏幕的尺寸。</li>
+</ul>
+<h2 id="3-3-移动设备产生缩放和滚动条的原因"><a href="#3-3-移动设备产生缩放和滚动条的原因" class="headerlink" title="3.3 移动设备产生缩放和滚动条的原因"></a>3.3 移动设备产生缩放和滚动条的原因</h2><ul>
+<li>移动设备上有2个viewport（为了方便理解人为定义的），分别是layout viewport和ideal viewport。</li>
+</ul>
+<h3 id="3-3-1-layout-viewport"><a href="#3-3-1-layout-viewport" class="headerlink" title="3.3.1 layout viewport"></a>3.3.1 layout viewport</h3><ul>
+<li>layout viewport（布局视口）指的是我们可以进行网页布局区域的大小，同样是以CSS像素做为计量单位。</li>
+<li>获取 layout viewport<ul>
+<li>document.documentElement.clientWidth</li>
+<li>document.documentElement.clientHeight</li>
+</ul>
+</li>
+<li>如果要保证为PC设计的网页在移动设备上布局不发生错乱，移动设备会默认设置一个较大的viewport（如IOS为980px），这个viewport实际指的是layout viewport。</li>
+</ul>
+<h3 id="3-3-2-ideal-viewport"><a href="#3-3-2-ideal-viewport" class="headerlink" title="3.3.2 ideal viewport"></a>3.3.2 ideal viewport</h3><ul>
+<li>ideal viewport（理想视口）指的是设备屏幕区域，（以设备独立像素PT、DP做为单位）以CSS像素做为计量单位，其大小是不能被改变的。</li>
+<li>获取ideal viewport有两种情形（并不总是正确的，在实际开发一般无需获取这个值具体大小。）<ul>
+<li>新设备<ul>
+<li>window.screen.width;</li>
+<li>window.screen.height;</li>
+</ul>
+</li>
+<li>老设备<ul>
+<li>window.screen.width / window.devicePixelRatio;</li>
+<li>window.screen.height / window.devicePixelRatio;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-3-出现滚动条的原因"><a href="#3-3-3-出现滚动条的原因" class="headerlink" title="3.3.3 出现滚动条的原因"></a>3.3.3 出现滚动条的原因</h3><ul>
+<li>移动设备浏览器会默认设置一个layout viewport，并且这个值会大于ideal viewport，那么我们也知道ideal viewport就是屏幕区域，layout viewport是我们布局网页的区域，那么最终layout viewport是要显示在ideal viewport里的，而layout viewport大于ideal viewport时，于是就出现滚动条了。</li>
+</ul>
+<h3 id="3-3-4-出现缩放的原因"><a href="#3-3-4-出现缩放的原因" class="headerlink" title="3.3.4 出现缩放的原因"></a>3.3.4 出现缩放的原因</h3><ul>
+<li>移动设备厂商认为将网页完整显示给用户才最合理，而不该出现滚动条，所以就将layout viewport进行了缩放，使其恰好完整显示在ideal viewport（屏幕）里，其缩放比例为ideal viewport / layout viewport。</li>
+</ul>
+<h2 id="3-4-移动浏览器"><a href="#3-4-移动浏览器" class="headerlink" title="3.4 移动浏览器"></a>3.4 移动浏览器</h2><ul>
+<li>移动端开发主要是针对IOS和Android两个操作系统平台的，除此之外还有Windows Phone。</li>
+<li>移动端主要可以分成三大类，系统自带浏览器、应用内置浏览器、第三方浏览器<ul>
+<li>指跟随移动设备操作系统一起安装的浏览器。</li>
+<li>通常在移动设备上都会安装一些APP，这些APP里往往会内置一个浏览器，就称这个浏览器为应用内置浏览器（也叫WebView）。(这个内置的浏览器一般功能比较简单，并且客户端开发人员可以更改这个浏览器的某些设置，在实际的开发中这个浏览器很重要)</li>
+<li>指安装在手机的浏览器如FireFox、Chrome、360等等。</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-屏幕适配"><a href="#4-屏幕适配" class="headerlink" title="4. 屏幕适配"></a>4. 屏幕适配</h1><ul>
+<li>移动页面最理想的状态是，避免滚动条且不被默认缩放处理.</li>
+<li>可以通过设置<meta name="viewport" content>来进行控制，并改变浏览器默认的layout viewport的宽度。</li>
+</ul>
+<h2 id="4-1-Viewport详解"><a href="#4-1-Viewport详解" class="headerlink" title="4.1 Viewport详解"></a>4.1 Viewport详解</h2><ul>
+<li>viewport 是由苹果公司为了解决移动设备浏览器渲染页面而提出的解决方案，后来被其它移动设备厂商采纳。</li>
+<li>其使用参数如下：<strong>通过设置属性content=””实现，中间以逗号分隔</strong><ul>
+<li>例如：<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code></li>
+<li>width 设置layout viewport 宽度，其取值可为数值或者device-width。</li>
+<li>height 设置layout viewport 高度，其取值可为数值或者device-height。</li>
+<li>initital-scale设置页面的初始缩放值，为一个数字，可以带小数。</li>
+<li>maximum-scale允许用户的最大缩放值，为一个数字，可以带小数。</li>
+<li>minimum-scale允许用户的最小缩放值，为一个数字，可以带小数。</li>
+<li>user-scalable是否允许用户进行缩放，值为”no”或”yes”。</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-控制缩放"><a href="#4-2-控制缩放" class="headerlink" title="4.2 控制缩放"></a>4.2 控制缩放</h2><ul>
+<li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></li>
+<li>当设置width=device-width，也达到了initial-scale=1的效果，得知其实 initial-scale = ideal viewport / layout viewport。</li>
+<li>两种方式都可以控制缩放，开发中一般同时设置width=device-width和initial-scale=1.0（为了解决一些兼容问题）</li>
+</ul>
+<h2 id="4-3-避免滚动"><a href="#4-3-避免滚动" class="headerlink" title="4.3 避免滚动"></a>4.3 避免滚动</h2><ul>
+<li><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</code></li>
+<li>滚动条是 layout viewport 相对于 ideal viewport 的，所以只要设置 layout viewport 小于或等于 ideal viewport</li>
+</ul>
+<h2 id="4-4-适配方案"><a href="#4-4-适配方案" class="headerlink" title="4.4 适配方案"></a>4.4 适配方案</h2><ul>
+<li>移动开发的核心是屏幕适配，然而并示有专门的规范进行约束，一般是对现有持术进行归纳而总结出适配方案，总结出以下几种适配方案：</li>
+</ul>
+<h3 id="4-4-1-固定宽度"><a href="#4-4-1-固定宽度" class="headerlink" title="4.4.1 固定宽度"></a>4.4.1 固定宽度</h3><ul>
+<li>1、设置<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></li>
+<li>2、设置内容区域大小为320px</li>
+<li>3、设置内容区域水平居中显示</li>
+<li><strong>此方案已经很少采用了。</strong></li>
+</ul>
+<h3 id="4-4-2-百分比宽度"><a href="#4-4-2-百分比宽度" class="headerlink" title="4.4.2 百分比宽度"></a>4.4.2 百分比宽度</h3><ul>
+<li>1、设置<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></li>
+<li>2、设置页面宽度为百分比</li>
+<li>CSS里百分比的使用：<ul>
+<li>width —&gt; 参照父元素的宽度</li>
+<li>height —&gt; 参照父元素的高度</li>
+<li>padding —&gt; 参照父元素的宽度</li>
+<li>border —&gt; 不支持百分比设置</li>
+<li>margin —&gt; 参照父元素的宽度</li>
+</ul>
+</li>
+<li>这种方案最容易理解，但是在设置元素高度时有非常大的局限性。</li>
+</ul>
+<h3 id="4-4-3-rem单位"><a href="#4-4-3-rem单位" class="headerlink" title="4.4.3 rem单位"></a>4.4.3 rem单位</h3><ul>
+<li>1、设置<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></li>
+<li>2、设置页面元素宽度单位为rem 或 em</li>
+<li>关于em和rem<ul>
+<li>em 相对长度单位，其参照当前元素字号大小，如果当前元素未设置字号则会继承其祖先元素字号大小。</li>
+<li>rem 相对长度单位，其参照根元素(html)字号大小。</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-4-4-100-像素"><a href="#4-4-4-100-像素" class="headerlink" title="4.4.4 100%像素"></a>4.4.4 100%像素</h3><ul>
+<li>1、设置网页宽度等于设备物理像素</li>
+<li>2、设置初始化缩放比例（值为1 / window.devicePixelRatio）</li>
+<li>淘宝针对iPhone设备采用的这种方案</li>
+</ul>
+<h1 id="5-媒体查询"><a href="#5-媒体查询" class="headerlink" title="5. 媒体查询"></a>5. 媒体查询</h1><ul>
+<li>通过媒体查询可以检测当前网页运行在什么终端，可以有机会实现网页适应不同终端的展示风格。</li>
+</ul>
+<h2 id="5-1-媒体类型"><a href="#5-1-媒体类型" class="headerlink" title="5.1 媒体类型"></a>5.1 媒体类型</h2><ul>
+<li>将不同的终端设备划分成不同的类型，称为媒体类型。<ul>
+<li>all —&gt; 用于所有设备</li>
+<li>print —&gt; 用于打印机和打印预览</li>
+<li>screen —&gt; 用于电脑屏幕，平板电脑，智能手机</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-媒体特性"><a href="#5-2-媒体特性" class="headerlink" title="5.2 媒体特性"></a>5.2 媒体特性</h2><ul>
+<li>每种媒体类型都具体各自不同的特性，根据不同媒体类型的媒体特性设置不同的展示风格。<ul>
+<li>width —&gt; 定义输出设备中的页面可见区域宽度</li>
+<li>height —&gt; 定义输出设备中的页面可见区域高度</li>
+<li>min-width —&gt; 定义输出设备中的页面最小可见区域宽度</li>
+<li>min-height —&gt; 定义输出设备中的页面最小可见区域高度</li>
+<li>max-width —&gt; 定义输出设备中的页面最大可见区域宽度</li>
+<li>max-height —&gt; 定义输出设备中的页面最大可见区域高度</li>
+<li>device-width —&gt; 定义输出设备的屏幕可见宽度</li>
+<li>device-height —&gt; 定义输出设备的屏幕可见高度</li>
+<li>aspect-ratio —&gt; 定义输出设备中的页面可见区域宽度与高度的比率</li>
+<li>device-aspect-ratio —&gt; 定义输出设备的屏幕可见宽度与高度的比率</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3-关键字"><a href="#5-3-关键字" class="headerlink" title="5.3 关键字"></a>5.3 关键字</h2><ul>
+<li>关键字将媒体类型或多个媒体特性连接到一起作为媒体查询的条件。<ul>
+<li>and 可以将多个<strong>媒体特性</strong>连接到一起，相当于“且”的意思。</li>
+<li>not 排除某个<strong>媒体类型</strong>，相当于“非”的意思，可以省略。</li>
+<li>only指定某个特定的<strong>媒体类型</strong>，可以省略。</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-4-引入方式"><a href="#5-4-引入方式" class="headerlink" title="5.4 引入方式"></a>5.4 引入方式</h2><ul>
+<li>1、link方法：<code>&lt;link href=&quot;./5-1.css&quot; media=&quot;only screen and (max-width: 320px)&quot;&gt;</code></li>
+<li>@media方法（写在CSS里）：<code>@media only screen and (max-width: 320px) {...}</code></li>
+</ul>
+<h2 id="5-5-常用特性"><a href="#5-5-常用特性" class="headerlink" title="5.5 常用特性"></a>5.5 常用特性</h2><ul>
+<li>1、width / height完全等于layout viewport</li>
+<li>2、max-width / max-height 小于等于layout viewport</li>
+<li>3、min-width / min-height 大于等于layout viewport</li>
+<li>4、device-width / device-height 完全等于ideal viewport</li>
+<li>5、orientation: portrait | landscape肖像/全景模式</li>
+</ul>
+<h1 id="6-触屏事件"><a href="#6-触屏事件" class="headerlink" title="6. 触屏事件"></a>6. 触屏事件</h1><h2 id="6-1-事件类型"><a href="#6-1-事件类型" class="headerlink" title="6.1 事件类型"></a>6.1 事件类型</h2><ul>
+<li>touchstart: 手指触摸屏幕时触发</li>
+<li>touchmove: 手指在屏幕上移动时触发</li>
+<li>touchend: 手指离开屏幕时触发</li>
+</ul>
+<h2 id="6-2-TouchEvent对象"><a href="#6-2-TouchEvent对象" class="headerlink" title="6.2 TouchEvent对象"></a>6.2 TouchEvent对象</h2><ul>
+<li>touches: 位于屏幕上的所有手指的列表</li>
+<li>targetTouches: 位于该元素上的所有手指的列表</li>
+<li>changedTouches：touchstart时包含刚与触摸屏接触的触点，touchend时包含离开触摸屏的触点。</li>
+<li>！注：没有对比出touches同targetTouches的差异，推荐使用targetTouches</li>
+</ul>
+<h2 id="6-3-Touch对象"><a href="#6-3-Touch对象" class="headerlink" title="6.3 Touch对象"></a>6.3 Touch对象</h2><ul>
+<li>clientX/Y：手指相对于layout viewport的水平/垂直像素距离</li>
+<li>pageX/Y：手指相对于layout viewport的水平/垂直像素距离（含滚动）</li>
+<li>screenX/Y：手指相对于layout viewport的水平/垂直像素距离（含滚动）,（未设置viewport时，screenX/Y在Webview中不正确）</li>
+<li>target：手指最初与屏幕接触时的元素</li>
+<li>移动开发通常会设置<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code>，这时这三对坐标值是完全一样的。</li>
+</ul>
+<h2 id="6-4-click延时"><a href="#6-4-click延时" class="headerlink" title="6.4 click延时"></a>6.4 click延时</h2><ul>
+<li>早期移动设备浏览器网页时内容非常小，为了增强用户体验，苹果公司专门为移动设备设计了双击放大的功能，确保用户可以非常方便的放大网页内容，但是当用户单击一个按钮时，移动设备会延时（约300ms）执行，判断用单是否要双击。</li>
+<li>用触屏事件可以解决这个问题。</li>
+</ul>
+<h2 id="6-5-手势封装"><a href="#6-5-手势封装" class="headerlink" title="6.5 手势封装"></a>6.5 手势封装</h2><p><strong>详细手势见wcy笔记中的内容。</strong></p>
+<ul>
+<li>Tap：点击</li>
+<li>Double tap：双击</li>
+<li>Drag：拖拽</li>
+<li>Flick：轻滑</li>
+<li>Pinch：缩小</li>
+<li>Spread：放大</li>
+<li>Press：按压</li>
+<li>Press and tap：按压点击</li>
+<li>Press and drag：按压拖拽</li>
+<li>Rotate：旋转</li>
+<li>利用触屏事件简易封装手势，主要用途是熟悉触屏事件的使用。</li>
+<li>【tap检测接触和离开屏幕的距离来实现】</li>
+<li>【drag跟踪手指移动位置，进而设置元素定位坐标】</li>
+<li>【swipe判断手指滑动的方向】</li>
+</ul>
+<h1 id="7-移动端类库"><a href="#7-移动端类库" class="headerlink" title="7. 移动端类库"></a>7. 移动端类库</h1><ul>
+<li>iScroll.js</li>
+<li>swipe.js</li>
+<li>swiper.js</li>
+<li>fastclick.js</li>
+</ul>
+<h1 id="8-网页布局"><a href="#8-网页布局" class="headerlink" title="8. 网页布局"></a>8. 网页布局</h1><h2 id="8-1-布局方式"><a href="#8-1-布局方式" class="headerlink" title="8.1 布局方式"></a>8.1 布局方式</h2><ul>
+<li>1、固定宽度布局：为网页设置一个固定的宽度，通常以px做为长度单位，常见于PC端网页。</li>
+<li>2、流式布局：为网页设置一个相对的宽度，通常以百分比做为长度单位。</li>
+<li>3、栅格化布局：将网页宽度人为的划分成均等的长度，然后排版布局时则以这些均等的长度做为度量单位，通常利用百分比做为长度单位来划分成均等的长度。</li>
+<li>4、响应式布局：通过检测设备信息，决定网页布局方式，即用户如果采用不同的设备访问同一个网页，有可能会看到不一样的内容，一般情况下是检测设备屏幕的宽度来实现。</li>
+</ul>
+<h2 id="8-2-响应式布局"><a href="#8-2-响应式布局" class="headerlink" title="8.2 响应式布局"></a>8.2 响应式布局</h2><ul>
+<li>Responsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。</li>
+<li>响应式布局常用于企业的官网、博客、新闻资讯类型网站，这些网站以浏览内容为主，没有复杂的交互。</li>
+<li>般我们会对常见的设备尺寸进行划分后，再分别确定为不同的尺寸的设备设计专门的布局方式：（类型与布局宽度）<ul>
+<li>大屏幕：大于等于1200px</li>
+<li>默认：大于等于980px</li>
+<li>平板：小于等于768px</li>
+<li>手机到平板：小于等于767px</li>
+<li>手机：小于等于480px</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/移动端/" rel="tag"><i class="fa fa-tag"></i> 移动端</a>
+          
+            <a href="/tags/web/" rel="tag"><i class="fa fa-tag"></i> web</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/08/H-06-Ajax之ajax跨域/" rel="next" title="H-06-Ajax之ajax跨域">
+                <i class="fa fa-chevron-left"></i> H-06-Ajax之ajax跨域
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/15/F-03-Node之实现服务器配置/" rel="prev" title="Node之实现服务器配置">
+                Node之实现服务器配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="颖">
+            
+              <p class="site-author-name" itemprop="name">颖</p>
+              <p class="site-description motion-element" itemprop="description">业精于勤，荒于嬉；行成于思，毁于随。</p>
+          </div>
+           <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">54</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">76</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                查阅链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://geekying.github.io/" title="myblog" target="_blank">myblog</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.mozilla.org/zh-CN/" title="MDN web文档" target="_blank">MDN web文档</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.w3school.com.cn/" title="w3c在线教程" target="_blank">w3c在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://cn.vuejs.org/v2/guide/" title="Vue.js在线教程" target="_blank">Vue.js在线教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://icomoon.io/" title="文字图标" target="_blank">文字图标</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.iciba.com/" title="爱词霸" target="_blank">爱词霸</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.whitcast.top/" title="JavaSE基础教程" target="_blank">JavaSE基础教程</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.jq22.com/" title="jquery插件库" target="_blank">jquery插件库</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://www.htmleaf.com/" title="jquery之家" target="_blank">jquery之家</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/coding-interviews" title="牛客网-剑指offer编程题" target="_blank">牛客网-剑指offer编程题</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.nowcoder.com/ta/js-assessment" title="牛客网-js能力测评" target="_blank">牛客网-js能力测评</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://marxi.co/" title="markdown语法" target="_blank">markdown语法</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://getbootstrap.com" title="bootstrap" target="_blank">bootstrap</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://v3.bootcss.com/components/" title="bootstrap中文" target="_blank">bootstrap中文</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com/" title="git官网" target="_blank">git官网</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-基础知识"><span class="nav-number">1.</span> <span class="nav-text">1. 基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-屏幕"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 屏幕</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-1-屏幕尺寸"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1 屏幕尺寸</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-2-屏幕分辨率"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.2 屏幕分辨率</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-长度单位"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 长度单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-像素密度"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 像素密度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-设备独立像素"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 设备独立像素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-起因"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 起因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-设备独立像素"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 设备独立像素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-像素"><span class="nav-number">1.5.</span> <span class="nav-text">1.5. 像素</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-1-物理像素"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.5.1 物理像素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-2-CSS像素"><span class="nav-number">1.5.2.</span> <span class="nav-text">1.5.2 CSS像素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-远程调试"><span class="nav-number">2.</span> <span class="nav-text">2. 远程调试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-模拟调试"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 模拟调试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-真机调试"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 真机调试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-视口"><span class="nav-number">3.</span> <span class="nav-text">3. 视口</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-PC设备"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 PC设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-移动设备"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 移动设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-移动设备产生缩放和滚动条的原因"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 移动设备产生缩放和滚动条的原因</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-layout-viewport"><span class="nav-number">3.3.1.</span> <span class="nav-text">3.3.1 layout viewport</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-ideal-viewport"><span class="nav-number">3.3.2.</span> <span class="nav-text">3.3.2 ideal viewport</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-3-出现滚动条的原因"><span class="nav-number">3.3.3.</span> <span class="nav-text">3.3.3 出现滚动条的原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-4-出现缩放的原因"><span class="nav-number">3.3.4.</span> <span class="nav-text">3.3.4 出现缩放的原因</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-移动浏览器"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 移动浏览器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-屏幕适配"><span class="nav-number">4.</span> <span class="nav-text">4. 屏幕适配</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-Viewport详解"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 Viewport详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-控制缩放"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 控制缩放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-避免滚动"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 避免滚动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-适配方案"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 适配方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-1-固定宽度"><span class="nav-number">4.4.1.</span> <span class="nav-text">4.4.1 固定宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-2-百分比宽度"><span class="nav-number">4.4.2.</span> <span class="nav-text">4.4.2 百分比宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-3-rem单位"><span class="nav-number">4.4.3.</span> <span class="nav-text">4.4.3 rem单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-4-100-像素"><span class="nav-number">4.4.4.</span> <span class="nav-text">4.4.4 100%像素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-媒体查询"><span class="nav-number">5.</span> <span class="nav-text">5. 媒体查询</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-媒体类型"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 媒体类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-媒体特性"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 媒体特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-关键字"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 关键字</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-4-引入方式"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 引入方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-5-常用特性"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 常用特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-触屏事件"><span class="nav-number">6.</span> <span class="nav-text">6. 触屏事件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-事件类型"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 事件类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-TouchEvent对象"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 TouchEvent对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-Touch对象"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 Touch对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-click延时"><span class="nav-number">6.4.</span> <span class="nav-text">6.4 click延时</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-手势封装"><span class="nav-number">6.5.</span> <span class="nav-text">6.5 手势封装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-移动端类库"><span class="nav-number">7.</span> <span class="nav-text">7. 移动端类库</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-网页布局"><span class="nav-number">8.</span> <span class="nav-text">8. 网页布局</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-布局方式"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 布局方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-响应式布局"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 响应式布局</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">颖</span>
+  
+</div>
+<span id="busuanzi_container_site_pv">
+    
+</span>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+   <script type="text/javascript" src="/js/src/clicklove.js"></script>
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+   <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+   <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+   <script type="text/javascript" src="/js/src/fireworks.js"></script>
+
+</body>
+</html>
+

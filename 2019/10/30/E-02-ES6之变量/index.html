@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1. 变量的声明1.1 let let声明不存在预解析。先使用后声明会报错！ let声明的变量不允许重复(在同一个作用域内)。 ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的 一个大括号({})就可以表示是一个块级作用域。 如：{let flag = 111}，这里的let就不能被外部访问。   for循环括号中用let声明的变量只能在循环体中使用。 在块级作用域内部，变量只能先声">
+<meta name="description" content="1. 变量的声明1.1 let let声明不存在预解析。先使用后声明会报错！ let声明的变量不允许重复(在同一个作用域内)。 ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的 一个大括号({})就可以表示是一个块级作用域。 如：{let flag = 111}，这里的let就不能被外部访问。   for循环括号中用let声明的变量只能在循环体中使用。 在块级作用域内部，变量也只能先">
 <meta name="keywords" content="ES6变量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6之变量">
 <meta property="og:url" content="http://yoursite.com/2019/10/30/E-02-ES6之变量/index.html">
 <meta property="og:site_name" content="小颖子的hexo博客">
-<meta property="og:description" content="1. 变量的声明1.1 let let声明不存在预解析。先使用后声明会报错！ let声明的变量不允许重复(在同一个作用域内)。 ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的 一个大括号({})就可以表示是一个块级作用域。 如：{let flag = 111}，这里的let就不能被外部访问。   for循环括号中用let声明的变量只能在循环体中使用。 在块级作用域内部，变量只能先声">
+<meta property="og:description" content="1. 变量的声明1.1 let let声明不存在预解析。先使用后声明会报错！ let声明的变量不允许重复(在同一个作用域内)。 ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的 一个大括号({})就可以表示是一个块级作用域。 如：{let flag = 111}，这里的let就不能被外部访问。   for循环括号中用let声明的变量只能在循环体中使用。 在块级作用域内部，变量也只能先">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-30T08:44:14.916Z">
+<meta property="og:updated_time" content="2019-12-14T02:55:19.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6之变量">
-<meta name="twitter:description" content="1. 变量的声明1.1 let let声明不存在预解析。先使用后声明会报错！ let声明的变量不允许重复(在同一个作用域内)。 ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的 一个大括号({})就可以表示是一个块级作用域。 如：{let flag = 111}，这里的let就不能被外部访问。   for循环括号中用let声明的变量只能在循环体中使用。 在块级作用域内部，变量只能先声">
+<meta name="twitter:description" content="1. 变量的声明1.1 let let声明不存在预解析。先使用后声明会报错！ let声明的变量不允许重复(在同一个作用域内)。 ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的 一个大括号({})就可以表示是一个块级作用域。 如：{let flag = 111}，这里的let就不能被外部访问。   for循环括号中用let声明的变量只能在循环体中使用。 在块级作用域内部，变量也只能先">
 
 
 
@@ -419,7 +419,7 @@
 </ul>
 </li>
 <li>for循环括号中用let声明的变量只能在循环体中使用。</li>
-<li>在块级作用域内部，变量只能先声明再使用。</li>
+<li>在块级作用域内部，变量也只能先声明再使用。</li>
 </ul>
 <h3 id="1-2-const"><a href="#1-2-const" class="headerlink" title="1.2 const"></a>1.2 const</h3><ul>
 <li>let的规则，const一样适用</li>
@@ -430,21 +430,36 @@
 <a id="more"></a>
 
 <h2 id="2-变量的解构赋值"><a href="#2-变量的解构赋值" class="headerlink" title="2. 变量的解构赋值"></a>2. 变量的解构赋值</h2><h3 id="2-0-普通赋值"><a href="#2-0-普通赋值" class="headerlink" title="2.0 普通赋值"></a>2.0 普通赋值</h3><ul>
-<li>示例：<code>let a = 1;let b = 2;let c = 3;</code>或者 <code>let a = 1,b = 2,c = 3;</code><h3 id="2-1-数组的解构赋值"><a href="#2-1-数组的解构赋值" class="headerlink" title="2.1 数组的解构赋值"></a>2.1 数组的解构赋值</h3></li>
+<li>示例：<code>let a = 1;let b = 2;let c = 3;</code>或者 <code>let a = 1,b = 2,c = 3;</code></li>
+</ul>
+<h3 id="2-1-数组的解构赋值"><a href="#2-1-数组的解构赋值" class="headerlink" title="2.1 数组的解构赋值"></a>2.1 数组的解构赋值</h3><ul>
 <li>示例：<code>let [a,b,c] = [1,2,3];</code></li>
 <li>以逗号分隔，按照顺序一一对应。</li>
-<li>带默认值：<code>let [a=1,b,c] = [,2,3];</code>，不指定使用默认值，指定则使用新值。<h3 id="2-2-对象的解构赋值"><a href="#2-2-对象的解构赋值" class="headerlink" title="2.2 对象的解构赋值"></a>2.2 对象的解构赋值</h3></li>
-<li>自定义对象解构赋值示例：<code>let {foo,bar} = {foo: &quot;hello&quot;,bar: &quot;hi&quot;};</code></li>
+<li>带默认值：<code>let [a=1,b,c] = [,2,];</code>，不指定使用默认值，指定则使用新值。</li>
+<li>没有带默认值，也没有指定的值为undefined。</li>
+</ul>
+<h3 id="2-2-对象的解构赋值"><a href="#2-2-对象的解构赋值" class="headerlink" title="2.2 对象的解构赋值"></a>2.2 对象的解构赋值</h3><ul>
+<li>自定义对象解构赋值示例：<code>let {foo,bar} = {foo: &quot;hello&quot;,bar: &quot;hi&quot;};</code><ul>
 <li>以逗号分隔，按照对象名称一一对应，与顺序无关。</li>
-<li>对象属性别名（如果有了别名，原来的名字就无效了）<ul>
-<li>示例：<code>let {foo:abc,bar} = {bar: &quot;hello&quot;,foo: &quot;hi&quot;};</code>，使用时应该：<code>conslog.log(abc,bar);</code></li>
+<li>示例：<code>let {sin,cos,random} = Math;</code>，三个都会被赋值。</li>
 </ul>
 </li>
-<li>对象解构赋值示例：<code>let {sin,cos,random} = Math;</code>，三个都会被赋值。</li>
-<li>也可以像数组的结构赋值那样给一个默认值：<code>let {foo:abc=&quot;hi&quot;,bar} = {bar: &quot;hello&quot;};</code><h3 id="2-3-字符串的解构赋值"><a href="#2-3-字符串的解构赋值" class="headerlink" title="2.3 字符串的解构赋值"></a>2.3 字符串的解构赋值</h3></li>
+<li>对象属性别名（如果有了别名，原来的名字就无效了）<ul>
+<li>示例：<code>let {foo:abc,bar} = {bar: &quot;hello&quot;,foo: &quot;hi&quot;};</code>，使用时应该：<code>conslog.log(abc,bar);</code></li>
+<li>！注意：给值时使用原来的名字，使用时使用新名字！</li>
+</ul>
+</li>
+<li>指定别名并给默认值：<code>let {foo:abc=&quot;hi&quot;,bar} = {bar: &quot;hello&quot;};</code>，不指定使用默认值，指定则使用新值</li>
+<li>没有带默认值，也没有指定的值为undefined。</li>
+</ul>
+<h3 id="2-3-字符串的解构赋值"><a href="#2-3-字符串的解构赋值" class="headerlink" title="2.3 字符串的解构赋值"></a>2.3 字符串的解构赋值</h3><ul>
 <li>示例：<code>let [a,b,c,d] = &quot;hello&quot;;</code></li>
-<li>将字符串分开与前面的按照顺序一一对应，多的自动借调，少的为undefined。</li>
-<li>获取字符串长度(length属性)要用对象的方法：<code>let {length} = &quot;hello&quot;</code>。</li>
+<li>将字符串分开与前面的按照顺序一一对应，多的自动截掉，少的为undefined。</li>
+<li>获取字符串长度(length属性)：<ul>
+<li>用对象的方法：<code>let {length} = &#39;hello&#39;; console.log(length);</code></li>
+<li>或者：<code>console.log(&#39;hello&#39;.length);</code></li>
+</ul>
+</li>
 </ul>
 
       
@@ -476,8 +491,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/30/F-05-Node之Node-js基础/" rel="next" title="Node之Node.js基础">
-                <i class="fa fa-chevron-left"></i> Node之Node.js基础
+              <a href="/2019/10/30/F-02-Node之Node-js基础/" rel="next" title="Node之Node基本操作">
+                <i class="fa fa-chevron-left"></i> Node之Node基本操作
               </a>
             
           </div>
@@ -566,7 +581,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -577,7 +592,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -588,7 +603,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

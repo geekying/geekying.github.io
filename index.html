@@ -298,6 +298,1539 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/F-03-Node之实现服务器配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/F-03-Node之实现服务器配置/" itemprop="url">Node之实现服务器配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-15T13:36:14+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Node/" itemprop="url" rel="index">
+                    <span itemprop="name">Node</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-Web开发概述"><a href="#1-Web开发概述" class="headerlink" title="1. Web开发概述"></a>1. Web开发概述</h1><ul>
+<li>Node.js服务器模型与php服务器模型的区别</li>
+<li>传统的动态网站开发需要应用软件<ul>
+<li>PHP ： Apache + php模块</li>
+<li>java ：Tomcat 、Weblogic</li>
+<li>Node.js  : 不需要应用软件（可以自己实现）</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Node-js实现静态网站功能"><a href="#2-Node-js实现静态网站功能" class="headerlink" title="2. Node.js实现静态网站功能"></a>2. Node.js实现静态网站功能</h1><h2 id="2-1-使用http模块初步实现服务器功能"><a href="#2-1-使用http模块初步实现服务器功能" class="headerlink" title="2.1 使用http模块初步实现服务器功能"></a>2.1 使用http模块初步实现服务器功能</h2><ul>
+<li>1、引入http模块：<code>const http = require(&#39;http&#39;);</code></li>
+<li>2、创建服务器实例对象：<code>let server = http.createServer();</code></li>
+<li>3、绑定请求事件：server.on() —&gt; 详细使用可以查看文档<ul>
+<li>参数1：事件类型(request/response)</li>
+<li>参数2：事件处理函数(参数1请求req，参数2响应res)</li>
+</ul>
+</li>
+<li>4、监听端口：server.listen()  —&gt; 详细使用可以查看文档<ul>
+<li>参数1：端口号</li>
+<li>参数2：IP地址(默认是localhost–&gt;127.0.0.0)</li>
+<li>参数3：回调函数</li>
+</ul>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/15/F-03-Node之实现服务器配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/H-07-移动web之基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/13/H-07-移动web之基础知识/" itemprop="url">H-07-移动web之基础知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-13T07:47:59+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/移动端/" itemprop="url" rel="index">
+                    <span itemprop="name">移动端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h1><h2 id="1-1-屏幕"><a href="#1-1-屏幕" class="headerlink" title="1.1 屏幕"></a>1.1 屏幕</h2><ul>
+<li>移动设备与PC设备最大的差异在于屏幕，这主要体现在<strong>屏幕尺寸</strong>和<strong>屏幕分辨率</strong>两个方面。</li>
+</ul>
+<h3 id="1-1-1-屏幕尺寸"><a href="#1-1-1-屏幕尺寸" class="headerlink" title="1.1.1 屏幕尺寸"></a>1.1.1 屏幕尺寸</h3><ul>
+<li>通常所指的屏幕尺寸，实际上指的是屏幕对角线的长度（一般用英寸来度量）。</li>
+</ul>
+<h3 id="1-1-2-屏幕分辨率"><a href="#1-1-2-屏幕分辨率" class="headerlink" title="1.1.2 屏幕分辨率"></a>1.1.2 屏幕分辨率</h3><ul>
+<li>分辨率则一般用像素来度量 px，表示屏幕水平和垂直方向的像素数。<ul>
+<li>例如1920*1080指的是屏幕垂直方向和水平方向分别有1920和1080个像素点而构成</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-长度单位"><a href="#1-2-长度单位" class="headerlink" title="1.2 长度单位"></a>1.2 长度单位</h2><ul>
+<li>在Web开发中可以使用px（像素）、em、pt（点）、in（英寸）、cm（厘米）做为长度单位，最常用px（像素）做为长度单位。</li>
+<li>可以将上述的几种长度单位划分成<strong>相对长度单位</strong>和<strong>绝对长度单位</strong>。<ul>
+<li>其<em>中像素是一个相对长度单位（像素并没有固定的长度）</em>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-3-像素密度"><a href="#1-3-像素密度" class="headerlink" title="1.3 像素密度"></a>1.3 像素密度</h2><ul>
+<li>用PPI（Pixels Per Inch）值来表示屏幕每英寸的像素数量，我们将PPI、DPI都称为像素密度，但PPI应用更广泛，DPI在Android设备比较常见。</li>
+<li>PPI值的越大说明单位尺寸里所能容纳的像素数量就越多，所能展现画面的品质也就越精细，反之就越粗糙。(利用勾股定理可以计算得出PPI)</li>
+<li>屏幕尺寸固定时，当PPI 越大，像素的实际大小就会越小，当PPI越小，像素实际大小就越大。</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/13/H-07-移动web之基础知识/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/08/H-06-Ajax之ajax跨域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/08/H-06-Ajax之ajax跨域/" itemprop="url">H-06-Ajax之ajax跨域</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-08T09:00:52+08:00">
+                2019-12-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">Ajax</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">ajax</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-跨域的概念"><a href="#1-跨域的概念" class="headerlink" title="1. 跨域的概念"></a>1. 跨域的概念</h1><ul>
+<li>前端没有办法从后台获取json形式的数据，只能获取jsonp形式的数据</li>
+<li>Ajax的异步，缺点是使代码的可读性降低了，如果请求有数据依赖，就必须要嵌套。（node中的Promise可以解决这一问题）<h2 id="1-1-同源策略"><a href="#1-1-同源策略" class="headerlink" title="1.1 同源策略"></a>1.1 同源策略</h2></li>
+<li>同源策略是浏览器的一种安全策略，所谓同源指的是请求URL地址中的协议、域名和端口都相同，只要其中之一不相同就是跨域</li>
+<li>同源策略主要为了保证浏览器的安全性</li>
+<li>在同源策略下，浏览器不允许Ajax跨域获取服务器数据</li>
+</ul>
+<h2 id="1-2-跨域解决方法"><a href="#1-2-跨域解决方法" class="headerlink" title="1.2 跨域解决方法"></a>1.2 跨域解决方法</h2><ul>
+<li>jsonp(主流使用)</li>
+<li>document.domain+iframe</li>
+<li>location.hash + iframe</li>
+<li>window.name + iframe</li>
+<li>window.postMessage </li>
+<li>flash等第三方插件</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/08/H-06-Ajax之ajax跨域/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/07/H-05-Ajax之ajax封装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/07/H-05-Ajax之ajax封装/" itemprop="url">Ajax之ajax封装</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-07T16:47:14+08:00">
+                2019-12-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">Ajax</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">ajax</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-初步封装"><a href="#1-初步封装" class="headerlink" title="1.初步封装"></a>1.初步封装</h1><ul>
+<li>传入url,type,param,dataType,callback参数</li>
+</ul>
+<h2 id="1-1-创建XMLHttpRequest对象"><a href="#1-1-创建XMLHttpRequest对象" class="headerlink" title="1.1 创建XMLHttpRequest对象"></a>1.1 创建XMLHttpRequest对象</h2><ul>
+<li>处理兼容问题</li>
+<li>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if(window.XMLHttpRequest)&#123;</span><br><span class="line">    xhr = new XMLHttpRequest();</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="1-2-准备发送"><a href="#1-2-准备发送" class="headerlink" title="1.2 准备发送"></a>1.2 准备发送</h2><ul>
+<li>请求类型处理：传入请求类型(形参type)</li>
+<li>url处理：<code>url = type == &#39;get&#39; ? url + &quot;?&quot; + param : url;</code></li>
+<li>异步/同步处理：传入 ture/false</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/07/H-05-Ajax之ajax封装/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/05/H-04-Ajax之ajax基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/05/H-04-Ajax之ajax基础知识/" itemprop="url">Ajax之ajax基础知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-05T16:59:56+08:00">
+                2019-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">Ajax</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">ajax</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-使用Ajax发送请求流程"><a href="#1-使用Ajax发送请求流程" class="headerlink" title="1. 使用Ajax发送请求流程"></a>1. 使用Ajax发送请求流程</h1><h2 id="1-1-XMLHttpRequest对象"><a href="#1-1-XMLHttpRequest对象" class="headerlink" title="1.1 XMLHttpRequest对象"></a>1.1 XMLHttpRequest对象</h2><h3 id="1-1-1-创建XMLHttpRequest对象"><a href="#1-1-1-创建XMLHttpRequest对象" class="headerlink" title="1.1.1 创建XMLHttpRequest对象"></a>1.1.1 创建XMLHttpRequest对象</h3><ul>
+<li><p>标准浏览器：</p>
+<ul>
+<li><code>var xhr = new XMLHttpRequest();</code></li>
+</ul>
+</li>
+<li><p>IE6：</p>
+<ul>
+<li><code>var xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</code></li>
+</ul>
+</li>
+<li><p>处理兼容</p>
+<ul>
+<li><p>详细代码1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var xhr = null;</span><br><span class="line">if(window.XMLHttpRequest)&#123;</span><br><span class="line">    xhr = new XMLHttpRequest();//标准</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    xhr = new ActiveXObject(&quot;Microsoft&quot;);//IE6</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>详细代码2：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">try&#123;</span><br><span class="line">     xhr = new XMLHttpRequest();</span><br><span class="line"> &#125;catch(e)&#123;</span><br><span class="line">     xhr = new ActiveXObject(&quot;Microsoft&quot;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/05/H-04-Ajax之ajax基础知识/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/03/H-03-Ajax之php基础知识/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/03/H-03-Ajax之php基础知识/" itemprop="url">Ajax之php基础知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-03T10:52:39+08:00">
+                2019-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">Ajax</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/Ajax/php/" itemprop="url" rel="index">
+                    <span itemprop="name">php</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="1-基本语法"><a href="#1-基本语法" class="headerlink" title="1.基本语法"></a>1.基本语法</h1><ul>
+<li>所有的php相关的代码都要写到这里面；<code>&lt;?php ... ?&gt;</code></li>
+<li>php是一种后台编程语言；使用php可以开发动态网站和后台接口（所谓接口就是url地址，用于给前端提供数据）。</li>
+</ul>
+<h2 id="1-1-变量声明"><a href="#1-1-变量声明" class="headerlink" title="1.1 变量声明"></a>1.1 变量声明</h2><ul>
+<li>变量名的规则：由$/字母/数字/下划线，不能以数字开头，大小写敏感</li>
+<li><code>$Num = 123;</code></li>
+</ul>
+<h2 id="1-2-字符串拼接"><a href="#1-2-字符串拼接" class="headerlink" title="1.2 字符串拼接"></a>1.2 字符串拼接</h2><ul>
+<li>js中字符串拼接用+；php当中的字符串拼接用的是<code>.</code></li>
+</ul>
+<h2 id="1-3-单引号与双引号的差异"><a href="#1-3-单引号与双引号的差异" class="headerlink" title="1.3 单引号与双引号的差异"></a>1.3 单引号与双引号的差异</h2><ul>
+<li>单引号对于其中的变量当作普通的字符串来处理</li>
+<li>双引号对于其中的变量会把变量解析成变量值</li>
+</ul>
+<h2 id="1-4-内容输出"><a href="#1-4-内容输出" class="headerlink" title="1.4 内容输出"></a>1.4 内容输出</h2><ul>
+<li><code>echo</code>：输出简单数据类型，如字符串、数值</li>
+<li><code>print_r()</code>：输出复杂数据类型，如数组</li>
+<li><code>var_dump()</code>：输出详细信息，如对象、数组</li>
+</ul>
+<h2 id="1-5-字符串拼接"><a href="#1-5-字符串拼接" class="headerlink" title="1.5 字符串拼接"></a>1.5 字符串拼接</h2><ul>
+<li>echo 的作用就是向页面当中输出字符串：<code>echo &#39;&lt;div&gt;Hello World!&lt;/div&gt;&#39;;</code></li>
+</ul>
+<h2 id="1-6-数据类型"><a href="#1-6-数据类型" class="headerlink" title="1.6 数据类型"></a>1.6 数据类型</h2><ul>
+<li><p>与JavaScript基本类似，都是弱类型语言</p>
+<h3 id="1-6-1-数据类型"><a href="#1-6-1-数据类型" class="headerlink" title="1.6.1 数据类型"></a>1.6.1 数据类型</h3></li>
+<li><p>字符串、整型、浮点型、布尔型、数组、对象、NULL</p>
+</li>
+<li><p>基本类型：<code>number、string、boolean、null、undefined</code></p>
+</li>
+<li><p>引用类型：<code>object（Array、Math、RegExp、Date、Object、Error、Number、String、Boolean）</code></p>
+<h3 id="1-6-2-判断变量的类型"><a href="#1-6-2-判断变量的类型" class="headerlink" title="1.6.2 判断变量的类型"></a>1.6.2 判断变量的类型</h3></li>
+<li><p><code>gettype()</code> 内置函数，用来判断变量的类型</p>
+<h3 id="1-6-3-数组"><a href="#1-6-3-数组" class="headerlink" title="1.6.3 数组"></a>1.6.3 数组</h3></li>
+<li><p>一维数组</p>
+<ul>
+<li>数组的两种形式<ul>
+<li><code>$arr = array(1,2,3);</code>默认key是从0开始的整数</li>
+<li><code>$arr = array(&quot;a&quot;=&gt;&quot;1&quot;,&quot;b&quot;=&gt;&quot;2&quot;,&quot;c&quot;=&gt;&quot;3&quot;);</code>指定键</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$arr6 = array();</span><br><span class="line">$arr6[0] = array(11,22,33);</span><br><span class="line">$arr6[1] = array(33,44,55);</span><br><span class="line">$arr6[2] = array(55,66,77);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>count()是内置函数，用来计算数组的长度</p>
+<ul>
+<li><p>遍历数组时，循环体中的分号必须写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for($i=0; $i&lt;count($arr1); $i++) &#123;</span><br><span class="line">    echo $arr1[$i].&quot;&lt;br/&gt;&quot;;// 此处分号必须写</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>foreach()遍历数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	sleep(3);// 执行到这里的时候等待3秒</span><br><span class="line">// 遍历数组1</span><br><span class="line">    foreach($arr3 as $key =&gt; $value) &#123;</span><br><span class="line">        echo $key.&apos;===&apos;.$value.&apos;&lt;br /&gt;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">// 遍历数组2</span><br><span class="line">    foreach($arr as $value)&#123;</span><br><span class="line">        echo $value.&apos;-----&lt;br&gt;&apos;;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-7-运算符"><a href="#1-7-运算符" class="headerlink" title="1.7 运算符"></a>1.7 运算符</h2><ul>
+<li>与JavaScript基本类似，都是弱类型语言</li>
+<li>基本类型：<code>number、string、boolean、null、undefined</code></li>
+<li>引用类型：<code>object（Array、Math、RegExp、Date、Object、Error、Number、String、Boolean）</code></li>
+</ul>
+<h2 id="1-8-分支循环语句"><a href="#1-8-分支循环语句" class="headerlink" title="1.8 分支循环语句"></a>1.8 分支循环语句</h2><ul>
+<li>if/switch</li>
+<li>while</li>
+<li>for</li>
+<li>foreach</li>
+</ul>
+<h2 id="1-9-函数"><a href="#1-9-函数" class="headerlink" title="1.9 函数"></a>1.9 函数</h2><h3 id="1-9-1-自定义函数"><a href="#1-9-1-自定义函数" class="headerlink" title="1.9.1 自定义函数"></a>1.9.1 自定义函数</h3><ul>
+<li>语法规则（函数名不区分大小写）</li>
+<li>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function Foo($str) &#123;</span><br><span class="line">        return $str;</span><br><span class="line">&#125;</span><br><span class="line">$ret1 = foo(&apos;hi wcy&apos;);</span><br><span class="line">echo $ret1;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="1-9-2-系统函数"><a href="#1-9-2-系统函数" class="headerlink" title="1.9.2 系统函数"></a>1.9.2 系统函数</h3><ul>
+<li><code>gettype()</code>：检测数据类型的</li>
+<li><code>json_encode()</code>：把对象变成json类型的字符串</li>
+</ul>
+<h2 id="1-10-预定义变量（表单处理）"><a href="#1-10-预定义变量（表单处理）" class="headerlink" title="1.10 预定义变量（表单处理）"></a>1.10 预定义变量（表单处理）</h2><ul>
+<li><p>$_GET</p>
+</li>
+<li><p>$_POST</p>
+<h3 id="1-10-1-http协议的常用请求方式：-增删改查"><a href="#1-10-1-http协议的常用请求方式：-增删改查" class="headerlink" title="1.10.1 http协议的常用请求方式：(增删改查)"></a>1.10.1 http协议的常用请求方式：(增删改查)</h3></li>
+<li><p>get：用来从服务器获取数据(参数一般作为查询条件)</p>
+<ul>
+<li><code>(http://localhost/ajax/php/page.php?abc=1)  $f = $_GET[&#39;abc&#39;];</code></li>
+</ul>
+</li>
+<li><p>post：用来添加数据</p>
+<ul>
+<li><code>$uname = $_POST[&#39;username&#39;];</code></li>
+<li>post获取到的数据是字符串类型的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=&quot;./post.php&quot; method=&quot;post&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;text&quot; name=&quot;username&quot;&gt;</span><br><span class="line">    &lt;br&gt;&lt;input type=&quot;text&quot; name=&quot;password&quot;&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot;&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">$un = $_POST[&apos;username&apos;];</span><br><span class="line">$pd = $_POST[&apos;password&apos;];</span><br><span class="line">if($un === &apos;admin&apos; &amp;&amp; $pd === &apos;123&apos;) &#123;</span><br><span class="line">    echo &apos;登录成功&apos;;</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    echo &apos;登录失败，用户名或者密码错误&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>put：用来修改数据</p>
+</li>
+<li><p>delete：用来删除数据</p>
+</li>
+</ul>
+<h1 id="2-其它"><a href="#2-其它" class="headerlink" title="2. 其它"></a>2. 其它</h1><h2 id="2-1-设置服务器响应的文件类型"><a href="#2-1-设置服务器响应的文件类型" class="headerlink" title="2.1 设置服务器响应的文件类型"></a>2.1 设置服务器响应的文件类型</h2><ul>
+<li><code>header(&quot;Content-Type:text/plain;charset=utf-8&quot;);</code><h2 id="2-1-判断数组中没有对应键"><a href="#2-1-判断数组中没有对应键" class="headerlink" title="2.1 判断数组中没有对应键"></a>2.1 判断数组中没有对应键</h2></li>
+<li><code>array_key_exists</code> :用来判断数组中没有对应键</li>
+<li>使用：   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if(array_key_exists($code,$books) == 1)&#123;</span><br><span class="line">    $book = $books[$code];//这里根据参数获取一本书的信息</span><br><span class="line">    echo json_encode($book);</span><br><span class="line">&#125;else&#123;</span><br><span class="line">    echo &apos;&#123;&quot;flag&quot;:0&#125;&apos;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/02/H-02-js之Ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/02/H-02-js之Ajax/" itemprop="url">js之Ajax学前知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-02T16:06:47+08:00">
+                2019-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/JavaScript/Ajax/" itemprop="url" rel="index">
+                    <span itemprop="name">Ajax</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-基础知识"><a href="#1-基础知识" class="headerlink" title="1. 基础知识"></a>1. 基础知识</h1><h2 id="1-1-前端相关的知识点"><a href="#1-1-前端相关的知识点" class="headerlink" title="1.1 前端相关的知识点"></a>1.1 前端相关的知识点</h2><ul>
+<li>html（html5） 主要用来实现页面的排版布局</li>
+<li>css（css3） 主要用来实现页面的样式美化</li>
+<li>JavaScript（jQuery） 主要用来实现前端功能特效</li>
+</ul>
+<blockquote>
+<p>采用上面的这些技术开发的页面和前端特效脚本需要放到服务器才能够对外提供服务，才能够让互联网上的网友看到。</p>
+</blockquote>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/12/02/H-02-js之Ajax/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/29/H-01-js之jQuery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="颖">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小颖子的hexo博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/29/H-01-js之jQuery/" itemprop="url">js之jQuery</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-29T08:14:33+08:00">
+                2019-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/JavaScript/" itemprop="url" rel="index">
+                    <span itemprop="name">JavaScript</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/JavaScript/jQuery/" itemprop="url" rel="index">
+                    <span itemprop="name">jQuery</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h1><h2 id="1-1-是什么？好处？"><a href="#1-1-是什么？好处？" class="headerlink" title="1.1 是什么？好处？"></a>1.1 是什么？好处？</h2><h3 id="1-1-1-是什么？"><a href="#1-1-1-是什么？" class="headerlink" title="1.1.1 是什么？"></a>1.1.1 是什么？</h3><ul>
+<li>JavaScript框架库:就是一个普通的js文件,封装了很多的函数,封装了很多兼容的代码</li>
+<li>jQuery是JavaScript框架库中的一种</li>
+</ul>
+<h3 id="1-1-2-好处？"><a href="#1-1-2-好处？" class="headerlink" title="1.1.2 好处？"></a>1.1.2 好处？</h3><ul>
+<li>jQuery的好处:写的少,做的多,链式编程,隐式迭代等…</li>
+<li>jQuery可以解决js兼容的问题</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/29/H-01-js之jQuery/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/01/C-10-mpvue之mpvue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -650,1439 +2183,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/G-02-构建工具之Gulp/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/31/G-02-构建工具之Gulp/" itemprop="url">构建工具之Gulp</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T12:05:38+08:00">
-                2019-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/构建工具/" itemprop="url" rel="index">
-                    <span itemprop="name">构建工具</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/构建工具/Gulp/" itemprop="url" rel="index">
-                    <span itemprop="name">Gulp</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-Gulp须知"><a href="#1-Gulp须知" class="headerlink" title="1. Gulp须知"></a>1. Gulp须知</h2><ul>
-<li>任务化</li>
-<li>基于流<ul>
-<li>有自己的内存（从内存里输出流到本地）</li>
-<li>输入流：从本地读数据到Gulp的内存</li>
-<li>输出流：在内部处理完之后，从Gulp的内存六道本地</li>
-</ul>
-</li>
-<li>执行任务是异步（return是关键）的，也可以同步。要确保先后用依赖！</li>
-</ul>
-<h2 id="2-Gulp介绍"><a href="#2-Gulp介绍" class="headerlink" title="2. Gulp介绍"></a>2. Gulp介绍</h2><ul>
-<li>中文主页: <a href="http://www.gulpjs.com.cn/" target="_blank" rel="noopener">http://www.gulpjs.com.cn/</a></li>
-<li>gulp是与grunt功能类似的<strong>前端项目构建</strong>工具, 也是基于Nodejs的自动<strong>任务运行器</strong></li>
-<li>能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的合并、压缩、检查、监听文件变化、浏览器自动刷新、测试等任务</li>
-<li>gulp更高效(异步多任务), 更易于使用, 插件高质量</li>
-<li>安装 nodejs, 查看版本: node -v</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/31/G-02-构建工具之Gulp/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/31/G-01-构建工具之Grunt/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/31/G-01-构建工具之Grunt/" itemprop="url">构建工具之Grunt</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-31T12:05:18+08:00">
-                2019-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/构建工具/" itemprop="url" rel="index">
-                    <span itemprop="name">构建工具</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/构建工具/Grunt/" itemprop="url" rel="index">
-                    <span itemprop="name">Grunt</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-项目构建"><a href="#1-项目构建" class="headerlink" title="1.项目构建"></a>1.项目构建</h2><h3 id="1-对项目构建的理解"><a href="#1-对项目构建的理解" class="headerlink" title="1. 对项目构建的理解"></a>1. 对项目构建的理解</h3><ul>
-<li>什么是项目构建?<ul>
-<li>编译项目中的js, sass, less</li>
-<li>合并js/css等资源文件</li>
-<li>压缩js/css/html等资源文件</li>
-<li>JS语法的检查</li>
-<li>……</li>
-</ul>
-</li>
-<li>构建工具的作用?<ul>
-<li>简化项目构建, 自动化完成构建。</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-2-构建工具"><a href="#1-2-构建工具" class="headerlink" title="1.2 构建工具"></a>1.2 构建工具</h3><ul>
-<li>Grunt</li>
-<li>Gulp</li>
-<li>Webpack</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/31/G-01-构建工具之Grunt/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/E-03-ES6之类与继承/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/30/E-03-ES6之类与继承/" itemprop="url">ES6之类与继承</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T16:02:17+08:00">
-                2019-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/ECMAScript/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="1-类"><a href="#1-类" class="headerlink" title="1. 类"></a>1. 类</h2><h3 id="1-1-定义类"><a href="#1-1-定义类" class="headerlink" title="1.1 定义类"></a>1.1 定义类</h3><ul>
-<li><p>语法：<code>class 类名{构造函数、方法(静态方法/普通方法)}</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Class Animal &#123;</span><br><span class="line">    //静态方法</span><br><span class="line">    static showInfo() &#123;</span><br><span class="line">        console.log(&apos;wang~&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    //构造函数</span><br><span class="line">    constructor(name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    // 方法</span><br><span class="line">    showName() &#123;</span><br><span class="line">        console.log(this.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//实例化</span><br><span class="line">let dog = new Animal(&apos;haha&apos;);</span><br><span class="line">// 调用方法</span><br><span class="line">dog.showName();</span><br><span class="line">// 调用静态方法</span><br><span class="line">Animal.showInfo();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>静态方法</p>
-<ul>
-<li>就是用static修饰词修饰的方法。</li>
-<li>静态方法只能通过类名调用，不可以使用实例对象调用。</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-2-类的继承（extends）"><a href="#1-2-类的继承（extends）" class="headerlink" title="1.2 类的继承（extends）"></a>1.2 类的继承（extends）</h3><ul>
-<li><p>语法：<code>class 类名 extends 父类{构造函数、方法(静态方法/普通方法)}</code></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Class Dog extends Animal &#123;</span><br><span class="line">    //构造函数</span><br><span class="line">    constructor(name,color) &#123;</span><br><span class="line">        super(name);// super用来调用父类</span><br><span class="line">        this.color = color;</span><br><span class="line">    &#125;</span><br><span class="line">    // 方法</span><br><span class="line">    showColor() &#123;</span><br><span class="line">        console.log(this.color);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//实例化</span><br><span class="line">let dog1 = new Dog(&apos;dudu&apos;);</span><br><span class="line">// 调用方法</span><br><span class="line">dog1.showColor();</span><br><span class="line">dog1.showName(); // 继承了父类的方法</span><br><span class="line">// 静态方法的继承(通过类名调用)</span><br><span class="line">Dog.showInfo();</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/E-02-ES6之扩展/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/30/E-02-ES6之扩展/" itemprop="url">ES6之扩展</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T15:54:11+08:00">
-                2019-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/ECMAScript/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-字符串相关扩展"><a href="#1-字符串相关扩展" class="headerlink" title="1. 字符串相关扩展"></a>1. 字符串相关扩展</h2><ul>
-<li>几个常用的API</li>
-</ul>
-<h3 id="1-1-includes"><a href="#1-1-includes" class="headerlink" title="1.1 includes();"></a>1.1 includes();</h3><ul>
-<li>判断字符串中是否包含指定的定的字串（有的话返回true，否则false）</li>
-<li>可以传一个参数（匹配的子串）或两个参数（第二个参数代表从指定位置开始匹配）<ul>
-<li>一个参数：<code>console.log(&#39;hello world&#39;.includes(&#39;world&#39;))</code> —-&gt; true</li>
-<li>两个参数：<code>console.log(&#39;hello world&#39;.includes(&#39;world&#39;,7))</code> —-&gt; false</li>
-</ul>
-</li>
-</ul>
-<h3 id="1-2-startswith"><a href="#1-2-startswith" class="headerlink" title="1.2 startswith();"></a>1.2 startswith();</h3><ul>
-<li><p>判断字符串是否以特定的子串开始</p>
-</li>
-<li><p>示例：</p>
-<p><code>let url = &#39;admin/index.php&#39;</code></p>
-<p><code>console.log(url.startswith(&#39;admin&#39;)</code>—-&gt; true</p>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/30/E-02-ES6之扩展/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/E-02-ES6之变量/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/30/E-02-ES6之变量/" itemprop="url">ES6之变量</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T15:48:44+08:00">
-                2019-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/ECMAScript/" itemprop="url" rel="index">
-                    <span itemprop="name">ECMAScript</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/ECMAScript/ES6/" itemprop="url" rel="index">
-                    <span itemprop="name">ES6</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-变量的声明"><a href="#1-变量的声明" class="headerlink" title="1. 变量的声明"></a>1. 变量的声明</h2><h3 id="1-1-let"><a href="#1-1-let" class="headerlink" title="1.1 let"></a>1.1 let</h3><ul>
-<li>let声明不存在预解析。先使用后声明会报错！</li>
-<li>let声明的变量不允许重复(在同一个作用域内)。</li>
-<li>ES6引入了块级作用域：块内部定义的变量，在外部是不可以访问的<ul>
-<li>一个大括号({})就可以表示是一个块级作用域。</li>
-<li>如：<code>{let flag = 111}</code>，这里的let就不能被外部访问。</li>
-</ul>
-</li>
-<li>for循环括号中用let声明的变量只能在循环体中使用。</li>
-<li>在块级作用域内部，变量只能先声明再使用。</li>
-</ul>
-<h3 id="1-2-const"><a href="#1-2-const" class="headerlink" title="1.2 const"></a>1.2 const</h3><ul>
-<li>let的规则，const一样适用</li>
-<li>const用来声明常量</li>
-<li>const声明的常量不允许重新赋值</li>
-<li>const声明的常量必须初始化</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/30/E-02-ES6之变量/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/F-05-Node之Node-js基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/30/F-05-Node之Node-js基础/" itemprop="url">Node之Node.js基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T14:14:52+08:00">
-                2019-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/Node/" itemprop="url" rel="index">
-                    <span itemprop="name">Node</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-Global-全局成员-概述"><a href="#1-Global-全局成员-概述" class="headerlink" title="1. Global(全局成员)概述"></a>1. Global(全局成员)概述</h2><ul>
-<li>node API: <a href="https://nodejs.org/dist/latest-v12.x/docs/api/" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v12.x/docs/api/</a></li>
-<li>Global地址：<a href="https://nodejs.org/dist/latest-v12.x/docs/api/globals.html" target="_blank" rel="noopener">https://nodejs.org/dist/latest-v12.x/docs/api/globals.html</a></li>
-</ul>
-<h3 id="1-1-普通的一些API"><a href="#1-1-普通的一些API" class="headerlink" title="1.1 普通的一些API"></a>1.1 普通的一些API</h3><ul>
-<li>__filename：包含文件名称的全路径</li>
-<li>__dirname：文件的路径(不包含文件名称)</li>
-<li>setTimeOut(function(){},time)：定时函数</li>
-<li>setTimeOut()：清除定时器</li>
-<li>process：<ul>
-<li>process.argv：argv是一个数组，默认情况下，前两项数据分别是Node.js环境的路径、当前执行的js文件的全路径；从第三项开始表示命令行参数。</li>
-<li>process.arch：表示当前系统的架构（64位/32位）</li>
-<li>…</li>
-</ul>
-</li>
-<li>…<h3 id="1-2-核心的API会在下面内容中详细记录"><a href="#1-2-核心的API会在下面内容中详细记录" class="headerlink" title="1.2 核心的API会在下面内容中详细记录"></a>1.2 核心的API会在下面内容中详细记录</h3></li>
-<li><em>node.js核心</em></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/30/F-05-Node之Node-js基础/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/F-04-Node之Node-js开发环境准备/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/30/F-04-Node之Node-js开发环境准备/" itemprop="url">Node.js开发准备</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T10:51:19+08:00">
-                2019-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/Node/" itemprop="url" rel="index">
-                    <span itemprop="name">Node</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1. 环境准备"></a>1. 环境准备</h2><h3 id="1-普通安装方式"><a href="#1-普通安装方式" class="headerlink" title="1. 普通安装方式"></a>1. 普通安装方式</h3><ul>
-<li>官方网站：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></li>
-<li>中文官网：<a href="http://nodejs.cn/" target="_blank" rel="noopener">http://nodejs.cn/</a></li>
-<li>左边是稳定版本，右边是新特性的</li>
-</ul>
-<h3 id="2-多版本安装方式"><a href="#2-多版本安装方式" class="headerlink" title="2. 多版本安装方式"></a>2. 多版本安装方式</h3><ul>
-<li>1.卸载已有的Node.js。</li>
-<li>2.下载nvm（<a href="https://github.com/coreybutler/nvm-windows）。" target="_blank" rel="noopener">https://github.com/coreybutler/nvm-windows）。</a></li>
-<li>3.在C盘创建目录dev：<ul>
-<li>在dev目录中创建两个子目录nvm和nodejs</li>
-<li>将nvm包解压，解压文件放入nvm中并修改nvm的配置文件。</li>
-</ul>
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/30/F-04-Node之Node-js开发环境准备/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/30/F-03-Node之终端的基本使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="颖">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小颖子的hexo博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/30/F-03-Node之终端的基本使用/" itemprop="url">Node之终端的基本使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-30T10:50:17+08:00">
-                2019-10-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/前端/Node/" itemprop="url" rel="index">
-                    <span itemprop="name">Node</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="1-打开应用"><a href="#1-打开应用" class="headerlink" title="1. 打开应用"></a>1. 打开应用</h2><p><em>win + R —&gt; 弹出一个窗口，向里面输入下列内容。</em></p>
-<ul>
-<li><code>cmd</code>：打开DOS命令窗口</li>
-<li><code>notepad</code>：打开记事本</li>
-<li><code>mspaint</code>：打开画图</li>
-<li><code>calc</code>：打开计算机</li>
-<li><code>write</code>：打开写字板</li>
-<li><code>sysdm.cpl</code>：打开环境变量设置窗口</li>
-</ul>
-<h2 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2. 常用命令"></a>2. 常用命令</h2><p><em>win + R —&gt; 弹出一个窗口，向里面输入cmd —&gt; 到想去的目录里输入下列内容。</em></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/10/30/F-03-Node之终端的基本使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -2129,7 +2234,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">54</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2140,7 +2245,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -2151,7 +2256,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">76</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
